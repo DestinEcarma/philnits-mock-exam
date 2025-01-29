@@ -41,7 +41,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
       <p className="text-xl">Time taken: {formatTime(timeTaken)}</p>
       {quizData.map((question, index) => (
         <div key={index} className={`border p-4 rounded-md ${userAnswers[index] === question.correctAnswer ? 'bg-green-50' : 'bg-red-50'}`}>
-          <div className="font-bold">
+          <div className="font-medium">
             <Markdown>{question.question}</Markdown>
           </div>
           {question.image && (
@@ -58,11 +58,11 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
           )}
           {userAnswers[index] !== undefined ? (
             <>
-              <p className="mt-2 font-bold">
+              <p className="mt-2 font-medium">
                 Your answer:
               </p>
               <Markdown>{question.options[userAnswers[index]]}</Markdown>
-              <p className="font-bold">
+              <p className="font-bold my-1">
                 {userAnswers[index] === question.correctAnswer ? (
                   <span className="text-green-600">Correct</span>
                 ) : (

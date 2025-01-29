@@ -48,7 +48,7 @@ export default function Question({
       )}
       <div className="grid grid-cols-1 gap-2">
         {options.map((option, index) => (
-          <Button key={index} variant="outline" className="justify-start text-left text-wrap py-4 h-auto font-medium" onClick={() => onAnswer(index)}>
+          <Button key={index} variant="outline" className="justify-start text-left text-wrap py-4 h-auto font-light" onClick={() => onAnswer(index)}>
             <Markdown>{option}</Markdown>
           </Button>
         ))}
