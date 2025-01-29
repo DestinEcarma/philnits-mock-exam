@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import ReactMarkdown from "react-markdown"
 import Markdown from "@/components/Markdown"
 
 interface QuestionProps {

@@ -3,7 +3,7 @@ import React from 'react'
 import 'katex/dist/katex.css';
 import { MarkdownPreviewProps } from "@uiw/react-markdown-preview/nohighlight";
 import rehypeKatex from "rehype-katex";
-import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
