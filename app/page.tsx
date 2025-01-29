@@ -49,12 +49,20 @@ export default function Quiz() {
   }, [quizStarted, quizCompleted, endQuiz])
 
   const handleAnswer = (selectedOption: number) => {
-    setUserAnswers([...userAnswers, selectedOption])
+    const newUserAnswers = [...userAnswers]
+    newUserAnswers[currentQuestion] = selectedOption
+    setUserAnswers(newUserAnswers)
 
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
     } else {
       endQuiz()
+    }
+  }
+
+  const handleGoBack = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1)
     }
   }
 
@@ -84,8 +92,10 @@ export default function Quiz() {
                 image={questions[currentQuestion].image}
                 options={questions[currentQuestion].options}
                 onAnswer={handleAnswer}
+                onGoBack={handleGoBack}
                 currentQuestionNumber={currentQuestion + 1}
                 totalQuestions={questions.length}
+                isFirstQuestion={currentQuestion === 0}
               />
             ) : (
               <Results

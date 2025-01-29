@@ -32,17 +32,10 @@
         "d) 27"
     ],
     "correctAnswer": 3,
-    "explanations": [
-        "A = Explanation.",
-        "B = Explanation.",
-        "C = Explanation.",
-        "D = Explanation."
-    ],
     "solution": "2024-3.png"
   },
   {
     "question": "Which of the following is an appropriate explanation of feedback control?",
-    "image": "",
     "options": [
       "a) It performs control in a predetermined order.",
       "b) It performs control to keep the output in line with the target value.",
@@ -68,5 +61,35 @@
     ],
     "correctAnswer": 1,
     "solution": "2024-5.png"
+  },
+  {
+    "question": "",
+    "image": "2024-6.png",
+    "options": [
+      "a) i ≥ 2N – 1",
+      "b) i ≥ 2N + 1",
+      "c) x ≥ 2N – 1",
+      "d) x ≥ 2N + 1"
+    ],
+    "correctAnswer": 1,
+    "solution": "2024-6.png"
+  },
+  {
+    "question": "",
+    "image": "",
+    "options": [
+        "a)", 
+        "b)", 
+        "c)", 
+        "d)"
+    ],
+    "correctAnswer": 0,
+    "explanations": [
+        "A = Explanation.",
+        "B = Explanation.",
+        "C = Explanation.",
+        "D = Explanation."
+    ],
+    "solution": ""
   }
 ]

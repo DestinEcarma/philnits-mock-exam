@@ -17,7 +17,7 @@ export default function LandingPage({ onStartQuiz }: LandingPageProps) {
         <ul className="list-disc list-inside space-y-2">
           <li>You have 1 hour and 30 minutes to complete the quiz</li>
           <li>Some questions may include images</li>
-          <li>After completing the quiz, you'll receive detailed explanations for each question</li>
+          <li>After completing the quiz, you&apos;ll receive detailed explanations for each question</li>
           <li>You can retake the quiz multiple times with different questions</li>
         </ul>
         <p>Are you ready to begin?</p>

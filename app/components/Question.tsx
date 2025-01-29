@@ -5,12 +5,23 @@ interface QuestionProps {
   question: string
   image?: string
   options: string[]
-  onAnswer: (selectedOption: number) => void,
-  currentQuestionNumber: number,
-  totalQuestions: number,
+  onAnswer: (selectedOption: number) => void
+  onGoBack: () => void
+  currentQuestionNumber: number
+  totalQuestions: number
+  isFirstQuestion: boolean
 }
 
-export default function Question({ question, image, options, onAnswer, currentQuestionNumber, totalQuestions }: QuestionProps) {
+export default function Question({
+  question,
+  image,
+  options,
+  onAnswer,
+  onGoBack,
+  currentQuestionNumber,
+  totalQuestions,
+  isFirstQuestion,
+}: QuestionProps) {
   return (
     <div className="space-y-4">
       <span className="text-sm font-medium bg-primary text-primary-foreground px-2 py-1 rounded-full">
@@ -36,6 +47,11 @@ export default function Question({ question, image, options, onAnswer, currentQu
             <p className="w-full py-2">{option}</p>
           </Button>
         ))}
+      </div>
+      <div className="flex justify-between items-center mt-4">
+        <Button onClick={onGoBack} disabled={isFirstQuestion} variant="outline">
+          Go Back
+        </Button>
       </div>
     </div>
   )

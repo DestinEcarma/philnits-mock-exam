@@ -29,7 +29,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
     <div className="space-y-4">
       <h2 className="text-2xl font-bold">Quiz Results</h2>
       {isTimeOut ? (
-        <p className="text-xl text-red-600 font-bold">Time's up!</p>
+        <p className="text-xl text-red-600 font-bold">Time&apos;s up!</p>
       ) : (
         <p className="text-xl text-green-600 font-bold">Quiz completed!</p>
       )}
