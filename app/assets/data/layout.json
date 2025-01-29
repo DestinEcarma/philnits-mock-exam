@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Question 1 here",
+        "image": "path to image here // optional",
+        "options": [
+            "A", 
+            "B", 
+            "C", 
+            "D"
+        ],
+        "correctAnswer": 0,
+        "explanations": [
+            "A = Explanation.",
+            "B = Explanation.",
+            "C = Explanation.",
+            "D = Explanation."
+        ],
+        "solution": "path to solution image here //this is optional"
+    },
+    {
+        "question": "",
+        "image": "",
+        "options": [
+            "A",
+            "B", 
+            "C", 
+            "D"
+        ],
+        "correctAnswer": 0,
+        "explanations": [
+            "A = Explanation.",
+            "B = Explanation.",
+            "C = Explanation.",
+            "D = Explanation."
+        ],
+        "solution": ""
+    }
+]
