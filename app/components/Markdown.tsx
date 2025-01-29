@@ -1,4 +1,4 @@
-import MDEditor, { ICommand, MDEditorProps } from '@uiw/react-md-editor'
+import MDEditor from '@uiw/react-md-editor'
 import React from 'react'
 import 'katex/dist/katex.css';
 import { MarkdownPreviewProps } from "@uiw/react-markdown-preview/nohighlight";
