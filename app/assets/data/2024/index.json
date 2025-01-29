@@ -2,94 +2,56 @@
   {
     "question": "What is the decimal representation of the hexadecimal number 123.4?",
     "options": [
-      "a) 83.25",
-      "b) 83.5",
-      "c) 291.25",
-      "d) 291.5"
+      "83.25",
+      "83.5",
+      "291.25",
+      "291.5"
     ],
     "correctAnswer": 2,
-    "solution": "2024-1.png"
+    "solution": "### Step 1: Convert the whole part (123) to decimal.\n\nThe hexadecimal number `123` can be expanded as:\n\n$1 \\times 16^2 + 2 \\times 16^1 + 3 \\times 16^0$\n\n$= 1 \\times 256 + 2 \\times 16 + 3 \\times 1$\n\n$= 256 + 32 + 3 = 291$\n\n ### Step 2: Convert the fractional part (0.4) to decimal.\n\nIn hexadecimal, `4` means \\( 4 \\times 16^{-1} \\):\n\n$4 \\times \\frac{1}{16} = \\frac{4}{16} = 0.25$\n\n ### Step 3: Add the whole and fractional parts together.\n\n$291 + 0.25 = 291.25$"
   },
   {
     "question": "Five people are sitting at a table in a restaurant. Two of them ordered coffee, and the other three ordered tea. The waiter forgets who ordered what and puts the drinks in a random order for the five persons. What is the probability that every person gets the correct drink?",
-    "image": "",
     "options": [
-        "a) 1/30",
-        "b) 1/20", 
-        "c) 1/10", 
-        "d) 3/10"
+      "$\\frac{1}{30}$",
+      "$\\frac{1}{20}$",
+      "$\\frac{1}{10}$",
+      "$\\frac{3}{10}$"
     ],
     "correctAnswer": 2,
-    "solution": "2024-2.png"
+    "solution": "### Step 1: List down the given\n\nGiven:\n- 5 people\n- 2 coffee orders\n- 3 tea orders\n\n### Step 2: Calculate the probability\n\nTo calculate probability, you must divide the number of favorable events by the total number of possible events.\n\n*Probability = Number of favorable outcomes / Total number of outcomes*\n\nUsing the formula above, it would be possible to calculate for the final answer using the values for either tea or coffee being served to the correct people. Since in the case that either one of them is served correctly, then the other will also be the same.\n\nCalculating for P, probability, using the values for coffee:\n\n$P = \\frac{2}{5} \\times \\frac{1}{4} = \\frac{2}{20} = 0.1$\n\nUsing the values for tea:\n\n$P = \\frac{3}{5} \\times \\frac{2}{4} \\times \\frac{1}{3} = \\frac{6}{60} = \\frac{1}{10} = 0.1$"
   },
   {
     "question": "The expression below is represented in postfix (reverse Polish) notation. What is the resulting value of this expression? Here, the numbers are in decimal, and the symbols ‘+’, ‘−’, ‘*’, and ‘/’ represent addition, subtraction, multiplication, and division operators, respectively\n\n100 5 6 2 + * 12 4 / − − 36 −",
-    "image": "",
     "options": [
-        "a) 5", 
-        "b) 18", 
-        "c) 21", 
-        "d) 27"
+      "5",
+      "18",
+      "21",
+      "27"
     ],
     "correctAnswer": 3,
-    "solution": "2024-3.png"
+    "solution": "### Step 1: Understanding Postfix Notation\n\nIn postfix notation, the operator appears after the operands, i.e., the operator between operands is taken out & is attached after operands.\n\n**Example:** Translate a ∗ d − (b + c) into Postfix form.\n\nad ∗ bc + −\n\nSince operators appear after operands ad * becomes translated into a * d and bc + becomes translated into b + c. Since this forms the two operands (a * d) and (b + c), the remaining operator uses those two resulting operands as its arguments, becoming the equation:\n\na ∗ d − (b + c)\n\nThe most common way of visualizing this is using the *Stack Implementation*, which will be used in the next step\n\n### Step 2: Using the Stack Implementation\n\n**Given: 100 5 6 2 + * 12 4 / − − 36 −**\n\n| **String Symbols**            | **Stack**         |\n| ----------------------------- | ----------------- |\n| 100 5 6 2 + * 12 4 / − − 36 − |                   |\n| 100                           | 100               |\n| 5                             | 100 5             |\n| 6                             | 100 5 6           |\n| 2                             | 100 5 6 2         |\n| +                             | 100 5 (6 + 2)     |\n| 5                             | 100 5 (8)         |\n| *                             | 100 (5 * 8)       |\n| 12                            | 100 (40) 12       |\n| 4                             | 100 (40) 12 4     |\n| /                             | 100 (40) (12 / 4) |\n| -                             | 100 (40 - 3)      |\n| -                             | (100 - 37)        |\n| 36                            | 63 36             |\n| -                             | (63- 36)          |\n|                               | 27                |\nThus, the answer is 27"
   },
   {
     "question": "Which of the following is an appropriate explanation of feedback control?",
     "options": [
-      "a) It performs control in a predetermined order.",
-      "b) It performs control to keep the output in line with the target value.",
-      "c) It performs control to prevent external disturbances from affecting the output.",
-      "d) It performs control without using the output."
+      "It performs control in a predetermined order.",
+      "It performs control to keep the output in line with the target value.",
+      "It performs control to prevent external disturbances from affecting the output.",
+      "It performs control without using the output."
     ],
     "correctAnswer": 1,
-    "explanations": [
-        "",
-        "Feedback Control in the context of Computer Science refers to the process of using feedback to monitor and manage the dissemination of information and the outcomes of actions taken to influence it.",
-        "",
-        ""
-    ]
+    "solution": "### Explanation\n\nAccording to [ScienceDirect.com](https://www.sciencedirect.com/topics/computer-science/feedback-control#:~:text=Feedback%20Control%20in%20the%20context,actions%20taken%20to%20influence%20it.)\n\nFeedback Control in the context of Computer Science refers to **the process of using feedback to monitor and manage the dissemination of information and the outcomes of actions taken to influence it**."
   },
   {
-    "question": "",
-    "image": "2024-5.png",
+    "question": "How many swaps are required in bubble sort when N elements in the array are already sorted in reverse order?",
     "options": [
-        "a) 2, 3, 4, 7, 8, 10, 13, 15, 18", 
-        "b) 2, 4, 8, 7, 3, 15, 18, 13, 10", 
-        "c) 10, 3, 2, 7, 4, 8, 13, 18, 15", 
-        "d) 10, 3, 13, 2, 7, 18, 4, 8, 15"
-    ],
-    "correctAnswer": 1,
-    "solution": "2024-5.png"
-  },
-  {
-    "question": "",
-    "image": "2024-6.png",
-    "options": [
-      "a) i ≥ 2N – 1",
-      "b) i ≥ 2N + 1",
-      "c) x ≥ 2N – 1",
-      "d) x ≥ 2N + 1"
-    ],
-    "correctAnswer": 1,
-    "solution": "2024-6.png"
-  },
-  {
-    "question": "",
-    "image": "",
-    "options": [
-        "a)", 
-        "b)", 
-        "c)", 
-        "d)"
+      "$\\frac{N(N-1)}{2}$",
+      "$\\frac{N^2}{2}$",
+      "$N(N-1)$",
+      "$N^2$"
     ],
     "correctAnswer": 0,
-    "explanations": [
-        "A = Explanation.",
-        "B = Explanation.",
-        "C = Explanation.",
-        "D = Explanation."
-    ],
-    "solution": ""
+    "solution": "### Step 1: Understanding the Bubble Sort Algorithm\n\nWhen the array is sorted in reverse order, every adjacent pair of elements is out of order. This means that every comparison will result in a swap.\n\n- In the first pass through the array, bubble sort will compare the first element with the second, the second with the third, and so on, until the last element. This results in N−1 comparisons and swaps.\n- In the second pass, the largest element (which is now at the end of the array) will not be compared. Thus, there will be N−2 comparisons and swaps.\n- This pattern continues, leading to:\n    - First pass: N−1 swaps\n    - Second pass: N−2 swaps\n    - Third pass: N−3 swaps\n    - ...\n    - Last pass: 1 swap\n\nGiven this, you can calculate the total number of swaps through this formula:\n\n$Total Swaps=(N−1)+(N−2)+(N−3)+…+1$\n\nor through\n\n$\\frac{N(N-1)}{2}$"
   }
 ]

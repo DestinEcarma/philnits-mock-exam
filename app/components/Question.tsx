@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import ReactMarkdown from "react-markdown"
+import Markdown from "@/components/Markdown"
 
 interface QuestionProps {
   question: string
@@ -27,7 +29,11 @@ export default function Question({
       <span className="text-sm font-medium bg-primary text-primary-foreground px-2 py-1 rounded-full">
         Question {currentQuestionNumber} of {totalQuestions}
       </span>
-      <h2 className="question text-xl font-semibold">{question}</h2>
+      <div className="font-medium">
+        <Markdown>
+          {question}
+        </Markdown>
+      </div>
       {image && (
         <div className="relative w-full my-2">
           <Image
@@ -43,8 +49,8 @@ export default function Question({
       )}
       <div className="grid grid-cols-1 gap-2">
         {options.map((option, index) => (
-          <Button key={index} variant="outline" className="justify-start text-left text-wrap py-2 h-auto" onClick={() => onAnswer(index)}>
-            <p className="w-full py-2">{option}</p>
+          <Button key={index} variant="outline" className="justify-start text-left text-wrap py-4 h-auto font-medium" onClick={() => onAnswer(index)}>
+            <Markdown>{option}</Markdown>
           </Button>
         ))}
       </div>

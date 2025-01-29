@@ -5,7 +5,6 @@ export interface QuizQuestion {
     image?: string
     options: string[]
     correctAnswer: number
-    explanations?: string[]
     solution?: string // New optional field for markdown solution
   }
 

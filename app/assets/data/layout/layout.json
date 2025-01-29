@@ -9,13 +9,7 @@
             "d)"
         ],
         "correctAnswer": 0,
-        "explanations": [
-            "A = Explanation.",
-            "B = Explanation.",
-            "C = Explanation.",
-            "D = Explanation."
-        ],
-        "solution": "path to solution image here //this is optional"
+        "solution": "md solution here"
     },
     {
         "question": "",
@@ -27,12 +21,6 @@
             "d)"
         ],
         "correctAnswer": 0,
-        "explanations": [
-            "A = Explanation.",
-            "B = Explanation.",
-            "C = Explanation.",
-            "D = Explanation."
-        ],
         "solution": ""
     }
 ]
