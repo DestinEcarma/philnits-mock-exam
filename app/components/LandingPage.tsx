@@ -9,7 +9,7 @@ export default function LandingPage({ onStartQuiz }: LandingPageProps) {
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-3xl">Welcome to the PhilNITS Mock Morning Exam</CardTitle>
+        <CardTitle className="text-3xl">PhilNITS FE AM Mock Exam</CardTitle>
         <CardDescription>Test your knowledge and prepare for your upcoming exam</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

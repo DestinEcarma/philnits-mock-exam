@@ -3,10 +3,10 @@
         "question": "Question 1 here",
         "image": "path to image here // optional",
         "options": [
-            "A", 
-            "B", 
-            "C", 
-            "D"
+            "a)", 
+            "b)", 
+            "c)", 
+            "d)"
         ],
         "correctAnswer": 0,
         "explanations": [
@@ -21,10 +21,10 @@
         "question": "",
         "image": "",
         "options": [
-            "A",
-            "B", 
-            "C", 
-            "D"
+            "a)", 
+            "b)", 
+            "c)", 
+            "d)"
         ],
         "correctAnswer": 0,
         "explanations": [
