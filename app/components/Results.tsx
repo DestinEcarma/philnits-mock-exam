@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import type { QuizQuestion } from "@/assets/data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -41,27 +40,18 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
       <p className="text-xl">Time taken: {formatTime(timeTaken)}</p>
       {quizData.map((question, index) => (
         <div key={index} className={`border p-4 rounded-md ${userAnswers[index] === question.correctAnswer ? 'bg-green-50' : 'bg-red-50'}`}>
+          <h2 className="font-bold text-sm mb-4">{question.id}</h2>
           <div className="font-medium">
             <Markdown>{question.question}</Markdown>
           </div>
-          {question.image && (
-            <div className="relative w-full my-2">
-              <Image
-                src={`/images/${question.image}`}
-                alt="Question image"
-                width={800} // Adjust based on expected width
-                height={0}  // Height will auto-adjust based on aspect ratio
-                style={{ height: "auto", width: "100%", objectFit: "contain" }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          )}
           {userAnswers[index] !== undefined ? (
             <>
-              <p className="mt-2 font-medium">
+              <p className="mt-2 font-semibold">
                 Your answer:
               </p>
-              <Markdown>{question.options[userAnswers[index]]}</Markdown>
+              <div className="font-medium">
+                <Markdown>{question.options[userAnswers[index]]}</Markdown>
+              </div>
               <p className="font-bold my-1">
                 {userAnswers[index] === question.correctAnswer ? (
                   <span className="text-green-600">Correct</span>
@@ -70,12 +60,14 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
                 )}
               </p>
               {userAnswers[index] !== question.correctAnswer && (
-                <>
-                    <p className="mt-2 text-green-600 font-semibold">
+                <div className="text-green-600">
+                    <p className="mt-2 font-semibold">
                       Correct answer:
                     </p>
-                    <Markdown>{question.options[question.correctAnswer]}</Markdown>
-                </>
+                    <div className="font-medium">
+                      <Markdown>{question.options[question.correctAnswer]}</Markdown>
+                    </div>
+                </div>
               )}
               {question.solution && (
                 <Accordion type="single" collapsible className="w-full">
@@ -95,9 +87,16 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
           ) : (
             <>
               <p className="mt-2 text-red-600 font-bold">Not answered</p>
-              <p className="mt-2 text-green-600 font-semibold">
-                Correct answer: {question.options[question.correctAnswer]}
-              </p>
+              {userAnswers[index] !== question.correctAnswer && (
+                <div className="text-green-600">
+                    <p className="mt-2 font-semibold">
+                      Correct answer:
+                    </p>
+                    <div className="font-medium">
+                      <Markdown>{question.options[question.correctAnswer]}</Markdown>
+                    </div>
+                </div>
+              )}
               {question.solution && (
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="solution">

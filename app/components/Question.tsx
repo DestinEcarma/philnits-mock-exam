@@ -1,24 +1,25 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Markdown from "@/components/Markdown"
 
 interface QuestionProps {
+  id: string
   question: string
-  image?: string
   options: string[]
   onAnswer: (selectedOption: number) => void
   onGoBack: () => void
+  onSubmit: () => void
   currentQuestionNumber: number
   totalQuestions: number
   isFirstQuestion: boolean
 }
 
 export default function Question({
+  id,
   question,
-  image,
   options,
   onAnswer,
   onGoBack,
+  onSubmit,
   currentQuestionNumber,
   totalQuestions,
   isFirstQuestion,
@@ -28,27 +29,15 @@ export default function Question({
       <span className="text-sm font-medium bg-primary text-primary-foreground px-2 py-1 rounded-full">
         Question {currentQuestionNumber} of {totalQuestions}
       </span>
+      <h2 className="font-bold text-sm">{id}</h2>
       <div className="font-medium">
         <Markdown>
           {question}
         </Markdown>
       </div>
-      {image && (
-        <div className="relative w-full my-2">
-          <Image
-            src={`/images/${image}`}
-            alt="Question image"
-            width={800} // Adjust based on expected width
-            height={0}  // Height will auto-adjust based on aspect ratio
-            style={{ height: "auto", width: "100%", objectFit: "contain" }}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
-        
-      )}
       <div className="grid grid-cols-1 gap-2">
         {options.map((option, index) => (
-          <Button key={index} variant="outline" className="justify-start text-left text-wrap py-4 h-auto font-light" onClick={() => onAnswer(index)}>
+          <Button key={index} variant="outline" className="justify-start text-left text-wrap py-4 h-auto font-normal" onClick={() => onAnswer(index)}>
             <Markdown>{option}</Markdown>
           </Button>
         ))}
@@ -56,6 +45,9 @@ export default function Question({
       <div className="flex justify-between items-center mt-4">
         <Button onClick={onGoBack} disabled={isFirstQuestion} variant="outline">
           Go Back
+        </Button>
+        <Button onClick={onSubmit} variant="outline">
+          Submit Early
         </Button>
       </div>
     </div>

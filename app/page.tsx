@@ -22,6 +22,10 @@ export default function Quiz() {
   const startQuiz = useCallback(() => {
     const shuffled = [...quizData].sort(() => 0.5 - Math.random())
     setQuestions(shuffled.slice(0, QUESTIONS_COUNT))
+    // // FOR DEBUGGING
+    // const debugIndex = 55
+    // setQuestions(quizData.slice(debugIndex, debugIndex + 5))
+    
     setQuizStarted(true)
     setTimeRemaining(QUIZ_TIME)
   }, [])
@@ -66,6 +70,12 @@ export default function Quiz() {
     }
   }
 
+  const handleSubmit = () => {
+    if(confirm("Are you sure?")) {
+      endQuiz()
+    }
+  }
+
   const restartQuiz = () => {
     setCurrentQuestion(0)
     setUserAnswers([])
@@ -88,11 +98,12 @@ export default function Quiz() {
             <Timer timeRemaining={timeRemaining} />
             {!quizCompleted && questions.length > 0 ? (
               <Question
+                id={questions[currentQuestion].id}
                 question={questions[currentQuestion].question}
-                image={questions[currentQuestion].image}
                 options={questions[currentQuestion].options}
                 onAnswer={handleAnswer}
                 onGoBack={handleGoBack}
+                onSubmit={handleSubmit}
                 currentQuestionNumber={currentQuestion + 1}
                 totalQuestions={questions.length}
                 isFirstQuestion={currentQuestion === 0}

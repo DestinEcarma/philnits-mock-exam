@@ -1,0 +1,33 @@
+
+Prompt:
+
+Clear any history related to JSON content.
+
+Please generate an array of JSON files in the following format:
+
+```typescript
+export interface QuizQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  solution?: string; // Optional field for markdown solution
+}
+```
+
+Instructions:
+
+1. **Do not modify any text** from the original content.
+2. If the question contains an image, retain it and ensure proper Markdown formatting: `![Alt](path)`.
+   - The image path should begin with `Files/` followed by the pathname. For example, convert `![[Pasted image 20241017134330.png]]` into `![Image](Files/Pasted%20image%2020241017134330.png)`.
+3. The same applies to images in the **solution** field: convert paths accordingly and retain the Markdown format.
+4. Only include the options in the `options` field. Do not include the choices directly in the question text.
+5. Remove any "a)", "b)", "c)", etc., from the options. Only include the words or values.
+6. Ensure that **LaTeX is fixed for compatibility** with MDEditor. This includes handling any necessary escapes or formatting changes.
+7. **Always use at least two `
+`** to create new lines instead of a single `
+`. For example: `
+
+(1)...`. Do not use a single `
+` unless explicitly required.
+8. **Keep all original content intact**, including solutions, explanations, and any extra details. Do not add new information or modify existing content.
