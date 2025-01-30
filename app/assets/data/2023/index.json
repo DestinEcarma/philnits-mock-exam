@@ -103,6 +103,246 @@
         ],
         "correctAnswer": 3,
         "solution": "a) It is based on HTML and expands its functions.\n- no, it doesn't necessarily have to expand HTML, it can be like a\n\nconfig file like `beans.xml` for Java.\n\nb) It requires a dedicated editor for writing XML documents.\n\n\n\n- no, you can edit it with any text editor. It's just a plaintext file after all.c) It integrates the logical structure and display style of documents.\n\n- no, XML only cares about the logical structure of its tags, not the display style of documents.\n\n- only HTML can inline CSS to talk about display style of documents.\n\nd) It enables users to define the attribute information and logical structure of documents by using the user’s own tags.\n\n- yes, we, as the user, can define attribute & logical structure (tags)\n\n- this is the correct choice"
+    },
+    {
+        "id": "2023A_FE_AM_11",
+        "question": "In a CPU, which of the following is a special register that contains the address of the next instruction to be fetched?",
+        "options": [
+        "Accumulator",
+        "Index Register",
+        "Instruction Register",
+        "Program Counter"
+        ],
+        "correctAnswer": 3,
+        "solution": "You might've thought it was Instruction Register, however that register holds the CURRENTLY EXECUTING instruction that is about to be decoded & executed by the ALU.\n\n## Description of the Components\n\n- **Accumulator**: This register holds the intermediate result of arithmetic or logical operations. Like if the calculation depends on the sum of a previous expression, we store the sum in the accumulator first before using it in the next expression.\n\n- **Index Register**: This register holds an offset value for memory addresses for accessing struct data types and arrays.\n\n- **Instruction Register**: This register holds the CURRENT instruction that has just been fetched from memory and is about to be decoded and executed.\n\n- **Program Counter (PC)**: The PC always points to the address of the next instruction in the program. After fetching an instruction, the PC is incremented so that it points to the subsequent instruction, ensuring the CPU executes the program sequentially. In case of jumps or branches, the PC is updated with the target address."
+    },
+    {
+        "id": "2023A_FE_AM_12",
+        "question": "Which of the following is an appropriate CPU operation associated with cache memory?",
+        "options": [
+        "When a cache hit occurs, the CPU fetches data from ROM.",
+        "When a cache hit occurs, the CPU fetches data from the main memory.",
+        "When a cache miss occurs, the CPU fetches data from the cache memory.",
+        "When a cache miss occurs, the CPU fetches data from the main memory."
+        ],
+        "correctAnswer": 3,
+        "solution": "## Understanding the Cache (Hit & Miss)\n\nThe cache is used to store data that is frequently used. So if we frequently use an `add()` function, we store it in lower levels of cache so that it is closer to the CPU and faster to read. Reading an instruction or memory address that is in a cache is called a 'Cache Hit'.\n\n![Image](Files/Pasted%20image%2020241019120834.png)\n\nA 'Cache Miss' happens when we do not find it in the next higher level of cache, we look upwards to the next higher level and see if its there. Eventually, going back to the main memory, where our program code resides in. \n\nIn this question, we are currently working in the CPU level with CPU registers (level 0), so if we have a cache miss, this means we did not find something in the Cache Memory (level 1), so we jump another level to Main Memory (level 2).\n\n\nThe other answers do not follow the proper hierarchy and immediately jump multiple levels."
+    },
+    {
+        "id": "2023A_FE_AM_13",
+        "question": "Which of the following is a computer architecture in which a processor executes the same instruction on multiple data?",
+        "options": [
+        "MIMD",
+        "MISD",
+        "SIMD",
+        "SISD"
+        ],
+        "correctAnswer": 2,
+        "solution": "### **1. SIMD (Single Instruction, Multiple Data)**:\n\n- **Definition**: SIMD is a parallel computing architecture where **one instruction** is applied to **multiple data** elements at the same time.\n\n- **Example**: Useful for tasks like vector processing or graphics processing, where the same operation (e.g., adding two arrays) needs to be applied to many data points in parallel.\n\n- **Use Case**: Often used in **multimedia applications**, like image processing or video games, where similar operations are performed on large datasets.\n\n### **2. MIMD (Multiple Instruction, Multiple Data)**:\n\n- **Definition**: MIMD is a parallel architecture where **multiple instructions** operate on **multiple data** streams simultaneously. Each processor works independently, executing its own instruction on its own data.\n\n- **Example**: Used in systems with multiple processors or cores, such as multi-core CPUs, where each core can run a different program or task.\n\n- **Use Case**: MIMD is used in **general-purpose multi-core processors** and supercomputers, where different tasks need to run concurrently.\n\n### **3. MISD (Multiple Instruction, Single Data)**:\n\n- **Definition**: MISD is a rare and theoretical architecture where **multiple instructions** operate on **one piece of data**. This means multiple processors work on the same data with different instructions.\n\n- **Example**: It's not widely implemented in practice, but some fault-tolerant systems may use it for error checking by running different algorithms on the same data.\n\n- **Use Case**: Limited real-world use; mostly found in very specialized or research-based systems.\n\n### **4. SISD (Single Instruction, Single Data)**:\n\n- **Definition**: SISD is a traditional, non-parallel computing architecture where **one instruction** is executed on **one piece of data** at a time.\n\n- **Example**: Most **conventional single-core processors** operate in an SISD fashion.\n\n- **Use Case**: Found in simple, sequential processing where parallelism is not required."
+    },
+    {
+        "id": "2023A_FE_AM_14",
+        "question": "ECC is used for error detection and correction in memory. When n+2 redundant bits are required for a data bus having a width of $2^n$ bits, what is the number of redundant bits that are required for a data bus having a width of 128 bits?",
+        "options": [
+        "3",
+        "8",
+        "9",
+        "10"
+        ],
+        "correctAnswer": 2,
+        "solution": "## What is ECC?\n\nIt is an acronym for 'Error Code Correction' and it's used to pinpoint error codes by using multiple parity bits laid out the block of bits.\n\n![Imagee](Files/Pasted%20image%2020241019124146.png)\n\nGiven:\n- We need n+2 redundant bits for our data bus\n- Our data bus size formula is $2^n$\n- Our desired data bus size is 128 bits\n\nAsked:\n- How many redundant bits should we allocate for our Data Bus of 128 bits?\n\nSolution:\n1. First, we find n, so we do $2^n = 128$.\n- what power of $2$ allows us to get 128? Yes, it's 7, so $n = 7$.\n2. We can now substitute $n+2$ so that $7 + 2 = 9$, meaning we need $9$ redundant bits for our data bus of size $2^n$.\n3. Our answer is **c) 9**."
+    },
+    {
+        "id": "2023A_FE_AM_15",
+        "question": "Which of the following is the most appropriate explanation of grid computing?",
+        "options": [
+        "A computing task is distributed to several computers in the network to attain computational capacity.",
+        "Physical devices such as computers or network devices are emulated to circumvent compatibility constraints and attain software portability and flexibility.",
+        "Requirements are stated as constraints on response time and/or on the temporal validity of sensory data.",
+        "Sensing devices are connected to a network to provide feedback and control through personal mobile devices."
+        ],
+        "correctAnswer": 0,
+        "solution": "When you think of a grid, you think of multiple nodes that connect to one another to create a network.\n\nIn our choices, only 1 word is synonymous or related to 'multiple nodes', which is in *a) 'A computing task is distributed to several computers'*\n\nTherefore, our answer is a).\n\n> [!quote] Grid computing is defined as a distributed architecture of multiple computers connected by networks that work together to accomplish a joint task.\n\n![Image](Files/Pasted%20image%2020241019125026.png)"
+    },
+    {
+        "id": "2023A_FE_AM_16",
+        "question": "Which of the following is an RAID configuration that deploys two parity records to different disk drives enabling two simultaneous disk drive failures in the same RAID group to be recovered?",
+        "options": [
+        "RAID0",
+        "RAID1",
+        "RAID5",
+        "RAID6"
+        ],
+        "correctAnswer": 3,
+        "solution": "## What is RAID?\n\n> [!info] Redundant Array of Independent Disks\n\n> Lets us use multiple hard disks as redundant disks in case one breaks, the other two still has a copy of the data.\n\n### Raid Levels\n\n> [!tip] The higher the RAID level, the more redundant the storage is & the more resilient it is to failure. It's better for data integrity, but it's slower to save data across all disks.\n\n![Image](Files/Pasted%20image%2020241019125441.png)\n\nThe question requires us to have **TWO disk failures**, so our only possible answer is RAID6 according to the table above."
+    },
+    {
+        "id": "2023A_FE_AM_17",
+        "question": "Which of the following occurs when a program attempts to access a page that is mapped in the virtual address space but is not located in the main memory? Here, the OS supports paging.",
+        "options": [
+        "Fatal error",
+        "Page fault",
+        "Scheduling error",
+        "Segmentation fault"
+        ],
+        "correctAnswer": 1,
+        "solution": "## What are their Definitions?\n\n- **Fatal Error**: An irrecoverable error that forces a program to stop.\n\n- **Page Fault**: An event triggered when the program accesses memory not currently in RAM, and the OS retrieves it from disk.\n\n- **Scheduling Error**: A problem in how the OS allocates CPU time to tasks, leading to inefficiency or deadlocks.\n\n- **Segmentation Fault**: A program tries to access illegal or non-existent memory, often leading to a crash.\n\n## What is Paging?\n\nIt's when we separate our memory into blocks and keep track of it in a paging table. This paging table maps the memory address of our main memory to our secondary memory, like when code is saved to main memory & is mapped (via paging) to our main memory to execute.\n\nIf we try to access memory in our main memory that doesn't exist, it will raise a Page Fault and attempt to find the corresponding mapped page in our secondary memory.\n\n## Discussing the Answer\n\nWe might have thought of Segmentation Fault, however that is different. It's when we access memory that DOES EXIST, but we do not have access permissions.\n\n- each program is 'allocated memory' when a program runs - meaning the CPU leases it memory it can borrow and it cannot access others - otherwise it leads to a segmentation fault.\n\nIf the computer did not support paging, accessing invalid memory will cause a Fatal Error and crash the program.\n\nHowever, it does support paging, so a Page Fault is raised instead.\n\nTherefore, our answer is **b) Page fault**."
+    },
+    {
+        "id": "2023A_FE_AM_18",
+        "question": "Which of the following is an appropriate description concerning the round robin process scheduling method?",
+        "options": [
+        "CPU resources are allocated to each process in order of priority specified in advance when a particular event occurs.",
+        "CPU resources are allocated to each process in order of processing time from shortest to longest.",
+        "CPU resources are allocated to the first executable process in the queue when an interval-timer interrupt is generated.",
+        "CPU resources are allocated to the process that needs to start immediately when some kind of interrupt is generated."
+        ],
+        "correctAnswer": 2,
+        "solution": "## How does Round Robin Work?\n\nWatch this video: [Scheduling Algorithms - Round Robin Scheduling - YouTube](https://www.youtube.com/watch?v=YzBBJYfwdi8).\n\nNotes:\n\n- we have a set time quantum (window for execution) \n\n- it serves as the amount of time the CPU works on a process before moving on to the next one\n\n- processes aren't scheduled by time to execute or a specific priority, they are just inserted at the tail of a CIRCULAR queue.\n\n- whoever was the first process to be enqueued, it will be the first to execute for the time quantum amount\n\n- if it's not done, the CPU moves to the next process and does the same.\n\n- if it's done, it's dequeued from the queue.\n\n## Discussing the Possible Answers\n\na) CPU resources are allocated to each process in order of priority specified in advance when a particular event occurs. \n\n- we don't have priority in round robin, so this is wrong.\n\nb) CPU resources are allocated to each process in order of processing time from shortest to longest. \n\n- we don't take into account the processing time in round robin, it's first-come, first-serve.\n\nd) CPU resources are allocated to the process that needs to start immediately when some \n\nkind of interrupt is generated. \n\n- the 'process that needs to start immediately' does not fit the first-come, first-serve framework.\n\n- sort of correct, but we can find a better solution to describe Round Robin better\n\n**c) CPU resources are allocated to the first executable process in the queue when an** \n\n**interval-timer interrupt is generated.** \n\n- there we go, we allocate resources to the first executable process (first-come, first-serve) and we have an interval-timer interrupt (time quantum).\n\n- this is our answer."
+    },
+    {
+        "id": "2023A_FE_AM_19",
+        "question": "Which of the following is an explanation of the function of an archiver that is one of the data management utilities?",
+        "options": [
+        "Compiling several files into one file or reconstructing the original files in order to perform data backup and distribution",
+        "Creating both an area for recording data and an area for managing data on a single hard disk",
+        "Keeping data secure through file protection for safeguarding data from unauthorized use and destruction, and also through copy protection for preventing unauthorized copying",
+        "Rearranging a file into contiguous areas, to the extent possible, on a hard disk in which fragmentation has occurred"
+        ],
+        "correctAnswer": 0,
+        "solution": "You know how in `.zip` file management tools like 7z and WinRAR, you can select multiple files and click 'Add to archive'? Afterwards, it compresses and groups your files into a single `.zip` file so that it's easier to transfer and compress?\n\nYeah, that's basically what a) is doing. We are 'archiving' files into a single file to be easily moved or compressed into a smaller format, which we can 'Extract' or reconstruct to the originals if we need to."
+    },
+    {
+        "id": "2023A_FE_AM_20",
+        "question": "Which of the following is a sequential circuit that has two stable states?",
+        "options": [
+        "Adder circuit",
+        "Capacitor",
+        "Flip-flop",
+        "NAND gate"
+        ],
+        "correctAnswer": 2,
+        "solution": "## What is a Flip-Flop\n\nA flip-flop in digital electronics is a circuit with **two stable states that can be used to store binary data.**\n\nThe stored data can be changed by applying varying inputs.\n\nFlip-flops and latches are fundamental building blocks of digital electronics systems used in computers, communications, and many other types of systems. Both are used as **data storage elements**.\n\n## Why the Others Are Wrong\n\n- **a) Adder circuit**: An adder circuit performs arithmetic operations like addition but does not have stable states. It is a combinational circuit, meaning it doesn't store data but rather computes outputs based on current inputs.\n\n- **b) Capacitor**: A capacitor is a passive electronic component that stores electric charge temporarily, but it does not have defined binary states in the context of a digital circuit like flip-flops do.\n\n- **d) NAND gate**: A NAND gate is a basic logic gate used in digital circuits to perform a logical operation. It's a combinational circuit that produces an output based on its current inputs, but it doesn’t have memory or stable states like a flip-flop."
+    },
+    {
+        "id": "2023A_FE_AM_21",
+        "question": "Use DeMorgan's Law\n\n![Image](Files/Pasted%20image%2020241019133645.png)\n\nOur original circuit expressed in Boolean Algebra is: $((B\\cap C)' \\cup A)'$",
+        "options": [
+        "(B∩C)' ∪ A)",
+        "(B∩C) ∩ A'",
+        "(B∩C)' ∩ A'",
+        "(B∩C) ∩ A"
+        ],
+        "correctAnswer": 2,
+        "solution": "Our original circuit expressed in Boolean Algebra is: $((B\\cap C)' \\cup A)'$. Let's simplify this.\n\n1. $(B\\cap C) \\cap A'$ by DeMorgan's & Double Negation Law\n- double negation happened when we distributed the `'` to $(B \\cap C)'$ making it $(B \\cap C)'.$\n\nAs we can see, this is equivalent to answer C.\n\n![Image](Files/Pasted%20image%2020241019134139.png)"
+    },
+    {
+        "id": "2023A_FE_AM_22",
+        "question": "A power supply unit has a rated output power of 500 watts and an efficiency of 80%. In order to obtain an output power of 500 watts from this power supply unit, how many watts is the minimum input power?",
+        "options": [
+        "100",
+        "400",
+        "625",
+        "900"
+        ],
+        "correctAnswer": 2,
+        "solution": "We can define output power as 'Output Power = Input Power * Efficiency'.\n\nSo in our example, let's see what's given & let's find the solution.\n\nGiven:\n- output power 500W\n- efficiency 80%\n\nAsked:\n- input power\n\nSolution:\n\n1. We can derive the formula for input power by isolating it from our formula.\n\n- (Output Power / Efficiency) = Input Power\n\n2. Now we can substitute the variables into the formula\n- (500 / 0.8) = 625."
+    },
+    {
+        "id": "2023A_FE_AM_23",
+        "question": "When an order data in the format shown below is entered, which of the following is a data validation method that is performed to determine whether the order date is a business day and whether the date is on or before the date of data entry or after the date of data entry?",
+        "options": [
+        "Duplicate check",
+        "Format check",
+        "Logical check",
+        "Sequence check"
+        ],
+        "correctAnswer": 2,
+        "solution": "Our answer is c) because we need to make the data adhere to multiple business logic constraints. You might have answered d) because the last part of the problem talks about order 'or after the date of data entry', but it has other clauses it must fulfill, hence why it should be a business logic check."
+    },
+    {
+        "id": "2023A_FE_AM_24",
+        "question": "Which of the following is a process in PCM to capture analog values from audio signals at a regular interval?",
+        "options": [
+        "Encoding",
+        "Reverse quantization",
+        "Quantization",
+        "Sampling"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Key Processes in PCM:\n\nPCM involves three key steps to convert an analog signal (like an audio signal) into a digital signal:\n\n1. **Sampling**:\n\n- The analog signal is sampled at regular intervals. In this step, the continuous analog signal is measured at discrete points in time.\n\n- **Purpose**: To capture the signal’s amplitude (value) at these regular intervals.\n\n2. **Quantization**:\n\n- After sampling, the analog values are rounded to the nearest value within a range of discrete levels. This process introduces a small\n\nerror called 'quantization noise.'\n\n- **Purpose**: To convert the sampled values into a finite set of values for easier digital representation.\n\n3. **Encoding**:\n\n- The quantized values are converted into a binary format (0s and 1s).\n\n- **Purpose**: To represent the data in digital form for storage, transmission, or processing.\n\n## The Answer\n\nd) Sampling matches the description of the question to capture analog signals at regular intervals.\n\nPCM involves three key steps: 1. Sampling, 2. Quantization, 3. Encoding."
+    },
+    {
+        "id": "2023A_FE_AM_25",
+        "question": "In a DBMS, which of the following is a function that decides the schema?",
+        "options": [
+        "Definition function",
+        "Maintenance function",
+        "Recovery function",
+        "Security function"
+        ],
+        "correctAnswer": 0,
+        "solution": "a) Definition function: Responsible for defining and managing the database schema, including structure and relationships.\n\nb) Maintenance function: Ensures the smooth operation of the database by updating and optimizing it over time.\n\nc) **Recovery function**: Handles restoring the database to a previous state in case of failure or data loss.\n\nd) **Security function**: Manages access controls, ensuring data integrity and preventing unauthorized access."
+    },
+    {
+        "id": "2023A_FE_AM_26",
+        "question": "Which of the following is an appropriate method used to remove data redundancy in relational database systems?",
+        "options": [
+        "Entity-relationship",
+        "Functional dependency",
+        "Hierarchical",
+        "Normalization"
+        ],
+        "correctAnswer": 3,
+        "solution": "a) **Entity-relationship**: A diagrammatic technique to represent entities and relationships between them in a database.\n\nb) **Functional dependency**: A constraint that describes the relationship between attributes in a relational database.\n\nA **functional dependency** exists when one attribute uniquely determines another attribute. For example:\n\n- **EmployeeID → EmployeeName**: This means that each **EmployeeID** uniquely determines the corresponding **EmployeeName**. If you know the **EmployeeID**, you can always determine the **EmployeeName**.\n\n- **DepartmentID → DepartmentName**: This means that for each **DepartmentID**, there is a unique **DepartmentName**. If you know the **DepartmentID**, you can uniquely determine the **DepartmentName**.\n\nc) **Hierarchical**: A database model that organizes data in a tree-like structure, where each record has a single parent.\n\nd) **Normalization**: A process used to structure a relational database to minimize redundancy and dependency by organizing data into related tables."
+    },
+    {
+        "id": "2023A_FE_AM_27",
+        "question": "Which of the following is the most appropriate description concerning the primary role of an SQL query optimizer?",
+        "options": [
+        "It determines the most efficient way to execute a query.",
+        "It minimizes the number of rows in a result set.",
+        "It parses a query and improves it for efficient network transmission.",
+        "It stores the results of frequently used queries in a cache."
+        ],
+        "correctAnswer": 0,
+        "solution": "The goal of SQL query optimization is improved database efficiency and performance, minimizing the response time of your queries."
+    },
+    {
+        "id": "2023A_FE_AM_28",
+        "question": "![Image](Files/Pasted%20image%2020241019161313.png)",
+        "options": [
+        "StudentNumber HAVING AVG(Score) >= 80",
+        "StudentNumber WHERE AVG(Score) >= 80",
+        "Subject HAVING AVG(Score) >= 80",
+        "Subject WHERE AVG(Score) >= 80"
+        ],
+        "correctAnswer": 0,
+        "solution": "This means, we group all scores of the student by their `StudentNumber`, then we `AVG()` all of it, per student. Afterwards, we use the `HAVING AVG(Score) >= 80` to only show `group, AVG()` rows that have `AVG(Score) >= 80`.\n\n## Aggregate SQL Functions\n\nThe `GROUP BY <attr>` clause selects rows having a common attribute value `<attr>` into a smaller set of rows.\n- **typically used with aggregate functions** \n- for example, `SELECT item_name, SUM(price) FROM items GROUP BY item_name` will sum all the prices of each item, then group the `item_name` column to their corresponding `SUM(price)`.\n\n## Discussing Alternatives\n\nb) is wrong because `WHERE` does not apply to `GROUP BY`, but rather on the initial `SELECT StudentNumber`.\n\nc) is wrong because we are trying to average the `StudentNumber` scores, not the entire `Subject`.\n\nd) is wrong because of the same reason b) is wrong and we are not looking to average the `Subject` scores, but rather the `StudentNumber` scores."
+    },
+    {
+        "id": "2023A_FE_AM_29",
+        "question": "Which of the following is a file in which values before and after an update of the database are written and saved as the update history of the database?",
+        "options": [
+        "Backup file",
+        "Checkpoint file",
+        "Dump file",
+        "Log file"
+        ],
+        "correctAnswer": 3,
+        "solution": "## Summary of Choices\n\n### a) Backup file\n\nA backup file is a copy of the database or a subset of its data that is stored separately to **prevent data loss in case of failure, corruption, or accidental deletion**. Backups can be full (containing the entire database) or incremental (containing only changes made since the last backup).\n\n### b) Checkpoint file\n\nA checkpoint file is a **point-in-time snapshot of the database state, created during the database's operation**. It saves the current state of the database to minimize the amount of data that needs to be recovered after a crash, ensuring that only changes made after the checkpoint need to be processed.\n- used to rollback crashes\n\n### c) Dump file\n\nA dump file is a **complete export of the database's contents**, usually in a format suitable for storage or transfer. This can be used to create a backup, migrate data to another database, or analyze the database structure and data.\n\n### d) Log file\n\nA log file **records all changes made to the database, including before and after values of updates**, which provides a history of operations. It is critical for data recovery, allowing the database to be restored to a consistent state in case of a crash or failure.\n- used to rollback data mutations or transactions\n- it contains data like the type of operation & the values"
+    },
+    {
+        "id": "2023A_FE_AM_30",
+        "question": "Which of the following is the most appropriate information for a router to determine the destination of an incoming packet?",
+        "options": [
+        "Destination IP address",
+        "Destination MAC address",
+        "Source IP address",
+        "Source MAC address"
+        ],
+        "correctAnswer": 0,
+        "solution": "## Justification\n\nWe need to determine the destination, so choices c) and d) for 'Source' metadata is redundant, leaving us with choices a) and b).\n\nWe need to remember that routers mainly operate in the Network Layer (Layer 3) while switches operate in the Data Link Layer (Layer 2).\n- Network Layer uses packets & IP Addresses\n- Data Link Layer uses frames & MAC Addresses\n\nTherefore, since Routers are interested in IP Addresses, the answer is a) Destination IP address to determine the destination of an incoming packet."
     }
-    ]
+]
       

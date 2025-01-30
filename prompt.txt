@@ -1,4 +1,3 @@
-
 Prompt:
 
 Clear any history related to JSON content.
@@ -24,10 +23,10 @@ Instructions:
 4. Only include the options in the `options` field. Do not include the choices directly in the question text.
 5. Remove any "a)", "b)", "c)", etc., from the options. Only include the words or values.
 6. Ensure that **LaTeX is fixed for compatibility** with MDEditor. This includes handling any necessary escapes or formatting changes.
-7. **Always use at least two `
-`** to create new lines instead of a single `
-`. For example: `
-
-(1)...`. Do not use a single `
-` unless explicitly required.
+7. **Always use at least two `\n`** to create new lines instead of a single `\n`. For example: `\n\n(1)...`. Do not use a single `\n` unless explicitly required.
 8. **Keep all original content intact**, including solutions, explanations, and any extra details. Do not add new information or modify existing content.
+9. If there are double quotation marks, change them to single quotation marks. Example: "Hello" into 'Hello'.
+10. Everything after the correct answer is part of solution so please try to include everything after that into the solution field.
+
+
+Data:

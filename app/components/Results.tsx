@@ -45,9 +45,14 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
           <div className="font-medium">
             <Markdown>{question.question}</Markdown>
           </div>
-          {userAnswers[index] !== undefined ? (
+          <p className="font-bold my-1">
+            {userAnswers[index] === undefined ? <span className="text-red-600">Not Answered</span> : 
+            (userAnswers[index] === question.correctAnswer ? <span className="text-green-600">Correct</span> : 
+            <span className="text-red-600">Incorrect</span>)
+            }
+          </p>
             <>
-              <p className="mt-2 font-semibold">
+              {/* <p className="mt-2 font-semibold">
                 Your answer:
               </p>
               <div className="font-medium">
@@ -69,7 +74,27 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
                       <Markdown>{question.options[question.correctAnswer]}</Markdown>
                     </div>
                 </div>
-              )}
+              )} */}
+              <div className="flex flex-col gap-2 py-4">
+                <p className="font-semibold">Choices:</p>
+                {
+                  question.options.map((option, o_index) => {
+                    return (
+                      <div
+                        key={o_index}
+                        className={`w-full border border-gray-200 rounded-md p-4 text-wrap
+                          ${o_index === question.correctAnswer ? 'bg-green-300' :
+                            (o_index === userAnswers[index] ? 'bg-red-300' :
+                            'bg-white'
+                            )}
+                        `}
+                      >
+                        <Markdown>{option}</Markdown>
+                      </div>
+                    )
+                  })
+                }
+              </div>
               {question.solution && (
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="solution">
@@ -85,35 +110,6 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
                 </Accordion>
               )}
             </>
-          ) : (
-            <>
-              <p className="mt-2 text-red-600 font-bold">Not answered</p>
-              {userAnswers[index] !== question.correctAnswer && (
-                <div>
-                    <p className="mt-2 font-semibold">
-                      Correct answer:
-                    </p>
-                    <div className="font-medium">
-                      <Markdown>{question.options[question.correctAnswer]}</Markdown>
-                    </div>
-                </div>
-              )}
-              {question.solution && (
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="solution">
-                    <AccordionTrigger>Show Detailed Solution</AccordionTrigger>
-                    <AccordionContent>
-                    <div className="relative w-full my-2">
-                      <Markdown>
-                        {question.solution}
-                      </Markdown>
-                    </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              )}
-            </>
-          )}
         </div>
       ))}
       <Credits />
