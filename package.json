@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack -p 42561",
     "build": "next build",
     "start": "next start -p 42561",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npx pm2 start npm --name 'philnits' -- start",
+    "status": "npx pm2 status",
+    "startup": "npx pm2 startup",
+    "save": "npx pm2 save"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.2",
@@ -17,6 +21,7 @@
     "katex": "^0.16.21",
     "lucide-react": "^0.474.0",
     "next": "15.1.6",
+    "pm2": "^5.4.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^9.0.3",
