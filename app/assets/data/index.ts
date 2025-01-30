@@ -13,4 +13,3 @@ export const quizData: QuizQuestion[] = [
   ..._2024,
   ..._2023
 ]
-  
