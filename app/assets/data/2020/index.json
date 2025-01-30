@@ -1,0 +1,303 @@
+[
+    {
+        "id": "2020A_FE_AM_1",
+        "question": "When the decimal arithmetic expression, $\\frac{7}{32}$, is evaluated, which of the following represents the result in binary?",
+        "options": [
+            "0.001011",
+            "0.001101",
+            "0.00111",
+            "0.0111"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Usual Method\n### Step 1: Divide 7 by 32\n\n$\\frac{7}{32} = 0.21875$\n\n### Step 2: Convert 0.21875 to binary.\n\n$0.21875 \\times 2 = 0.4375$ (integer is 0).\n$0.4375 \\times 2 = 0.875$ (integer is 0).\n$0.875 \\times 2 = 1.75$ (integer is 1).\n$0.75 \\times 2 = 1.5$ (integer is 1).\n$0.5 \\times 2 = 1.0$ (integer is 1, and we stop since the fraction is now 0).\n\n### Step 3: Put it together from top to bottom\n\n$0.00111$ (**final answer**)."
+    },
+    {
+        "id": "2020A_FE_AM_2",
+        "question": "![Image](Files/Pasted%20image%2020241019112353.png)",
+        "options": [
+            "(p \\cdot (\\overline{p} + q)) \\cdot \\overline{q}",
+            "(p \\cdot \\overline{q}) \\cdot (\\overline{p} + \\overline{q})",
+            "p + (p \\cdot q)",
+            "\\overline{p} + (p \\cdot \\overline{q}) + q"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Step 1: Simplify the innermost part.\n\n$\\overline{p} + q$\n- The value of this expression is **TRUE** whenever $p$ is **FALSE** and $q$ is **TRUE**.\n\n### Step 2: Evaluate the left-most expression.\n\n$p \\cdot (\\overline{p} + q)$\n- The value of this expression is **TRUE** when $p$ is **TRUE** and $\\overline{p} + q$ is also **TRUE**.\n- However, if $p$ is **TRUE**, then $\\overline{p} + q$ depends only on $q$. If $q$ is **FALSE**, the whole expression $(p \\cdot (\\overline{p} + q)) \\cdot \\overline{q}$ becomes FALSE."
+    },
+    {
+        "id": "2020A_FE_AM_4",
+        "question": "![Image](Files/Pasted%20image%2020241019155644.png)",
+        "options": [
+            "Perform a bitwise AND operation with $0$F in hexadecimal",
+            "Perform a bitwise AND operation with $7$F in hexadecimal",
+            "Perform a bitwise OR operation with $0$F in hexadecimal",
+            "Perform a bitwise XOR (exclusive OR) operation with FF in hexadecimal"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Illustration\n![Image](Files/Pasted%20image%2020241019155644.png)\n\n- Therefore, the correct answer is b)."
+    },
+    {
+        "id": "2020A_FE_AM_6",
+        "question": "![Image](Files/Pasted%20image%2020241021154848.png)",
+        "options": [
+            "A", "B", "C", "D"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\n- Each node in a BST has at most **two children**, a *left* child and a *right* child. The *left* child contains values **less than** the *parent* node, and the *right* child contains values **greater than** the parent node."
+    },
+    {
+        "id": "2020A_FE_AM_8",
+        "question": "![Image](Files/Pasted%20image%2020241021170001.png)",
+        "options": [
+            "4",
+            "9",
+            "10",
+            "11"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Step 1: Setup the variables.\n\nA (L) = $876$\nB (B) = $204$\n\n### Step 2: Understanding the Process.\n\nHow does the *Euclidean* algorithm work based on the illustration?"
+    },
+    {
+        "id": "2020A_FE_AM_9",
+        "question": "![Image](Files/Pasted%20image%2020241022151351.png)",
+        "options": [
+            "[1, 2, 3, 1, 2, 3]",
+            "[1, 2, 3, 3, 2, 1]",
+            "[3, 2, 1, 1, 2, 3]",
+            "[3, 2, 1, 3, 2, 1]"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Understanding the Process:\n\n![Image](Files/Pasted%20image%2020241022151441.png)"
+    },
+    {
+        "id": "2020A_FE_AM_10",
+        "question": "![Image](Files/Pasted%20image%20202410222151952.png)",
+        "options": [
+            "315",
+            "360",
+            "1215",
+            "1260"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Step 1: Identify what type of cache access it is.\n\n**Simultaneous Cache Access**: The CPU accesses both the cache and the main memory at the ***same time*** (parallel).\n**Hierarchical Cache Access**: The CPU first accesses the cache memory.\n- Based on the first sentence, we can directly see that it's a **Hierarchical Cache Access**."
+    },
+    {
+        "id": "2020A_FE_AM_11",
+        "question": "Which of the following causes an external interrupt?",
+        "options": [
+        "Notification of elapsed time by a timer",
+        "The execution of a division-by-zero instruction",
+        "The execution of a non-existent operation code",
+        "The occurrence of a page fault"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\n- **External interrupts** are caused by events originating outside the CPU, such as hardware signals (e.g., timers, input/output devices).\n- **Internal interrupts** (or exceptions) are generated by the processor itself, typically due to errors or unusual conditions during program execution."
+    },
+    {
+        "id": "2020A_FE_AM_12",
+        "question": "Which of the following is an appropriate explanation of a device driver?",
+        "options": [
+        "Software to control peripheral devices that are connected to a PC",
+        "Software to install an application on a PC",
+        "Software to invade another PC and cause damage",
+        "Software to register the operation procedures for a keyboard or other devices and to automate this operation"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\n- A device driver is a special kind of software program that controls a specific hardware attached to a computer."
+    },
+    {
+        "id": "2020A_FE_AM_13",
+        "question": "ECC is used for error detection and correction in memory. When n+2 redundant bits are required for a data bus having a width of 2n bits, what is the number of redundant bits that are required for a data bus having a width of 128 bits?",
+        "options": [
+        "3",
+        "8",
+        "9",
+        "10"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Step 1: Express 128 as a power of 2.\n\nData bits $= 128$\n$128 = 2^{7}$\n\n### Step 2: Apply the formula provided.\n\nNumber of redundant bits $= n + 2$\n$= 7 + 2 = 9$"
+    },
+    {
+        "id": "2020A_FE_AM_14",
+        "question": "In a web system, which of the following is an appropriate benefit of a web server and an application (AP) server being placed on different physical servers?",
+        "options": [
+        "Because the business logic that accompanies an access to data is placed in a program on the web server, the program on the AP server does not need to be changed in association with a change in the business logic.",
+        "Because the difference between the character coding scheme of the web browser and that of the AP server is absorbed by the web server, garbled (or unreadable) characters do not appear.",
+        "Because the execution environment of the client is implemented on the web server, the client and the AP server do not need to exchange screen data for each request, and only a small amount of data communication is required.",
+        "Processing can be distributed according to the type of request from a client in such a way that a request for static content having a light load is processed by the web server, and a request for dynamic content having a heavy load is processed by the AP server."
+        ],
+        "correctAnswer": 3,
+        "solution": "### Explanation:\n\na) **Incorrect**\n- Business logic is usually handled by the **application server**, not the web server. Changing business logic would require updates on the AP server, not the web server.\nb) **Incorrect**\n- Encoding issues are usually addressed in the software, not in server separation.\nc) **Incorrect**\n- The **web server** doesn't run the execution environment of the client (typically a browser). The separation of the web and application servers doesn't reduce client-server communication, as data still needs to be exchanged.\nd) **Correct**\n- Separating the web server and AP server allows for load balancing:\n\t- **Static content** (HTML, CSS, images) is handled by the **web server**.\n\t- **Dynamic content** (database queries or business logic) is processed by the application server.\n\nOption 'd' highlights the primary benefit of separating web and application servers, which is the ability to optimize and distribute processing load efficiently between static and dynamic content."
+    },
+    {
+        "id": "2020A_FE_AM_15",
+        "question": "Which of the following achieves data redundancy via mirroring?",
+        "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\n- **a) RAID 0**: This does **not** provide redundancy. Instead, it uses **striping**, where data is split across multiple disks. It improves performance but offers no fault tolerance—if one disk fails, all data is lost.\n    \n- **c) RAID 5**: This uses **striping with parity**, which provides fault tolerance by distributing parity information across the drives. RAID 5 can tolerate one drive failure but does not use mirroring.\n    \n- **d) RAID 6**: Similar to RAID 5, RAID 6 uses **striping with double parity**, allowing it to tolerate two simultaneous drive failures. However, it does not use mirroring.\n\na) **Incorrect**\n- RAID 0 uses **striping**, where data is split across multiple disks. It improves performance but offers no fault tolerance—if one disk fails, all data is lost.\nc) **Incorrect**\n- RAID 5 uses **striping with parity**, which provides fault tolerance by distributing parity information across the drives. RAID 5 can tolerate one drive failure.\nd) **Incorrect**\n- RAID 6 uses **striping with double parity**, allowing it to tolerate two simultaneous drive failures.\nb) **Correct**\n- RAID 1 uses **mirroring**, where all data is written to two (or more) drives simultaneously. This creates an exact copy (mirror) of the data on multiple drives, ensuring redundancy. If one drive fails, the data can still be retrieved from the other mirrored drive(s)."
+    },
+    {
+        "id": "2020A_FE_AM_16",
+        "question": "Which of the following is an appropriate description of the dispatcher in an operating system?",
+        "options": [
+        "A function in which multiple tasks appear to be running simultaneously on a single processor",
+        "The allocation of the right to use a processor for a ready process",
+        "The context that is the information required for process execution",
+        "The determination of the order of execution for each process"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\na) **Incorrect**\n- The process described is **multitasking**, where the operating system switches between tasks quickly to give the appearance of simultaneous execution.\nc) **Incorrect**\n- This refers to the **process control block (PCB)**, which holds the state and context information of a process.\nd) **Incorrect**\n- This refers to **scheduling**, which simply executes the decisions made by the scheduler.\nb) **Correct**\n- The ***dispatcher*** is responsible for the actual handover of CPU control from one process to another, allocating the processor to a process that is ready to run."
+    },
+    {
+        "id": "2020A_FE_AM_17",
+        "question": "Among the processes that are performed by a compiler for a procedural language, which of the following is the process that is performed first?",
+        "options": [
+        "Lexical analysis",
+        "Optimization",
+        "Semantic analysis",
+        "Syntactic analysis (parsing)"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\nb) **Incorrect**\n- This phase occurs much later in the compilation process.\nc) **Incorrect**\n- This phase follows syntactic analysis.\nd) **Incorrect**\n- This phase comes after lexical analysis (second phase).\na) **Correct**\n- This phase is first step in the compilation process, where the compiler reads the source code and converts it into tokens."
+    },
+    {
+        "id": "2020A_FE_AM_18",
+        "question": "![Image](Files/Pasted%20image%2020241023183937.png)",
+        "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Step 1: Break down the problem.\n\n- **Task A** has **high priority**.\n- **Task B** has **medium priority**.\n- **Task C** has **low priority**.\n\t- Each task alternates between **CPU** and **I/O operations**.\n\t- The total execution window we are concerned with is from $3$ ms to $10$ ms ($7$ ms total)."
+    },
+    {
+        "id": "2020A_FE_AM_19",
+        "question": "Which of the following represents appropriate handling for open source software according to OSI's definition?",
+        "options": [
+        "For open- source software that is created for a specific industry, the scope of publishing of the source code can be limited to that industry.",
+        "If open- source software is to be modified for uses such as internal use by a company without being redistributed, the modified part of the source code does not have to be published.",
+        "When open- source software is modified and redistributed, the same license as the original software must be used for distribution so that the distribution conditions are remain the same as the original software.",
+        "When open- source software is redistributed by a third party as a product, the developer of the open- source software can charge a license fee to the third party."
+        ],
+        "correctAnswer": 1,
+        "solution": "### Definition:\n\nThe Open Source Initiative (OSI) defines open-source software as software that meets certain criteria:\n- **Free redistribution:** The software must be freely redistributable, including the right to sell copies.\n- **Source code availability:** The source code must be made available, allowing users to modify and improve the software.\n- **Derivative works:** Users must be allowed to create derivative works of the software and distribute them.\n- **No discrimination against persons or groups:** The software cannot discriminate against any person or group.\n- **No discrimination against fields of endeavor:** The software cannot be restricted to any particular field of endeavor.\n- **Distribution of license terms:** The license terms must be attached to the software and must allow for redistribution."
+    },
+    {
+        "id": "2020A_FE_AM_20",
+        "question": "Which of the following is an appropriate description of DRAM?",
+        "options": [
+        "It is memory that requires a refresh operation, and it is used as the main memory of a PC.",
+        "It is non-volatile memory of a NAND type or a NOR type, and it is used as an SSD.",
+        "It is non-volatile memory that is capable of erasing and writing data in byte units, and it is used when data need to be retained even when the power supply is turned off.",
+        "Its memory cells consist of flip-flops, and it is used for cache memory."
+        ],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\nb) **Incorrect**\n- It describes flash memory, which is a type of non-volatile memory used in solid-state drives (SSDs).\nc) **Incorrect**\n- It describes NOR flash memory, which is another type of non-volatile memory used in embedded systems and microcontrollers.\nd) **Incorrect**\n- It describes SRAM (Static Random Access Memory), which is another type of volatile memory used for cache memory.\na) **Correct**\n- DRAM is a type of volatile memory that requires periodic refreshing to retain its data. It is the most common type of main memory used in computers due to its high capacity and relatively low cost."
+    },
+    {
+        "id": "2020A_FE_AM_21",
+        "question": "Which of the following is a secondary (rechargeable) battery?",
+        "options": [
+            "Alkaline–manganese dry-cell battery",
+            "Fuel cell",
+            "Lithium-ion battery",
+            "Silver-oxide battery"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\n- **a) Incorrect**: It's a primary battery, meaning it cannot be recharged.\n- **b) Incorrect**: It's a device that converts chemical energy into electrical energy. While it can generate electricity for extended periods, it's not technically a battery.\n- **d) Incorrect**: It's a primary battery and cannot be recharged.\n- **c) Correct**: It's a secondary battery, meaning it can be recharged multiple times."
+    },
+    {
+        "id": "2020A_FE_AM_22",
+        "question": "![Image](Files/Pasted%20image%2020241023182339.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\n**OR Gate Output**: Z = X + Y\n\n**Desired NAND Gate Output**: Z = ¬(X * Y)\n\n**Connecting the NOT Gate**:\n- To convert the OR gate output to a NAND gate output, we need to negate the output of the OR gate.\n- Adding a NOT gate to the output of the OR gate inverts the OR gate’s output, thus achieving Z = ¬(X + Y).\n\n![Image](Files/Pasted%20image%2020241023183403.png)"
+    },
+    {
+        "id": "2020A_FE_AM_23",
+        "question": "Which of the following is an appropriate usage of radio buttons in GUI applications?",
+        "options": [
+            "To select multiple items from a group of items",
+            "To select one item from a group of mutually exclusive items",
+            "To select one item from a list or to enter new item into a text box",
+            "To select one item from a list that is displayed when a button is pressed"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\n- **a) Incorrect**: Check boxes are used when multiple selections are allowed.\n- **c) Incorrect**: Combo box or dropdown menu is used to enter new text.\n- **d) Incorrect**: Dropdown menu allows users to choose one item from a list that appears only when the button is pressed.\n- **b) Correct**: Radio buttons are designed for selecting a single option from a group of mutually exclusive choices."
+    },
+    {
+        "id": "2020A_FE_AM_24",
+        "question": "Which of the following is a method of improving the appearance of a jagged edge of a slanted line to be smoothed on a screen, such as that of an LCD?",
+        "options": [
+            "Anti-aliasing",
+            "Bump mapping",
+            "Shading",
+            "Texture mapping"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\n- **b) Incorrect**: Bump mapping is a technique used to create the illusion of surface detail and texture without adding more geometry.\n- **c) Incorrect**: Shading refers to the process of adjusting the color and brightness of surfaces in 3D models to simulate light and shadow, giving a sense of depth and realism.\n- **d) Incorrect**: Texture mapping is the process of applying a 2D image (a texture) onto the surface of a 3D model to add detail like color or patterns.\n- **a) Correct**: Anti-aliasing is a technique used to reduce the appearance of jagged edges (also known as \"aliasing\") on diagonal or curved lines on a digital screen."
+    },
+    {
+        "id": "2020A_FE_AM_25",
+        "question": "![Image](Files/Pasted%20image%2020241023152758.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 2,
+        "solution": "### Step 1: Understanding Function Dependency\n\nFunctional Dependencies basically work like this:\n- A → B: Knowing A allows us to determine B\n- A → C: Knowing A allows us to determine C\n- CP → Q: Knowing both C and P allows us to determine Q\n- CP → T: Knowing both C and P allows us to determine T\n\n### Step 2: Apply and Compare\n\n- **a) Incorrect**: Knowing A only allows us to derive both B and C.\n- **b) Incorrect**: Knowing A only allows us to derive both B and C. We cannot derive anything with B.\n- **d) Incorrect**: Knowing C and P only allows us to derive both Q and T.\n- **c) Correct**: Knowing A allows us to derive both B and C. Now, knowing C and P allows us to derive both Q and T.\n\nThus, A and P can determine all attributes in the relation."
+    },
+    {
+        "id": "2020A_FE_AM_26",
+        "question": "![Image](Files/Pasted%20image%2020241023180435.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 3,
+        "solution": "### Understanding the SQL Query Logic\n\n- **Goal:** Retrieve Manager_ID and the average salary of employees reporting to each manager.\n- **Self-Join (Employees a, Employees b):**\n  - `a` represents employees (whose salaries are averaged).\n  - `b` represents managers.\n- **Grouping and Ordering:**\n  - Group by `b.Emp_ID` (Manager_ID).\n  \n![Image](Files/Pasted%20image%2020241023180506.png)"
+    },
+    {
+        "id": "2020A_FE_AM_27",
+        "question": "![Image](Files/Pasted%20image%2020241023181132.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 3,
+        "solution": "### Understanding the Relationships and Conditions\n\n- **Condition (1):** Departments must have at least one employee (1..* multiplicity).\n- **Condition (2):** Employees belong to one department at a time.\n- **Condition (3):** Assignment history records past department affiliations.\n  \n![Image](Files/Pasted%20image%2020241023181205.png)"
+    },
+    {
+        "id": "2020A_FE_AM_28",
+        "question": "When a failure occurs in a storage unit that stores a database, which of the following is an operation that can recover the database by using backup files and a log?",
+        "options": [
+            "Archive",
+            "Checkpoint dump",
+            "Commit",
+            "Rollforward"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Explanation:\n\n- **a) Incorrect**: **Archiving** refers to the process of moving data that is no longer actively used to a separate storage location for long-term retention.\n\n- **b) Incorrect**: **Checkpoint dump** is a point-in-time snapshot of the database taken at regular intervals.\n\n- **c) Incorrect**: **Commit** indicates that a transaction has been completed and all changes should be made permanent in the database.\n\n- **d) Correct**: **Rollforward** is a recovery operation used in database management systems to restore a database to a consistent state after a failure."
+    },
+    {
+        "id": "2020A_FE_AM_29",
+        "question": "Which of the following is an appropriate explanation of the granularity of locks?",
+        "options": [
+            "When a large number of transactions update the same data, and the granularity is set as large, the number of transactions that can be simultaneously executed increases.",
+            "When all data in a table are referenced, and the granularity is set as large, data referenced from other transactions can be undisturbed.",
+            "When data are updated, and the granularity is set as large, the waiting times of other transactions increase, and the total throughput declines.",
+            "RollfWhen the granularity is set as large, the number of included data increases, and the number of locks that one transaction makes increases.orward"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\n- **a) Incorrect**: It's incorrect because large granularity actually reduces the number of transactions that can be executed simultaneously. A larger lock scope means that more data is locked, thereby preventing other transactions from accessing it.\n\n- **b) Incorrect**: The statement is misleading. When granularity is large, other transactions cannot access the locked data, causing disturbances rather than undisturbed access.\n\n- **d) Incorrect**: It's incorrect because a larger granularity means that a single lock may cover more data, which reduces the total number of locks needed, not increases it.\n\n- **c) Correct**: **Granularity of locks** refers to the size or scope of the data that a lock controls. When the granularity is set as large, it can lead to increased waiting times for other transactions because they may be blocked from accessing any part of the locked resource until the lock is released."
+    },
+    {
+        "id": "2020A_FE_AM_30",
+        "question": "Approximately how many seconds is required to transmit a file of $106$ bytes via a $64$-kbit/s communication line? Here, the transmission efficiency of the line is $80$%.",
+        "options": [
+            "19.6",
+            "100",
+            "124",
+            "156"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Step 1: Convert the file size to bits.\n\nFormula: bytes × bits/byte\n$= 1,000,000 × 8 = 8,000,000$ bits\n\n### Step 2: Calculate the effective transmission speed.\n\nFormula: Effective speed = kbit/s × transmission efficiency\n$= 64 × 0.80 = 51.2$ kbit/s\n\n### Step 3: Convert the kbit/s to bits.\n\n$= 51.2 = 51,200$ bits\n\n### Step 4: Calculate the time to transmit the file.\n\n![[Pasted image 20241023161437.png]]\n$\frac{8,000,000}{51,200} = 156.2$ seconds\n\n- Therefore, option d, 156, is correct."
+    }
+]
