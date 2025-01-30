@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Credits from "@/components/Credits"
 
 interface LandingPageProps {
   onStartQuiz: () => void
@@ -21,6 +22,7 @@ export default function LandingPage({ onStartQuiz }: LandingPageProps) {
           <li>You can retake the quiz multiple times with different questions</li>
         </ul>
         <p>Are you ready to begin?</p>
+        <Credits />
         <Button onClick={onStartQuiz} className="w-full">
           Start Quiz
         </Button>

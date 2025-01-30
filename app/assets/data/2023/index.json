@@ -1,0 +1,108 @@
+[
+    {
+        "id": "2023A_FE_AM_1",
+        "question": "In a school class, 13 students play basketball and 19 play football. Among them, 8 students play both. Further, 7 students play neither. How many students are there in the class?",
+        "options": ["17", "31", "33", "47"],
+        "correctAnswer": 1,
+        "solution": "### Step 1: Create Venn Diagram with Student Numbers\n\nWe can create a Venn Diagram of all the sports and we firstly add the students in the union `Basketball ∪ Football` then we add the students exclusive to their own sports and subtract the union students from them.\n\n![Image](Files/2023-1.png)\n\n### Step 2: We Add the Students Together\n\n$5 + 8 + 11 + 7 = 31$\n\nSo our final answer is 31."
+    },
+    {
+        "id": "2023A_FE_AM_2",
+        "question": "$n$ is a binary integer represented in two’s complement. Which of the following operations get the value $7 \\times n$ using only bit shifting and an addition or subtraction operation?",
+        "options": [
+        "Shift n 2 bits to the left, then add n to the result.",
+        "Shift n 2 bits to the left, then subtract n from the result.",
+        "Shift n 3 bits to the left, then add n to the result.",
+        "Shift n 3 bits to the left, then subtract n from the result"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Short Intro on Bitwise Operators\n\n> **Bitwise Operators**\n> - `<<` Signed Left Shift `x << n` does $x \\times 2^{n}$\n> - `>>` Signed Right Shift `x >> n` does $x \\div 2^{n}$\n\nFor example, `6 << 1 == 12` is visualized like this:\n\n```\n6\n00000110\n \n12\n00001100\n```\n\n### We Check Each Answer By Simulating Their Shifts\n\nRemember, our goal is to get $7 \\times n$.\n\nLet's try option d:\n\nIt translates to `n << 3 - 1` which is equal to $x \\times 2^3 - 1 \\equiv x \\times 7$ which is our goal, hence d is the answer."
+    },
+    {
+        "id": "2023A_FE_AM_3",
+        "question": "A parking lot has 10 parking spaces in a row, and 7 cars are parked at random parking spaces. What is the probability that the three empty places are adjacent to each other?",
+        "options": ["1/90", "1/72", "1/15", "1/12"],
+        "correctAnswer": 2,
+        "solution": "### Step 1: We Calculate the Total Number of Ways to Arrange 3 Empty Parking Spaces\n\nWe do $\\binom{10}{3}$ or $10C3$. This calculates to 120 total ways.\n\n### Step 2: Count the Favorable Combinations\n\nWe can illustrate the parking spaces and count how many ways we can arrange the 3 empty parking spaces to be adjacent:\n\n![Image](Files/2023-3.png)\n\nThere are 8 favorable combinations.\n\n### Step 3: Calculate the Probability\n\nThe probability is $\\frac{8}{120}$, which simplifies to $\\frac{1}{15}$. The correct answer is c."
+    },
+    {
+        "id": "2023A_FE_AM_4",
+        "question": "What is the sum of two binary fractions 1.0101 and 1.0111 expressed in decimal form?",
+        "options": ["2.5", "2.75", "2.875", "2.9375"],
+        "correctAnswer": 1,
+        "solution": "### We Simply Add Them & Carry the Bits If Necessary\n\n![Image](Files/2023-4.png)\n\nHence, the answer is b."
+    },
+    {
+        "id": "2023A_FE_AM_5",
+        "question": "Which of the following expressions in postfix notation is equivalent to the expression 2+5×3+4 in infix notation? Here, the operator “×” has higher precedence than “+”.",
+        "options": [
+        "2 5 3 4 x + +",
+        "2 5 + 3 4 x +",
+        "2 5 3 + x 4 +",
+        "2 5 3 x + 4 +"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Infix vs Prefix vs Postfix\n\nThe equations we're familiar with are infix operations because we put the operator 'in between' the operands.\n\nWe want to convert `2 + 5 × 3 + 4` from infix to postfix.\n\n- This is equivalent to `2 + (5 × 3) + 4`.\n- This means the operators should be AFTER their operands.\n- We still give `×` (multiplication) precedence over `+`.\n\nThe only valid expression that puts `5 3 x` together before addition is:\n\nd) `2 5 3 x + 4 +`\n\nThus, d is the correct answer."
+    },
+    {
+        "id": "2023A_FE_AM_6",
+        "question": "There is communication data that consists of five characters “A”, “B”, “C”, “D”, and “E” that have different appearance frequencies, and in order to compress the data by using Huffman coding, the code table shown below is created. Which of the following is an appropriate code that should be inserted in the blank?\n![Image](Files/Pasted%20image%2020241017231221.png)",
+        "options": [
+        "001",
+        "010",
+        "101",
+        "110"
+        ],
+        "correctAnswer": 3,
+        "solution": "![Image](Files/Pasted%20image%2020241017231221.png)\n\n### Video Tutorial on Huffman Coding\n\nIt's a strategy of compressing data for JPEG and MPEG files. There's a process to it so watching this tutorial: [Text Compression with Huffman Coding - YouTube](https://www.youtube.com/watch?v=iiGZ947Tcck) is more helpful than me discussing it\n![Image](Files/2023-6.png)"
+    },
+    {
+        "id": "2023A_FE_AM_7",
+        "question": "When the series of stack operations below is performed on an empty stack, which of the following is the data that is read out by the last READ operation? Here, “PUSH x” is the operation to put data x in the stack, “POP” is used to retrieve data from the stack, and “READ” is used to read data from the top of the stack without removing the original data.\n\nPUSH 2 → READ → PUSH 3 → PUSH 6 → POP → READ → PUSH 4 →READ → PUSH 7 → PUSH 5→ POP → POP → READ",
+        "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Let's Solve This Step By Step\n\nLet's say our stack grows from left to right, where right is the top-most element.\n\nSo our empty stack is `x = {}`.\n\n1. PUSH 2 `{ 2 }`\n2. READ `{ 2 }` outputs 2\n3. PUSH 3 `{ 2, 3 }`\n4. PUSH 6 `{ 2, 3, 6 }`\n5. POP `{ 2, 3 }`\n6. READ `{ 2, 3 }` outputs 3\n7. PUSH 4 `{ 2, 3, 4 }`\n8. READ `{ 2, 3, 4 }` outputs 4\n9. PUSH 7 `{ 2, 3, 4, 7 }`\n10. PUSH 5 `{ 2, 3, 4, 7, 5 }`\n11. POP `{ 2, 3, 4, 7 }`\n12. POP `{ 2, 3, 4 }`\n13. READ `{ 2, 3, 4 }` outputs 4"
+    },
+    {
+        "id": "2023A_FE_AM_8",
+        "question": "![Image](Files/Pasted%20image%2020241018221346.png)\n\nWhich of the following is the correct description of a binary search tree (BST)?",
+        "options": [
+        "Left child of 16",
+        "Left child of 23",
+        "Right child of 3",
+        "Right child of 10"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Understanding a Binary Search Tree\n\nRules:\n\n- A parent can only have 2 child nodes.\n- For every parent node, all the children to its left are lesser than the parent's value.\n- Meanwhile, all the children to the parents' right are greater than than the parent's value.\n![Image](Files/2023-8.png)"
+    },
+    {
+        "id": "2023A_FE_AM_9",
+        "question": "In the table below, there are five items A through E. Each item cannot be divided into smaller pieces. When a knapsack with a maximum volume of 7 units is used for carrying the items, which of the following is a set of items to be packed in the knapsack so that the total price can be maximized?\n\n| Item | Volume | Price |\n| ---- | ------ | ----- |\n| A    | 3      | 4     |\n| B    | 2      | 3     |\n| C    | 3      | 5     |\n| D    | 1      | 2     |\n| E    | 5      | 9     |",
+        "options": [
+        "A, B, D",
+        "A, C, D",
+        "B, E",
+        "D, E"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Step 1: Find the Price Sum of All The Choices\n\na) A, B, D = 4 + 3 + 2 = 9\nb) A,C,D = 4 + 5 + 2 = 11\nc) B,E = 3 + 9 = 12\nd) D,E = 2 + 9 = 11\n\n### Step 2: Pick the Choice with the Least Items & Highest Sum\n\nAs we can see from our calculations, c) has the highest price (12) while also fulfilling the constraints.\n\nHence, c) is our answer."
+    },
+    {
+        "id": "2023A_FE_AM_10",
+        "question": "Which of the following is an appropriate description concerning XML?",
+        "options": [
+        "It is based on HTML and expands its functions.",
+        "It requires a dedicated editor for writing XML documents.",
+        "It integrates the logical structure and display style of documents.",
+        "It enables users to define the attribute information and logical structure of documents by using the user’s own tags."
+        ],
+        "correctAnswer": 3,
+        "solution": "a) It is based on HTML and expands its functions.\n- no, it doesn't necessarily have to expand HTML, it can be like a\n\nconfig file like `beans.xml` for Java.\n\nb) It requires a dedicated editor for writing XML documents.\n\n\n\n- no, you can edit it with any text editor. It's just a plaintext file after all.c) It integrates the logical structure and display style of documents.\n\n- no, XML only cares about the logical structure of its tags, not the display style of documents.\n\n- only HTML can inline CSS to talk about display style of documents.\n\nd) It enables users to define the attribute information and logical structure of documents by using the user’s own tags.\n\n- yes, we, as the user, can define attribute & logical structure (tags)\n\n- this is the correct choice"
+    }
+    ]
+      

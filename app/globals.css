@@ -10,6 +10,10 @@ body {
   background-color: white;
 }
 
+.markdown .code-highlight {
+  background-color: white;
+}
+
 .question {
   white-space: pre-line;
 }

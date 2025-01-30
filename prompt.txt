@@ -5,13 +5,13 @@ Clear any history related to JSON content.
 
 Please generate an array of JSON files in the following format:
 
-```typescript
-export interface QuizQuestion {
+```json
+{
   id: string;
   question: string;
   options: string[];
   correctAnswer: number;
-  solution?: string; // Optional field for markdown solution
+  solution?: string;
 }
 ```
 

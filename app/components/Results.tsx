@@ -3,6 +3,7 @@ import type { QuizQuestion } from "@/assets/data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import React from "react"
 import Markdown from "@/components/Markdown"
+import Credits from "./Credits"
 
 interface ResultsProps {
   quizData: QuizQuestion[]
@@ -60,7 +61,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
                 )}
               </p>
               {userAnswers[index] !== question.correctAnswer && (
-                <div className="text-green-600">
+                <div>
                     <p className="mt-2 font-semibold">
                       Correct answer:
                     </p>
@@ -88,7 +89,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
             <>
               <p className="mt-2 text-red-600 font-bold">Not answered</p>
               {userAnswers[index] !== question.correctAnswer && (
-                <div className="text-green-600">
+                <div>
                     <p className="mt-2 font-semibold">
                       Correct answer:
                     </p>
@@ -115,6 +116,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
           )}
         </div>
       ))}
+      <Credits />
       <div className="flex space-x-4">
         <Button onClick={onRestart} className="flex-1">
           Retake Quiz
