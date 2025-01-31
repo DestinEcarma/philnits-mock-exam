@@ -10,7 +10,8 @@
     "deploy": "npx pm2 start npm --name 'philnits' -- start",
     "status": "npx pm2 status",
     "startup": "npx pm2 startup",
-    "save": "npx pm2 save" 
+    "save": "npx pm2 save",
+    "restart": "npx pm2 restart philnits"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.2",
