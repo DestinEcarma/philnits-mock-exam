@@ -19,8 +19,16 @@ export default function Quiz() {
   const [quizCompleted, setQuizCompleted] = useState(false)
   const [timeRemaining, setTimeRemaining] = useState(QUIZ_TIME)
 
+  const shuffle = (array: QuizQuestion[]) => { 
+    for (let i = array.length - 1; i > 0; i--) { 
+      const j = Math.floor(Math.random() * (i + 1)); 
+      [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+  };
+
   const startQuiz = useCallback(() => {
-    const shuffled = [...quizData].sort(() => 0.5 - Math.random())
+    const shuffled = shuffle(quizData)
     setQuestions(shuffled.slice(0, QUESTIONS_COUNT))
     // // FOR DEBUGGING
     // const debugIndex = 20
