@@ -26,6 +26,8 @@ export default function Quiz() {
     // const debugIndex = 20
     // setQuestions(quizData.slice(debugIndex, debugIndex + 10))
     
+    // setQuestions(quizData)
+    
     setQuizStarted(true)
     setTimeRemaining(QUIZ_TIME)
   }, [])
