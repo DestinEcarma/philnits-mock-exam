@@ -15,13 +15,25 @@
         "id": "2020A_FE_AM_2",
         "question": "![Image](Files/Pasted%20image%2020241019112353.png)",
         "options": [
-            "(p \\cdot (\\overline{p} + q)) \\cdot \\overline{q}",
-            "(p \\cdot \\overline{q}) \\cdot (\\overline{p} + \\overline{q})",
-            "p + (p \\cdot q)",
-            "\\overline{p} + (p \\cdot \\overline{q}) + q"
+            "$(p \\cdot (\\overline{p} + q)) \\cdot \\overline{q}$",
+            "$(p \\cdot \\overline{q}) \\cdot (\\overline{p} + \\overline{q})$",
+            "$p + (p \\cdot q)$",
+            "$\\overline{p} + (p \\cdot \\overline{q}) + q$"
         ],
         "correctAnswer": 0,
         "solution": "### Step 1: Simplify the innermost part.\n\n$\\overline{p} + q$\n- The value of this expression is **TRUE** whenever $p$ is **FALSE** and $q$ is **TRUE**.\n\n### Step 2: Evaluate the left-most expression.\n\n$p \\cdot (\\overline{p} + q)$\n- The value of this expression is **TRUE** when $p$ is **TRUE** and $\\overline{p} + q$ is also **TRUE**.\n- However, if $p$ is **TRUE**, then $\\overline{p} + q$ depends only on $q$. If $q$ is **FALSE**, the whole expression $(p \\cdot (\\overline{p} + q)) \\cdot \\overline{q}$ becomes FALSE."
+    },
+    {
+        "id": "2020A_FE_AM_3",
+        "question": "A factory manufactures the same products on two production lines, A and B. Line A manufactures 60% of all products, and B manufactures the remaining 40%. Defect rates of products manufactured in A and in B are 2% and 1%, respectively. When a product was randomly chosen for inspection among the products manufactured in this factory, it was found to be defective. What is the percentage of probability that the product was manufactured in Line A?",
+        "options": [
+          "40",
+          "50",
+          "60",
+          "75"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Step 1: Calculate the total defective products for each line.\n\nLine A: 60% × 2% = 1.2% of total products\n- Line A has a total of 1.2% of defective products.\nLine B: 40% × 1% = 0.4% of total products\n- Line B has a total of 0.4% of defective products.\n\n### Step 2: Combine both to calculate the total percentage of defective products.\n\nTotal defects = 1.2% + 0.4% = 1.6% of total products\n- 1.6% of all products are defective.\n\n### Step 3: Find the proportion of defective products from Line A.\n\n\\frac{Defects from A}{Total defects} = \\frac{1.2}{1.6} = 0.75\n- Therefore, there's a 75% chance of probability that the product was manufactured in A."
     },
     {
         "id": "2020A_FE_AM_4",
@@ -54,7 +66,8 @@
             "11"
         ],
         "correctAnswer": 3,
-        "solution": "### Step 1: Setup the variables.\n\nA (L) = $876$\nB (B) = $204$\n\n### Step 2: Understanding the Process.\n\nHow does the *Euclidean* algorithm work based on the illustration?"
+        "solution": "### Step 1: Setup the variables.\n\nA (L) = $876$\nB (B) = $204$\n\n### Step 2: Understanding the Process.\n\nHow does the *Euclidean* algorithm work based on the illustration?\n- **Condition 1:** If $L > S$, subtract $S$ from $L$.\n- **Condition 2:** If $L < S$, subtract $L$ from $S$.\n- **Condition 3:** If $L = S$, terminate the process.\nHence, the algorithm terminates once $L$ is equal to $S$.\n\n### Step 3: Commence the algorithm.\n\n- **First comparison**:\n    - $L = 876$ | $S = 204$\n    - $L > S$, so subtract $S$ from $L$. $L = 876 - 204 = 672$.\n- **Second comparison**:\n    - $L = 672$ | $S = 204$\n    - $L > S$, so subtract $S$ from $L$. $L = 672 - 204 = 468$.\n- **Third comparison**:\n    - $L = 468$ | $S = 204$\n    - $L > S$, so subtract $S$ from $L$. $L = 468 - 204 = 264$.\n- **Fourth comparison**:\n    - $L = 264$ | $S = 204$\n    - $L > S$, so subtract $S$ from $L$. $L = 468 - 204 = 60$.\n- **Fifth comparison**:\n    - $L = 60$ | $S = 204$\n    - $L < S$, so subtract $L$ from $S$, $S = 204 - 60 = 144$\n- **Sixth comparison**:\n    - $L = 60$ | $S = 144$\n    - $L < S$, so subtract $L$ from $S$, $S = 144 - 60 = 84$\n- **Seventh comparison**:\n    - $L = 60$ | $S = 84$\n    - $L < S$, so subtract $L$ from $S$. $S = 84 - 60 = 24$.\n- **Eighth comparison**:\n    - $L = 60$ | $S = 24$\n    - $L > S$, so subtract $S$ from $L$. $L = 60 - 24 = 36$.\n- **Ninth comparison**:\n    - $L = 36$ | $S = 24$\n    - $L > S$, so subtract $S$ from $L$. $L = 36 - 24 = 12$.\n- **Tenth comparison**:\n    - $L = 12$ | $S = 24$\n    - $L < S$, so subtract $L$ from $S$. $S = 24 - 12 = 12$.\n- **Eleventh comparison**:\n    - $L = 12$ | $S = 12$\n    - $L == S$, so the algorithm terminates.\nTherefore, there's exactly $11$ comparisons needed to obtain the result."
+
     },
     {
         "id": "2020A_FE_AM_9",
@@ -70,7 +83,7 @@
     },
     {
         "id": "2020A_FE_AM_10",
-        "question": "![Image](Files/Pasted%20image%20202410222151952.png)",
+        "question": "![Image](Files/Pasted%20image%2020241022151952.png)",
         "options": [
             "315",
             "360",
@@ -78,7 +91,7 @@
             "1260"
         ],
         "correctAnswer": 1,
-        "solution": "### Step 1: Identify what type of cache access it is.\n\n**Simultaneous Cache Access**: The CPU accesses both the cache and the main memory at the ***same time*** (parallel).\n**Hierarchical Cache Access**: The CPU first accesses the cache memory.\n- Based on the first sentence, we can directly see that it's a **Hierarchical Cache Access**."
+    "solution": "### Step 1: Identify what type of cache access it is.\n\n**Simultaneous Cache Access**: The CPU accesses both the cache and the main memory at the ***same time*** (parallel).\n**Hierarchical Cache Access**: The CPU first accesses the cache memory.\n- Based on the first sentence, we can directly see that it's a **Hierarchical Cache Access**.\n\n### Step 2: Calculate the Hit Ratio\n\nHit ratio $= 1 -$ Miss ratio\n$1 - 0.2 = 0.8$ | **Hit ratio** $= 0.8$\n\n### Step 3: Apply the formula.\n\nFormula: Average Access Time = (Hit Ratio x Cache Access Time) + (Miss Ratio x Main Memory Access Time)\n$= (0.8 \\cdot 75) + (0.2 \\cdot 1500) = 360$"
     },
     {
         "id": "2020A_FE_AM_11",
@@ -459,7 +472,7 @@
     },
     {
         "id": "2020A_FE_AM_44",
-        "question": "![Image](Files/Pasted%20image%202024102319171543.png)",
+        "question": "![Image](Files/Pasted%20image%2020241019171543.png)",
         "options": ["A", "B", "C", "D"],
         "correctAnswer": 2,
         "solution": "### Explanation:\n\n> **Note:** PCs use dynamic ports (1024 and higher) to establish connections. Port 80 is for HTTP traffic. Therefore, source ports are 1024+ for outbound requests, while responses come from port 80."
@@ -504,7 +517,7 @@
     },
     {
         "id": "2020A_FE_AM_49",
-        "question": "![Image](Files/Pasted%20image%20202410232005721.png)",
+        "question": "![Image](Files/Pasted%20image%2020241020005721.png)",
         "options": ["A", "B", "C", "D"],
         "correctAnswer": 0,
         "solution": "### Explanation:\n\nA sharply rising bug curve suggests that more bugs exist internally. Reaching the target number doesn’t mean testing is complete."

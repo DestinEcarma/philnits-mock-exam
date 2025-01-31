@@ -11,7 +11,7 @@ export interface QuizQuestion {
 }
 
 export const quizData: QuizQuestion[] = [
-  ..._2024,
-  ..._2023,
+  // ..._2024,
+  // ..._2023,
   ..._2020
 ]

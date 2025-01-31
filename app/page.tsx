@@ -20,11 +20,13 @@ export default function Quiz() {
   const [timeRemaining, setTimeRemaining] = useState(QUIZ_TIME)
 
   const startQuiz = useCallback(() => {
-    const shuffled = [...quizData].sort(() => 0.5 - Math.random())
-    setQuestions(shuffled.slice(0, QUESTIONS_COUNT))
+    // const shuffled = [...quizData].sort(() => 0.5 - Math.random())
+    // setQuestions(shuffled.slice(0, QUESTIONS_COUNT))
     // // FOR DEBUGGING
     // const debugIndex = 20
     // setQuestions(quizData.slice(debugIndex, debugIndex + 10))
+    
+    setQuestions(quizData)
     
     setQuizStarted(true)
     setTimeRemaining(QUIZ_TIME)
