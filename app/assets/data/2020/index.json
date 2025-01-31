@@ -298,6 +298,337 @@
             "156"
         ],
         "correctAnswer": 3,
-        "solution": "### Step 1: Convert the file size to bits.\n\nFormula: bytes × bits/byte\n$= 1,000,000 × 8 = 8,000,000$ bits\n\n### Step 2: Calculate the effective transmission speed.\n\nFormula: Effective speed = kbit/s × transmission efficiency\n$= 64 × 0.80 = 51.2$ kbit/s\n\n### Step 3: Convert the kbit/s to bits.\n\n$= 51.2 = 51,200$ bits\n\n### Step 4: Calculate the time to transmit the file.\n\n![[Pasted image 20241023161437.png]]\n$\frac{8,000,000}{51,200} = 156.2$ seconds\n\n- Therefore, option d, 156, is correct."
+        "solution": "### Step 1: Convert the file size to bits.\n\nFormula: bytes × bits/byte\n$= 1,000,000 × 8 = 8,000,000$ bits\n\n### Step 2: Calculate the effective transmission speed.\n\nFormula: Effective speed = kbit/s × transmission efficiency\n$= 64 × 0.80 = 51.2$ kbit/s\n\n### Step 3: Convert the kbit/s to bits.\n\n$= 51.2 = 51,200$ bits\n\n### Step 4: Calculate the time to transmit the file.\n\n![[Files/Pasted%image%20241023161437.png]]\n$\frac{8,000,000}{51,200} = 156.2$ seconds\n\n- Therefore, option d, 156, is correct."
+    },
+    {
+        "id": "2020A_FE_AM_31",
+        "question": "Which of the following is a device that connects multiple LANs by relaying data through the protocol information of the data link layer of the OSI basic reference model?",
+        "options": [
+            "Bridge",
+            "Gateway",
+            "Repeater",
+            "Router"
+        ],
+        "correctAnswer": 0,
+        "solution": "### **Explanation:**\n\n**a) Bridge** - Used to connect two or more LAN to create a larger network, operating at the Data Link Layer. It only connects LAN segments that use the same protocol. Think of bridges as a simpler, less efficient version of a switch. If a switch can connect hosts and LAN segments (switch to switch), a bridge can only connect LAN segments, not the hosts. Also keep in mind that **Every switch is a bridge, but bridges are not truly switches.**\n\n### Other Options\n\n**b) Gateway** - Acts as a gate between two networks, allowing for communication even if they use different protocols. So, in a sense, a gateway performs protocol translation or data formatting in order for data to flow between networks easily.\n\n**c) Repeater** - It operates at the physical layer, retransmitting data over longer distances, eliminating signal degradation when traveling from source to destination. It does not care about any protocol information.\n\n**d) Router** - A router directs data packets between networks, determining the best path for the data to travel between networks, operating at the network layer. A router connects LAN to WAN, while a bridge connects LAN to LAN."
+    },
+    {
+        "id": "2020A_FE_AM_32",
+        "question": "Which of the following is a role played by a DNS in a TCP/IP network?",
+        "options": [
+            "It assigns an unused IP address from the pool of addresses in response to a request from a PC or a printer.",
+            "It associates domain or host names with IP addresses.",
+            "It converts private IP addresses used within a company into global IP addresses, and it enables access to the Internet.",
+            "It enables a program in a server to be called by only specifying the program name without being aware of the IP address of the server."
+        ],
+        "correctAnswer": 1,
+        "solution": "### **Explanation:**\n\n**b)** **DNS (Domain Name System)** is responsible for translating human-readable domain names (www.wuwatracker.com) into their corresponding IP addresses (104.21.6.165). This allows users to easily access websites using familiar names instead of memorizing an IP address.\n\n### Other Options\n\n**a)** It describes **DHCP (Dynamic Host Configuration Protocol)**, which is responsible for automatically assigning IP addresses to hosts or devices on a network, simplifying network management and preventing conflicts from having similar IP addresses.\n\n**c)** This process describes what **NAT (Network Address Translation)** does, which converts private IP addresses into public IP addresses (and vice versa), allowing internet access to devices using private IPs.\n\n**d)** This describes the Service Discovery protocol. While **DNS (Domain Name System)** resolves domain names to IP addresses, it does **not** provide the ability to call specific programs or services on a server by name. For this, you would need additional protocols or layers of service discovery, which are not part of DNS's core functionality."
+    },
+    {
+        "id": "2020A_FE_AM_33",
+        "question": "What is the broadcast address of a network to which the IP address 192.168.57.123/22 belongs?",
+        "options": [
+            "192.168.55.255",
+            "192.168.57.255.",
+            "192.168.59.255",
+            "192.168.63.255"
+        ],
+        "correctAnswer": 2,
+        "solution": "### **Explanation:**\n\n### Step 1: Understand the Subnet Mask\n\nThe CIDR notation `/22` indicates that the subnet mask has 22 bits.\n- **Subnet Mask**: 255.255.252.0\n- In binary: `11111111.11111111.11111100.00000000`\n\n### Step 2: Determine the *Network* Address\n\nTo find the network address, perform a bitwise AND operation between the IP address and the subnet mask.\n- **IP Address**: 192.168.57.123 (binary: `11000000.10101000.00111001.01111011`)\n- **Subnet Mask**: 255.255.252.0 (binary: `11111111.11111111.11111100.00000000`)\n\nBitwise AND of IP address and Subnet Mask\n```\n(192.168.56.0)  11000000.10101000.00111000.00000000\n(255.255.252.0) 11111111.11111111.11111100.00000000\n---------------------------------------------------\n(192.168.56.0)  11000000.10101000.00111000.00000000\n```\nThe network address is **192.168.56.0**.\n\n### Step 3: Calculate the Broadcast Address\n\nWith a `/22` mask, there are **10 bits** for hosts (32 total bits - 22 bits for the network). This means the broadcast address is calculated by adding `2^10 - 1` to the network address:\n- **Host Range**: 192.168.56.0 to 192.168.59.255\n- The broadcast address is the last address in this range: **192.168.59.255**."
+
+    },
+    {
+        "id": "2020A_FE_AM_34",
+        "question": "Which of the following is an Internet standard that extends the format of email header fields to handle not only text messages but also audio and image files?",
+        "options": [
+            "HTML",
+            "MHS",
+            "MIME",
+            "SMTP5"
+        ],
+        "correctAnswer": 2,
+        "solution": "### **Explanation:**\n\n**c) MIME** - **(Multipurpose Internet Mail Extensions)** is a widely used internet standard that extends the original format of email to support the transmission of various media types. MIME allows emails to include non-text content such as images, audio, video, and other file attachments.\n\n### Other Options\n\n**a) HTML** - **(Hypertext Markup Language)** is the standard markup language used for creating web pages and web applications. It structures the content on the web through the use of tags for headings, paragraphs, links, images, and more. It is not designed for email transmission.\n\n**b) MHS** - **(Message Handling System)** was designed to handle message tracking, non-delivery reports, and multi-protocol routing. MHS is more robust but also more complex and slower compared to modern standards. In a way, MHS has similar core goals with SMTP, but MHS is more feature-rich and complex.\n\n> [!TIP]\n> Imagine (MHS) Notion having the same goals as (SMTP) Obsidian. Notion has more features and is more than just a note-taking app, while Obsidian excels at lightweight note-taking without extra layers of complexity. Also, MHS is designed for a different set of protocols compared to SMTP.\n\n**d) SMTP** - **(Simple Mail Transfer Protocol)** is a protocol used for sending and receiving email messages across the internet. It handles the transmission of emails but does not concern itself with the format or content types of the messages being sent. While SMTP lacks the complexity of MHS, it is faster, more efficient, and well-suited for the broader, less formal nature of internet communication."
+    },
+    {
+        "id": "2020A_FE_AM_35",
+        "question": "Which of the following attacks is classified as DNS cache poisoning?",
+        "options": [
+            "False domain information is injected into the DNS server that is referenced by a PC, and it leads the user to a fake server.",
+            "The version information of the DNS server software is obtained to identify a security hole.",
+            "To interrupt the target service, the attacker uses the DNS server as a steppingstone to send a large number of recursive queries.",
+            "To obtain internal information, the zone information stored in the DNS server is compiled and transferred."
+        ],
+        "correctAnswer": 0,
+        "solution": "### **Explanation:**\n\n**DNS cache poisoning** occurs when a hacker tricks a DNS resolver into storing incorrect information in its cache. This incorrect information would redirect users or hosts to malicious sites instead of the legitimate ones they intended to visit. The attacker can use this to steal sensitive information, spread malware, or conduct phishing attacks."
+    },
+    {
+        "id": "2020A_FE_AM_36",
+        "question": "Which of the following is a type of public-key cryptography that utilizes the difficulty of factorizing extremely large numbers into primes?",
+        "options": [
+            "AES",
+            "DH",
+            "DSA",
+            "RSA"
+        ],
+        "correctAnswer": 3,
+        "solution": "### **Explanation:**\n\n**d) RSA (Rivest–Shamir–Adleman)** - A **public-key encryption algorithm** that relies specifically on the difficulty of breaking down a large number into the two prime numbers that were used to create it.\n\n### Other Options\n\n**a) AES (Advanced Encryption Standard)** - Is a **symmetric encryption algorithm**, which means it uses the same key for both locking and unlocking the data (encrypting and decrypting). It relies on complex mathematical operations like substitution and permutation to securely encrypt data.\n\n**b) DH (Diffie-Hellman)** - Is a method used for **securely exchanging cryptographic keys** over a public channel, so two people can share a secret key without someone else figuring it out. It uses math based on something called **discrete logarithms.**\n\n**c) DSA (Digital Signature Algorithm)** - Is a **digital signature algorithm**, which is used for verifying the authenticity of digital messages or documents. It also relies on the **discrete logarithm problem** for its security."
+    },
+    {
+        "id": "2020A_FE_AM_37",
+        "question": "Which of the following is appropriate conduct for a white-hat hacker?",
+        "options": [
+            "Breaking into a system and changing one of the files without permission and reporting the weaknesses to the owner.",
+            "Breaking into a system to analyze its vulnerabilities with the owner’s permission and within the prescribed rules of engagement.",
+            "Logging into a system to show fellow hackers real-life examples of deleting a file without the owner’s permission.",
+            "Looking at secret data on a system with the motivation of personal or financial objectives, protest, or espionage."
+        ],
+        "correctAnswer": 1,
+        "solution": "### **Explanation:**\n\nA White-hat hacker acts ethically and with authorization. They could be testing a system for someone, finding vulnerabilities to help improve security, rather than trying to damage it or take advantage of the vulnerabilities. So, the appropriate conduct for a White-hat hacker would be 'Breaking into a system to analyze its vulnerabilities with the owner’s permission and within the prescribed rules of engagement.'"
+    },
+    {
+        "id": "2020A_FE_AM_38",
+        "question": "Which of the following is an appropriate explanation of an SQL injection attack?",
+        "options": [
+            "It is an attack in which a command for performing a malicious query or operation is entered in the website where there is a vulnerability in a web application to acquire or falsify data without authorization. ",
+            "It is an attack in which a commercial DBMS vulnerability is exploited to search the host database server and cause repeated infections in order to cause a sudden rise in Internet traffic. ",
+            "It is an attack in which a malicious script is executed on the visitor’s web browser by sending the malicious code to the website displaying the visitor’s input data. ",
+            "It is an attack in which a website visitor is made to view a web page containing an embedded malicious script, and the visitor is then made to perform an unintentional operation on another website."
+        ],
+        "correctAnswer": 0,
+        "solution": "### **Explanation:**\n\nSQL injection exploits vulnerabilities in a web application's input fields, allowing attackers to execute SQL commands to manipulate the database.\n\n### Example Scenario\n\nConsider a website that uses the following query to log in:\n```sql\nSELECT * FROM users WHERE username = 'john' AND password = 'password123';\n```\n\nTypically, you would need to know both the password and the username in order to bypass the authentication check. However, since usernames are easier to guess than passwords, the attacker can instead inject a malicious input into the username field:\n```bash\njohn' OR '1'='1\n```\n\nTransforming the original query into:\n```sql\nSELECT * FROM users WHERE username = 'john' OR '1'='1' AND password = 'password123';\n```\n\n### Breakdown of the Conditions\n\n**First Condition (`username = 'john'`)**\n- If 'john' exists in the database, this condition evaluates to **true**.\n\n**Second Condition (`'1'='1' AND password = 'password123'`)**\n- Here, `'1'='1'` is always **true**.\n- However, for this part of the condition to be **true**, the password also needs to be correct, which is not typically known to the attacker.\n\nSince the query uses an **OR** condition, only one part of the overall condition needs to be true for the query to return results. This means the attacker only needs to know the username of a user, making it easier to gain access to unauthorized accounts."
+    },
+    {
+        "id": "2020A_FE_AM_39",
+        "question": "Which of the following is an appropriate use of a private key for a digital signature?",
+        "options": [
+            "The recipient can use the private key to restore an encrypted message to its original status. ",
+            "The sender can use the private key to create a signature and attach it to a message, and the recipient can confirm the sender. ",
+            "The sender can use the private key to encrypt a message with an attached fixed string, and the recipient can identify sections that are falsified. ",
+            "The sender can use the private key to encrypt a message, and the content of the message cannot be understood by unrelated parties."
+        ],
+        "correctAnswer": 1,
+        "solution": "### **Explanation:**\n\n**b)** A **private key** in the context of a digital signature is used by the sender to **create** the signature, which ensures the authenticity of the message. The recipient can then verify the signature using the sender's **public key**, confirming that the message came from the sender and wasn't altered.\n\n### Other Options\n\n**a)** is incorrect because **private keys are not used by the recipient** to decrypt a message. Private keys are typically used by the sender to sign, while **public keys** are used to verify the signature or decrypt messages.\n\n**c)** is incorrect because while private keys can be used to sign data, the process described here (encrypting with a fixed string) is not how private keys function in digital signatures.\n\n**d)** is incorrect because **encrypting a message** is usually done using the **recipient’s public key**, not the sender’s private key. The private key is used for signing, not encrypting messages for confidentiality."
+    },
+    {
+        "id": "2020A_FE_AM_40",
+        "question": "Which of the following is a characteristic of a worm, as compared with a Trojan horse?",
+        "options": [
+            "Arbitrarily encrypting files so that they cannot be read normally ",
+            "Causing an infection to spread by itself by using the network and removable media ",
+            "Performing an unauthorized action as an individual program ",
+            "Waiting without performing any activity until a specific condition is established"
+        ],
+        "correctAnswer": 1,
+        "solution": "### **Explanation:**\n\n**b)** A **worm** is a type of malware that can **spread by itself** across networks and through removable media (like USB drives). Unlike a Trojan horse, which requires the user to execute the program, worms exploit vulnerabilities and propagate automatically without user intervention.\n\n### Other Options\n\n**a)** is incorrect because arbitrarily encrypting files is a characteristic of **ransomware**, not a worm.\n\n**c)** is incorrect because performing an unauthorized action as an individual program is characteristic of a **Trojan horse**, which masquerades as legitimate software but performs malicious actions when executed.\n\n**d)** is incorrect because waiting for a specific condition before acting is characteristic of a **logic bomb**, not a worm."
+    },
+    {
+        "id": "2020A_FE_AM_41",
+        "question": "Which of the following is an appropriate explanation of CSIRT?",
+        "options": [
+            "It is a generic term for an organization that is established within a company, organization, or government agency, and it receives reports on information security incidents for investigation and response.",
+            "It is a generic term for people or an organization whose aim is to achieve a religious or political goal by utilizing IT.",
+            "It is an organization that creates technical documents concerning the Internet, and it investigates standardization issues.",
+            "It is an organization that defines the IP-address allocation policy. It operates and monitors DNS root servers and coordinates DNS management and other such matters on a global scale."
+        ],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\nA **CSIRT** (Computer Security Incident Response Team) is a specialized team responsible for responding to information security incidents, such as breaches, malware attacks, or data leaks. They investigate, mitigate, and help prevent future security issues by handling reports of incidents, analyzing their causes, and providing recommendations for improving security practices."
+    },
+    {
+        "id": "2020A_FE_AM_42",
+        "question": "There is a network that is divided into three (3) segments (i.e., external segment, DMZ, and internal segment) by one (1) firewall... Which of the following is the most appropriate method of server installation that can protect important data from unauthorized access from the Internet?",
+        "options": [
+            "Installation of the web server and database server in the internal segment",
+            "Installation of the web server and the database server in the DMZ",
+            "Installation of the web server in the DMZ and the database server in the internal segment",
+            "Installation of the web server in the external segment and the database server in the DMZ"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\nThe **DMZ (Demilitarized Zone)** is a semi-trusted network accessible from the **external network**, while the **internal segment** is the most secure part, protecting sensitive data. The **web server** should be in the DMZ to be reachable by users, and the **database server** should be in the internal segment to protect it from unauthorized access."
+    },
+    {
+        "id": "2020A_FE_AM_43",
+        "question": "Which of the following is a purpose of using a port scanner during an inspection of a web server?",
+        "options": [
+            "Detecting the vulnerability of contents by logging in with a valid user ID and directly checking the contents of the web server",
+            "Detecting unauthorized use by analyzing the access history of the web server",
+            "Ensuring that no unnecessary service is operating by enumerating services on the web server",
+            "Ensuring that there is no deviation from the information-security policy by checking the management status of the web-server user IDs with the operator"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\nA **port scanner** is used to scan and identify open ports on a server to check if unnecessary services are running. Other options focus on user ID management, access history analysis, and content vulnerability checks, which are not the primary functions of a port scanner."
+    },
+    {
+        "id": "2020A_FE_AM_44",
+        "question": "![Image](Files/Pasted%20image%202024102319171543.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\n> **Note:** PCs use dynamic ports (1024 and higher) to establish connections. Port 80 is for HTTP traffic. Therefore, source ports are 1024+ for outbound requests, while responses come from port 80."
+    },
+    {
+        "id": "2020A_FE_AM_45",
+        "question": "Which of the following UML diagrams shows the exchange of messages among objects, message transmission, and object lifelines in a time series?",
+        "options": ["Activity diagram", "Communication diagram", "Sequence diagram", "State-machine diagram"],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\nA **Sequence Diagram** represents the order of message exchanges between objects, including their lifelines. It is useful for detailing the dynamic behavior of a system."
+    },
+    {
+        "id": "2020A_FE_AM_46",
+        "question": "Which of the following is an appropriate relation between a class and an instance in object-oriented programming?",
+        "options": [
+            "An instance defines the specifications of a class.",
+            "An instance is created based on the definition for a class.",
+            "Multiple classes correspond to one (1) instance.",
+            "Only one (1) instance exists for one (1) class."
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\nA **class** is a blueprint for creating **instances** (objects). When instantiated, an object follows the class definition."
+    },
+    {
+        "id": "2020A_FE_AM_47",
+        "question": "Which of the following is the type of module coupling that has the weakest degree of coupling in which the exchange of information between modules is performed only using parameters?",
+        "options": ["Common coupling", "Control coupling", "Data coupling", "Content coupling"],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\n**Data coupling** means modules share data only through parameters, reducing dependencies and making it the weakest form of coupling."
+    },
+    {
+        "id": "2020A_FE_AM_48",
+        "question": "In the development process, which of the following is an activity that should be performed for software architectural design?",
+        "options": [
+            "Analyzing the requirements in incremental steps by expressing them in the form of a diagram, etc.",
+            "Describing the specifications so that the program is clarified on a line-by-line basis",
+            "Obtaining the opinion of the customer and determining the specifications",
+            "Transforming the requirements for the software item into an architecture that describes its top-level structure and identifies its software components"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Explanation:\n\nSoftware architectural design involves defining the system’s top-level structure and components based on requirements."
+    },
+    {
+        "id": "2020A_FE_AM_49",
+        "question": "![Image](Files/Pasted%20image%20202410232005721.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 0,
+        "solution": "### Explanation:\n\nA sharply rising bug curve suggests that more bugs exist internally. Reaching the target number doesn’t mean testing is complete."
+    },
+    {
+        "id": "2020A_FE_AM_50",
+        "question": "Which of the following is an appropriate description of an extreme programming (XP) practice?",
+        "options": [
+            "After the code is created, and it is confirmed that it can be integrated, test cases are created.",
+            "Integration of the code and testing are continuously repeated.",
+            "The code that passed the tests is not refactored until the next iteration.",
+            "The customer is responsible for the specification of unit tests."
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\nXP emphasizes **continuous integration and testing** to ensure software remains in a working state and is developed based on feedback."
+    },
+    {
+        "id": "2020A_FE_AM_51",
+        "question": "According to the 6th edition of the PMBOK Guide, which of the following is an activity for the planning process group in project resource management?",
+        "options": [
+            "Acquire resources",
+            "Control resources",
+            "Develop project team",
+            "Estimate activity resources"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Explanation:\n\nIn the **Planning Process Group** of **Project Resource Management**, one key activity is to estimate the type and quantity of resources (people, equipment, materials) required to perform project activities. This falls under **\"Estimate Activity Resources\"**, which helps plan and allocate the necessary resources efficiently."
+    },
+    {
+        "id": "2020A_FE_AM_52",
+        "question": "![Image](Files/Pasted%20image%2020241020014458.png)",
+        "options": ["A", "B", "C", "D"],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\nTo determine the impact of reducing the duration of activity **D** by 3 days, we first need to calculate the **critical path** (Longest Path).\n\n### Finding critical path\n\n- Path 1: A → B → E\n  - Duration: 6 + 5 + 4 = 15 days\n- Path 2: C → D → E\n  - Duration: 7 + 5 + 4 = 16 days (**this is the critical path**)\n- Path 3: C → F\n  - Duration: 7 + 6 = 13 days\n\nPath 2 is the longest and determines the project duration.\n### Impact of reducing activity D by 3 days\n\n- Path 2 will be reduced to 13 days\n  - **Path 2**: 7 (C) + 2 (D) + 4 (E) = 13 days.\n\nAfter the reduction, the critical path becomes **Path 1: A → B → E** with 15 days, and the new project duration is reduced by **1 day** (from 16 days to 15 days)."
+    },
+    {
+        "id": "2020A_FE_AM_53",
+        "question": "The functional size of a new system was estimated to be 500 function points (FP). Apart from development, the project requires 10 person-months in total for installation of the system and education of developers. Additionally, for project management, 10% of the total person-months of development, installation, and education is required. How many person-months are required in total for this project? Here, the productivity in development is 10 FPs per person-month.",
+        "options": ["51", "60", "65", "66"],
+        "correctAnswer": 3,
+        "solution": "### Explanation:\n\nApart from **development** the project requires 10 person-months for **installation and education**. And another person-months for **project management**, which is 10% of the total person-months from development, installation and education. This means we need to add development, installation and education, and project management person-months to calculate the total.\n\n### Gathered Data\n\n1. Development\n  - The system size is 500 function points (FP), and the productivity is 10 FPs per person-month.\n  - Development person-months = 500 / 10 = 50 person-months\n2. Installation and education\n  - **Given**: 10 person-months.\n3. Project management\n  - Project management effort is **10%** of the total person-months for development, installation, and education.\n  - Total without project management = 50 (development) + 10 (installation and education) = 60 person-months.\n  - Project management = 10% × 60 = 6 person-months\n\n### Total person-months\n\nTotal = 50 (development) + 10 (installation and education) + 6 (project management) = **66** person-months."
+    },
+    {
+        "id": "2020A_FE_AM_54",
+        "question": "Which of the following is used in quality management to help determine whether a process is stable by using plotted time-series data and limit lines?",
+        "options": [
+            "Brainstorming",
+            "Cause-and-effect diagram",
+            "Control chart",
+            "Run chart"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\nA **control chart** is used in quality management to monitor and determine whether a process is stable over time. It displays time-series data and includes upper and lower control limits to track variation. If the data points remain within these limits, the process is considered stable. Control charts help identify any trends or deviations from the norm.\n\n### Other Options:\n\n**a) Brainstorming** – This is a technique used for generating ideas or solutions, not for monitoring process stability.\n\n**b) Cause-and-effect diagram** – Also known as a fishbone diagram, it is used to identify potential causes of problems but does not track process stability over time.\n\n**d) Run chart** – A run chart also plots data over time, but it doesn't have control limits like a control chart, making it less useful for determining process stability."
+    },
+    {
+        "id": "2020A_FE_AM_55",
+        "question": "Which of the following is an appropriate definition of the total cost of ownership (TCO) in the context of system cost?",
+        "options": [
+            "It is the total amount of expenses at the time of system installation.",
+            "It is the total amount of expenses related to the development of business systems.",
+            "It is the total amount of expenses, including those from system installation through operation and maintenance/management.",
+            "It is the total amount of operation expenses for systems related to communications and networking."
+        ],
+        "correctAnswer": 2,
+        "solution": "### Explanation:\n\n**Total Cost of Ownership (TCO)** refers to the **total lifetime cost** of a system or asset, including all expenses from its installation, development, ongoing operation, maintenance, and eventual disposal or retirement. TCO provides a comprehensive view of the costs involved in owning and managing a system beyond just the initial purchase or installation.\n\n### Other Options:\n\n**a) It is the total amount of expenses at the time of system installation** – This only considers the cost at the time of installation, but TCO includes all costs over the system's entire life.\n\n**b) It is the total amount of expenses related to the development of business systems** – TCO goes beyond just development costs to include operational and maintenance costs as well.\n\n**d) It is the total amount of operation expenses for systems related to communications and networking** – This is only a subset of TCO, which includes all aspects, not just communication and networking expenses."
+    },
+    {
+        "id": "2020A_FE_AM_56",
+        "question": "In IT service management, which of the following is an activity that is performed for management of incidents and service requests?",
+        "options": [
+            "Evaluating if customer satisfaction with the service desk meets the agreed service targets and performing a review for identifying improvement opportunities",
+            "Examining measures wherein the amount of free space on a disk is near its threshold",
+            "Investigating the impact of changes made to a program",
+            "Receiving a failure report from a user and checking to see if it corresponds to a known error"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Explanation:\n\nIn **IT service management**, **incident management** focuses on restoring normal service operation as quickly as possible after a disruption. One of the key activities is receiving failure reports (incidents) from users and determining if they correspond to a **known error** that already has a documented workaround or solution. This is a crucial part of the incident management process to minimize the impact on service.\n\n### Other Options:\n\n**a) Evaluating customer satisfaction and performing reviews** – This is part of **service level management**, which focuses on ensuring service performance aligns with agreed targets, not incident management.\n\n**b) Examining free disk space** – This is part of **capacity management** or **monitoring**, not incident and service request management.\n\n**c) Investigating the impact of changes** – This falls under **change management**, which deals with assessing the impact of changes to the IT environment, not incidents or service requests."
+    },
+    {
+        "id": "2020A_FE_AM_57",
+        "question": "Which of the following is the most appropriate description about the backup of data on a disk that is connected to a server?",
+        "options": [
+            "All data are backed up on the day the system commences full operations, and only frequently updated data are backed up thereafter to shorten the work time.",
+            "Data distributed and stored in multiple files are backed up when a series of update processes to the files are completed.",
+            "Data whose frequency of use are low after a certain period of time are deleted from the current disk, and the data that have been backed up are also deleted.",
+            "Important data are backed up by overwriting data on the same media, so that the backup media are not mistaken."
+        ],
+        "correctAnswer": 1,
+        "solution": "### Explanation:\n\nb) suggests that the backup process is conducted after a series of updates, ensuring that the latest version of the files is captured. This strategy helps maintain consistency and ensures that the backup reflects the most current state of the data.\n\n### Other Options:\n\n**a)** This option implies a fixed schedule for backups that may not account for all changes made in between, risking data being out of date.\n\n**c)** While managing data based on usage frequency is a common practice, automatically deleting backed-up data can lead to potential data loss, which is not typically advisable.\n\n**d)** Overwriting important data on the same media is not a recommended practice, as it increases the risk of data loss."
+    },
+    {
+        "id": "2020A_FE_AM_58",
+        "question": "Which of the following is the most appropriate description about a system auditor?",
+        "options": [
+            "The entire interview must be conducted by one (1) system auditor, because discrepancies may occur in the record if multiple auditors are involved.",
+            "The system auditor must instruct the department being audited to implement improvement measures for deficiencies identified during the interview..",
+            "The system auditor must make an effort to obtain documents and records that support the information obtained from the department being audited during the interview.",
+            "The system auditor must select interviewees from administrators who have been an auditor within the department being audited."
+        ],
+        "correctAnswer": 2,
+        "solution": "### **Explanation:**\n\nA **system auditor** is a professional responsible for evaluating an organization's information systems, including its software, hardware, data, and processes. The goal of a system auditor is to ensure that systems are functioning effectively, securely, and in compliance with relevant regulations and policies.\n\n### Other Operations\n\n**a)** Having only one auditor is not always necessary. Multiple auditors can help gather more information and provide different views.\n\n**b)** Auditors can identify problems, but it's not their job to order the department to fix them. They recommend changes, but management decides what to do.\n\n**d)** Interviewing only auditors can create bias. It’s better to talk to people in various roles to get a complete picture of the department."
+    },
+    {
+        "id": "2020A_FE_AM_59",
+        "question": "Which of the following is the most appropriate measure that a management executive must take to secure the appearance of independence for an internal system auditor?",
+        "options": [
+            "Assigning the system auditor to the internal audit department ",
+            "Making it compulsory for the system auditor to undergo continuous learning of IT",
+            "Setting up an auditing-skills training system for the system auditor ",
+            "Specifying and publishing the knowledge and experience necessary for the system auditor"
+        ],
+        "correctAnswer": 2,
+        "solution": "### **Explanation:**\n\nBy placing the system auditor within the internal audit department, it helps ensure that they can operate independently from other departments they may be auditing, thereby enhancing the credibility and objectivity of their work.\n\n### Other Operations\n\n**b)** This is important for the auditor's professional development but does not directly secure their independence in the auditing process.\n\n**c)** While training is beneficial for skill enhancement, it doesn't ensure that the auditor is perceived as independent in their role.\n\n**d)** Defining qualifications is important for transparency and accountability, but it does not directly address the auditor's independence."
+    },
+    {
+        "id": "2020A_FE_AM_60",
+        "question": "When software asset management is audited, which of the following activities is the most appropriate?",
+        "options": [
+            "It is checked to see if compatibility with existing systems is evaluated at the time of installation.",
+            "It is checked to see if evidence, such as a software-license certificate, is properly retained. ",
+            "It is checked to see if failures are localized via database partitioning or other methods. ",
+            "It is checked to see if the organizational and functional structure of the software provider is considered."
+        ],
+        "correctAnswer": 1,
+        "solution": "### **Explanation:**\n\nThis option focuses on verifying that the organization maintains proper documentation of software licenses, which is crucial for ensuring compliance with licensing agreements and avoiding legal issues. Proper retention of software-license certificates demonstrates responsible software asset management.\n\n### Other Operations\n\n**a)** While compatibility checks are important during installation, this activity is more related to system implementation rather than the auditing of software asset management itself.\n\n**c)** This option pertains to system performance and failure management, not directly to software asset management auditing.\n\n**d)** While understanding the provider's structure can be relevant in certain contexts, it is not a primary focus during a software asset management audit."
     }
 ]
