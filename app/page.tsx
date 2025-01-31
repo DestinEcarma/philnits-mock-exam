@@ -31,7 +31,7 @@ export default function Quiz() {
     const shuffled = shuffle(quizData)
     setQuestions(shuffled.slice(0, QUESTIONS_COUNT))
     // // FOR DEBUGGING
-    // const debugIndex = 20
+    // const debugIndex = 55
     // setQuestions(quizData.slice(debugIndex, debugIndex + 10))
     
     // setQuestions(quizData)
