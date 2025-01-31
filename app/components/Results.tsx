@@ -41,7 +41,10 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
       <p className="text-xl">Time taken: {formatTime(timeTaken)}</p>
       {quizData.map((question, index) => (
         <div key={index} className={`border p-4 rounded-md ${userAnswers[index] === question.correctAnswer ? 'bg-green-50' : 'bg-red-50'}`}>
-          <h2 className="font-bold text-sm mb-4">{question.id}</h2>
+          <span className="text-sm font-medium bg-primary text-primary-foreground px-2 py-1 rounded-full">
+            Question {index + 1} of {quizData.length}
+          </span>
+          <h2 className="font-bold text-sm my-4">{question.id}</h2>
           <div className="font-medium">
             <Markdown>{question.question}</Markdown>
           </div>
