@@ -3,7 +3,8 @@ import type { QuizQuestion } from "@/assets/data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import React from "react"
 import Markdown from "@/components/Markdown"
-import Credits from "./Credits"
+import Credits from "@/components/Credits"
+import ScrollToTop from "@/components/ScrollToTop"
 
 interface ResultsProps {
   quizData: QuizQuestion[]
@@ -39,6 +40,21 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
         Your score: {score} out of {quizData.length}
       </p>
       <p className="text-xl">Time taken: {formatTime(timeTaken)}</p>
+
+      <Credits />
+      <div className="flex space-x-4">
+        <Button onClick={onRestart} className="flex-1">
+          Retake Quiz
+        </Button>
+        <Button onClick={() => window.location.reload()} className="flex-1">
+          New Quiz
+        </Button>
+      </div>
+      
+      <hr className="my-4"/>
+
+      <p className="text-lg font-bold">Review answers</p>
+
       {quizData.map((question, index) => (
         <div key={index} className={`border p-4 rounded-md ${userAnswers[index] === question.correctAnswer ? 'bg-green-50' : 'bg-red-50'}`}>
           <span className="text-sm font-medium bg-primary text-primary-foreground px-2 py-1 rounded-full">
@@ -115,15 +131,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
             </>
         </div>
       ))}
-      <Credits />
-      <div className="flex space-x-4">
-        <Button onClick={onRestart} className="flex-1">
-          Retake Quiz
-        </Button>
-        <Button onClick={() => window.location.reload()} className="flex-1">
-          New Quiz
-        </Button>
-      </div>
+      <ScrollToTop />
     </div>
   )
 }
