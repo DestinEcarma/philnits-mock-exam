@@ -355,5 +355,365 @@
         ],
         "correctAnswer": 3,
         "solution": "### Explanation\n\n**d) An output list resulting from data entry is cross-checked with the input form.**\n\n- This is an example of a **detective control**, as it involves identifying errors or irregularities after they have occurred by comparing the output with the input to verify accuracy. Detective controls are designed to find and report errors, fraud, or other issues that might occur during a process.\n\n### Why the Others Won't Fit\n\n**a) A data entry manual is created, and the persons in charge of data entry are trained.**\n- This is a **preventive control** because it aims to prevent errors by ensuring that employees are trained and informed before performing data entry tasks.\n\n**b) A data entry screen is designed so that operation errors are unlikely to occur.**\n- This is also a **preventive control**, as it is intended to reduce the likelihood of errors occurring during data entry by designing a user-friendly interface.\n\n**c) Access rights are assigned only to the person in charge of data entry.**\n- This is another **preventive control** aimed at preventing unauthorized access or misuse by limiting access rights to only those who need them."
-    }  
+    },
+    {
+        "id": "2021S_FE_AM_01",
+        "question": "Which of the following is equivalent to the logic expression below?\n\n$$\n(x+y) \\cdot (x+z)\n$$\n\nHere, the letters are logic variables; $x+y$, $x \\cdot y$, and $\\bar{x}$ are OR, AND, and NOT operations on the corresponding variables, respectively.",
+        "options": [
+        "$x\\cdot(y+z)$",
+        "$x+y\\cdot z$",
+        "$x\\cdot y+y\\cdot z$",
+        "$(\\bar{x}+y)\\cdot z$"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Step 1: Refer to Boolean algebra identities\n\n![Image](Files/Pasted%20image%2020241017221750.png)\n\n**Goal:** is to find the most similar form with the given equation\n\n**Answer**: Distributive law is the most similar\n\nThe distributive law states that:\n$A+BC = (A+B)\\cdot(A+C)$\n\n### Step 2: Apply Distributive Law\n\n**Goal**: Substitute distributive law equation with the actual variables\n\n**Answer**:\n\t$(x+y)\\cdot(x+z) = ?$      *(original equation)*\n\t$(A+B)\\cdot(A+C) = A+B\\cdot C$\n\n\t$A = x$\n\t$B = y$\n\t$C = z$\n\n$\\therefore$ Resulting into the final equation\n$(x+y)\\cdot(x+z) = \\boxed{x+y\\cdot z}$\n\n### Hence, the answer would be **b)**"
+    },
+    {
+        "id": "2021S_FE_AM_02",
+        "question": "Which of the following is a decimal that is represented as a finite digit octal fraction?",
+        "options": [
+        "$0.3$",
+        "$0.4$",
+        "$0.5$",
+        "$0.8$"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Testing the waters approach\n\n**NOTE**: This only works for these specific problems, specifically:\n- single digit decimal fractions to any base number\nRefer to the In-Depth Approach for general applications\n\n### Step 1: Multiply all decimal choices by base number\nTo save time, we can do the initial multiplication of each number by the base number, `8`. This is to hope for a choice that immediately gives a terminating number on the first try.\n\n**Condition:** Achieve a result where the fractional part is `0`\n#### a) $0.3\\cdot 8 = 2.4$\n#### b) $0.4*8 = 3.2$\n#### c) $0.5*8 = 4.0$ !!\n#### d) $0.8*8 = 6.4$\n\nTherefore, we arrive at our answer, `c)`\n\n## In-Depth Approach\n### Step 1: Multiply fractional part by base number\nThis is according to the general conversion process of decimal fractions to any base number\n$$\\text{formula} = \\text{fractional part} \\cdot \\text{base number}$$\n\nSince we are looking for the `octal fraction`, our `base is 8`, so for letter **a)**\n$0.3 \\cdot 8 = 2.4$\n\n### Step 2: Separate whole number and fractional number from Step 1\nReferring to Step 1:\n$2.4 \\rightarrow 0.4$ , $2$\n\nBreak down uses:\n- **whole number** - for getting the final octal fraction\n- **fractional number** - for continued multiplication\n\n### Step 3: Repeat steps 1 and 2 until fractional number is 0\nIdeally, we create a table to keep track of the process.\n\n|             |                  |  Result   | Fractional |  Whole  |\n| :---------: | :--------------: | :-------: | :--------: | :-----: |\n|   **(1)**   |   $0.3\\cdot 8$   |   $2.4$   |   $0.4$    |   $2$   |\n| ==**(2)**== | ==$0.4\\cdot 8$== | ==$3.2$== | ==$0.2$==  | ==$3$== |\n|   **(3)**   |   $0.2\\cdot 8$   |   $0.8$   |   $0.8$    |   $0$   |\n|   **(4)**   |  $0.8 \\cdot 8$   |   $6.4$   |   $0.4$    |   $6$   |\n| ==**(5)**== | ==$0.4\\cdot 8$== | ==$3.2$== | ==$0.2$==  | ==$3$== |\n|     ...     |                  |           |            |         |\n\n**NOTE**: in this case, since we are already looping back, letter **a)** is non-terminating hence, we move on to the next choice.\n\n**IMPORTANT**: to determine a non-terminating fraction, find a step in the conversion table where a step is already similar to a previous step like in this case: `step (2)` and `step (5)`\n\n### Step 4: Repeat process to other choices until finite number\n**HOWEVER**, we can take a shortcut:\n\tif number is part of the previous table/s, it is immediately non-terminating\n#### b) 0.4\n- part of a), non-terminating\n#### d) 0.8\n- part of a), non-terminating\n\nTherefore, leaving us with\n#### c) 0.5\n\nwhich is the answer"
+    },
+    {
+        "id": "2021S_FE_AM_03",
+        "question": "The GCD (Greatest Common Divisor) of two positive integers, $x_0$ and $x_1 (x_0 > x_1)$, is computed by the procedure below. When $x_{0} = 175$ and $x_1 = 77$, how many times should step `(2)` of this procedure be executed before it stops? Here, '$A ← B$ ' indicates that B is substituted for A.\n\n`[`Procedure`]`\n1) $i ← 2$\n2) $x_i ←$ remainder of $x_{i−2}$ divided by $x_{i−1}$\n3) if $x_i = 0$, stop with $x_i−1$ as the GCD\n4) $i ← i + 1$\n5) return to step `(2)`",
+        "options": [
+        "$3$",
+        "$4$",
+        "$6$",
+        "$7$"
+        ],
+        "correctAnswer": 1,
+        "solution": "### Step 1: Look at step (2) and stop condition\n`step (2)`: $$x_{i} = \\frac{x_{i-2}}{x_{i-1}}$$\n\n`stop condition`:  when $x_{i}$ = 0\n\nBasically:\n- keep dividing the remainder before the last (`i-2`) with the last remainder (`i-1`) \n- until the **resulting remainder (`i`) is** `0`\n\n### Step 2: Do the process starting at i = 2\nDo not forget to take note of the given:\n$x_{0} = 175$\n$x_{1} = 77$\n\n| iterations |                          formula                           | $x_{i}$ |\n| :--------: | :--------------------------------------------------------: | :-----: |\n|  **(1)**   | $$\\frac{x_{0}}{x_{1}} = \\frac{175}{77} = 2 \\text{ R } 21$$ |  $21$   |\n|  **(2)**   | $$\\frac{x_{1}}{x_{2}} = \\frac{77}{21} = 3 \\text{ R } 14$$  |  $14$   |\n|  **(3)**   |  $$\\frac{x_{2}}{x_{3}} = \\frac{21}{14} = 1 \\text{ R } 7$$  |   $7$   |\n|  **(4)**   |  $$\\frac{x_{3}}{x_{4}} = \\frac{14}{7} = 2 \\text{ R } 0$$   |   $0$   |\nEnd at the `4th` iteration because $x_{i}$ = 0\n\n### Hence, the answer is b)"
+    },
+    {
+        "id": "2021S_FE_AM_04",
+        "question": "To compare the entrance exams of the current and previous years, a company required many of its employees to take those exams. The correlation coefficient and the regression line were obtained by assigning the scores of the previous year to the x-axis and the scores of the current year to the y-axis. Which of the following can be derived from the results below?\n\n`[`Results`]`\n\tThe correlation coefficient is 0.8.\n\tThe slope of the regression line is 1.1.\n\tThe y-intercept of the regression line is 10.",
+        "options": [
+        "From the slope and the y-intercept of the regression line, the tendency is to obtain a higher score for the current year than the previous year",
+        "From the slope of the regression line and the correlation coefficient, the exam of the current year is of high quality.",
+        "From the slope of the regression line, the average score for the current year is 1.1 times that of the previous year.",
+        "From the y-intercept of regression line, those who get zero for the current year can get a score as high as 10 for the previous year."
+        ],
+        "correctAnswer": 0,
+        "solution": "### Step 1: Gather important details.\n\n1) correlation coefficient\n2) regression line\n3) scores of previous year = x-axis\n4) scores of current year = y-axis\n\n### Step 2: Interpret details and results.\n\n#### Details\n1) correlation coefficient\n\t- tells us about how related the two variables, `x` and `y` are\n\t- $1$ = perfectly correlated (if x goes up, y goes up, and vice versa)\n\t- $0$ = zero correlation\n\t- $-1$ = perfect negative correlation (if x goes up, y goes down, and vice versa)\n![Image](Files/Pasted%20image%2020241018010152.png)\n\n2) regression line\n\t- tells us the relationship between the two variables\n\t- applied in scenarios where the change of the independent variable (x) changes the dependent variable (y)\n![Image](Files/Pasted%20image%2020241018010951.png)\n\n#### Results\n1) The correlation coefficient is 0.8.\n\t-  based on the description of correlation coefficients this means that the two variables x and y are `near perfect correlation`\n2) The slope of the regression line is 1.1.\n\t- the rate of change per increase of `x` is that for every 1 point in x means 1.1 points in y\n\t- so as the score of the previous year increases, scores of the current year increase more\n\t- `an increasing trend`\n3) The y-intercept of the regression line is 10.\n\t- if `x` = 0, then, the `y`-axis starts at 10\n\t- meaning if someone in the previous year `x` scores 0, it is expected that they would get 10 in the current year `y`\n\n### Step 3: Compare analysis to the choices\n\n#### a) From the slope and the y-intercept of the regression line, the tendency is to obtain a higher score for the current year than the previous year\n- from the analyses of both the slope and y-intercept of the regression line, the statement coincides\n\n#### b) From the slope of the regression line and the correlation coefficient, the exam of the current year is of high quality.\n- high quality isn't defined or studied in the problem, rather, it is the scores that are being compared\n\n#### c) From the slope of the regression line, the average score for the current year is 1.1 times that of the previous year.\n- the slope doesn't talk about the overall average score, instead it talks about each individual score. (1 point of x is 1.1 points for y)\n\n#### d) From the y-intercept of regression line, those who get zero for the current year can get a score as high as 10 for the previous year.\n- the variables are reversed, remember step 2\n\t- current year = y-axis\n\t- previous year = x-axis\n- it should be that if the person's score in the previous year is 0, in the current year that person should get an expected 10 points\n\n### Therefore, the answer is **a)**"
+    },
+    {
+        "id": "2021S_FE_AM_05",
+        "question": "The table below is a state transition table used for character string validation. In this table, '$A$' represents the initial state, and '$E$' represents the failure state. Which of the following is a character string that fails this validation? Here, each character of a string is parsed from the leftmost side, and the symbol '$\\triangle$' represents a blank character.\n\n![Image](Files/Pasted%20image%2020241018160540.png)",
+        "options": [
+        "$+0010$",
+        "$-1$",
+        "$12.2$",
+        "$\\triangle$"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Solution\nWe run through each option to the state transition table.\nAlways go to State A (first row) in the beginning.\n\n**Goal:** Get an option that will go to State E\n\n### Step 1: Run through option a)\nOur string would be: $+0010$\n\nFirst character: `+` = Sign $\\rightarrow$ go to state C (3rd row)\nNext character: `0` = Number $\\rightarrow$ go to state B (2nd row)\nNext character: `0` = Number $\\rightarrow$ go to state B\nNext character: `1` = Number $\\rightarrow$ go to state B\nNext character: `0` = Number $\\rightarrow$ go to state B\n\n**NOT A FAILURE**\n\n### Step 2: Run through option b)\nOur string would be: $-1$\n\nFirst character: `-` = Sign $\\rightarrow$ go to state C\nNext character: `1` = Number $\\rightarrow$ go to state B\n\n**NOT A FAILURE**\n\n### Step 3: Run through option c)\nOur string would be: $12.2$\n\nFirst character: `1` = Number $\\rightarrow$ go to state B\nNext character: `2` = Number $\\rightarrow$ go to state B\nNext character: `.` = Radix point $\\rightarrow$ go to state D\nNext character: `2` = Number $\\rightarrow$ go to state E\n\n**FAILURE**\n\n### Hence, c) is the answer"
+    },
+    {
+        "id": "2021S_FE_AM_06",
+        "question": "Which of the following is an appropriate description of parity check (vertical parity) that handles transmission errors on a communication line?",
+        "options": [
+        "A parity check can correct 1-bit and 2-bit errors.",
+        "A parity check can detect a 1-bit error.",
+        "An odd parity check can detect a 1-bit error, but an even parity check cannot even detect a 1-bit error.",
+        "An odd parity check can detect any odd number of bit errors, and an even parity check can detect any even number of bit errors."
+        ],
+        "correctAnswer": 1,
+        "solution": "### Parity Check Definition\n- adds an extra bit named `parity bit`\n- checks if the number of `1 bits` excluding itself\n- two types of `parity bits`:\n\t1) odd - checks if the no. of `1 bits` is odd\n\t2) even - checks if the no. of  `1 bits` is even\n- very simple\n- error prone\n- 1-bit error checker, or precisely:\n> \ta single bit parity check will detect any odd number of errors, but no even number of errors"
+    },
+    {
+        "id": "2021S_FE_AM_07",
+        "question": "When a sequence of data, $A, B, C, D$, arrives in this order, which of the following is a possible sequence that can be produced using a single stack?",
+        "options": [
+        "$A, D, B, C$",
+        "$B, D, A, C$",
+        "$C, B, D, A$",
+        "$D, C, A, B$"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Solution\n- Iteration through each option, \n- assume that the sequence is generated with the possibility of popping in between each push\n\n### Step 1: Test option a)\n#### (1) Push `A`\n\n|       |\n| :---: |\n|       |\n|       |\n| **A** |\nOutput Sequence: \n\n#### (2) Pop `A`\n\n|     |\n| :-: |\n|     |\n|     |\n|     |\nOutput Sequence: $A$\n\n#### (3) Push `B`\n\n|       |\n| :---: |\n|       |\n|       |\n| **B** |\nOutput Sequence: $A$\n\n#### (4) Push `C`\n\n|       |\n| :---: |\n|       |\n| **C** |\n| **B** |\nOutput Sequence: $A$\n\n#### (5) Push `D`\n\n|       |\n| :---: |\n| **D** |\n| **C** |\n| **B** |\nOutput Sequence: $A$\n\n#### (6) Pop `D`\n\n|       |\n| :---: |\n|       |\n| **C** |\n| **B** |\nOutput Sequence: $A, D$\n\n#### (7) Pop `C`\n\n|       |\n| :---: |\n|       |\n| **C** |\n| **B** |\nOutput Sequence: $A, D, C$\n**WRONG SEQUENCE, NEXT**\n\n### Step 2: Test option b)\nShortcutting some process steps:\n**NOTE:** Popping always pops top value of the stack\n#### (1) Push `A`\n\n|       |\n| :---: |\n|       |\n|       |\n| **A** |\nOutput Sequence: \n\n#### (2) Push and Pop `B`\n\n|           |\n| :-------: |\n|           |\n| ==**B**== |\n|   **A**   |\n$\\downarrow$\n\n|       |\n| :---: |\n|       |\n|       |\n| **A** |\nOutput Sequence:  $B$\n\n#### (3) Push `C, D` and Pop `D, C`\n\n|           |\n| :-------: |\n| ==**D**== |\n| ==**C**== |\n|   **A**   |\n$\\downarrow$\n\n|       |\n| :---: |\n|       |\n|       |\n| **A** |\nOutput Sequence:  $B, D, C$\n**WRONG SEQUENCE**\n\n### Step 3: Test option c)\n#### (1) Push `A, B, C` and Pop `C, B`\n\n|       |\n| :---: |\n| **C** |\n| **B** |\n| **A** |\n$\\downarrow$\n|       |\n| :---: |\n|       |\n|       |\n| **A** |\nOutput Sequence: $C, B$\n\n#### (2) Push `D` and Pop `D, A`\n\n|       |\n| :---: |\n|       |\n| **D** |\n| **A** |\n$\\downarrow$\n|     |\n| :-: |\n|     |\n|     |\n|     |\nOutput Sequence: $C, B, D, A$\n**CORRECT SEQUENCE**\n\n### Hence, c) is the correct answer"
+    },
+    {
+        "id": "2021S_FE_AM_08",
+        "question": "The in-order traversal of a binary tree is a procedure that visits all nodes of the tree. For a non-empty binary tree `T`, it performs the following operations in order.\n\n1) Recursively performs the in-order traversal of the left subtree of `T`.\n2) Visits the root node of `T`.\n3) Recursively performs the in-order traversal of the right subtree of `T`.\n\nWhich of the following is the ordered sequence of nodes when the in-order traversal is performed on the binary tree below?\n\n![Image](Files/Pasted%20image%2020241018165551.png)",
+        "options": [
+        "$1, 2, 4, 7, 8, 5, 3, 6, 9$",
+        "$6, 9, 3, 1, 5, 2, 8, 4, 7$",
+        "$7, 4, 8, 2, 5, 1, 3, 9, 6$",
+        "$7, 8, 4, 5, 2, 9, 6, 3, 1$"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Step 1: Start at left-most subtree: `Node 7`\nWe go to leaf node 7:\n- it is a valid subtree (1 node)\n- we cannot go deeper as it has no children\n![Image](Files/Pasted%20image%2020241018170137.png)\n**Sequence:** $7$\n\n### Step 2: Go to parent of `Node 7`: `Node 4`\nAccording to 2nd instruction:\n- go to parent of node T (7) which is node 4\n![Image](Files/Pasted%20image%2020241018170510.png)\n**Sequence:** $7,4$\n\n### WE CAN ALREADY STOP HERE AND ANS. `C)`\n\n## Process Continuation\n### Step 3: Repeat in-order process to right-subtree of `Node 4`: `Node 8`\nWe go to leaf node 8:\n- it is a valid subtree (1 node)\n- we cannot go deeper as it has no **children**\n![Image](Files/Pasted%20image%2020241018170936.png)\n**Sequence:** $7,4,8$\n\n### Step 4: Go back to `Node 4`\n**NOTE:** already visited, do not write in sequence, continue\n\n### Step 5: Go to parent of `Node 4`: `Node 2`\nAccording to 2nd instruction:\n- go to parent of node T (4) which is node 2\n![Image](Files/Pasted%20image%2020241018171307.png)\n**Sequence:** $7,4,8,2$\n\n### Step 6: Repeat in-order process to right-subtree of `Node 2`: `Node 5`\nWe go to leaf node 5:\n- it is a valid subtree (1 node)\n- we cannot go deeper as it has no **children**\n![Image](Files/Pasted%20image%2020241018171815.png)\n**Sequence:** $7,4,8,2,5$\n\n### Step 7: Go to parent of parent of `Node 5`: `Node 1`\n![Image](Files/Pasted%20image%2020241018172540.png)\n**Sequence:** $7,4,8,2,5,1$\n\n### Step 8: Repeat in-order process to right-subtree of `Node 1`: `Node 3`\nCannot go to left-most subtree (no left subtree)\nHence, it becomes the left-most subtree\n![Image](Files/Pasted%20image%2020241018172602.png)\n**Sequence:** $7,4,8,2,5,1,3$\n\n### Step 9: Repeat in-order process to right-subtree of `Node 3`: `Node 6`\n**Sequence:** $7,4,8,2,5,1,3$\n\n### Step 10: Go to left-most subtree of `Node 6`: `Node 9`\nLeaf-node, place itself\n![Image](Files/Pasted%20image%2020241018172634.png)\n**Sequence:** $7,4,8,2,5,1,3,9$\n\n### Step 11: Go to parent of `Node 9`: `Node 6`\n![Image](Files/Pasted%20image%2020241018172652.png)\n**Sequence:** $7,4,8,2,5,1,3,9,6$\n**NO MORE ELEMENTS OR SUBTREES --END--**\n\n### Hence, the answer is c)"
+    },
+    {
+        "id": "2021S_FE_AM_09",
+        "question": "Which of the following explains the objective of a recursive call?",
+        "options": [
+        "To allow a function to use itself from within its body",
+        "To execute processes in an event-driven way rather than in a predetermined order",
+        "To retain a function in memory for reuse after its execution",
+        "To undo an execution of a process when it fails"
+        ],
+        "correctAnswer": 0,
+        "solution": "### Definition of recursive call\n> A recursive function is a function that calls itself during its execution. The process may repeat several times, outputting the result and the end of each iteration."
+    },
+    {
+        "id": "2021S_FE_AM_10",
+        "question": "Which of the following is a technology that provides a dynamic user interface without page transition using an asynchronous communication in JavaScript?",
+        "options": [
+        "Ajax",
+        "CSS",
+        "RSS",
+        "SNS"
+        ],
+        "correctAnswer": 0,
+        "solution": "## Definitions\n### Ajax (ANSWER)\n- **A**synchronous **J**avaScript **A**nd **X**ML.\n- Update a web page without reloading the page\n- Request data from a server - after the page has loaded\n- Receive data from a server - after the page has loaded\n- Send data to a server - in the background\n\n### CSS\n- NOT JAVASCRIPT\n- **C**ascading **S**tyle **S**heets\n- CSS describes how HTML elements are to be displayed on screen, paper, or in other media\n- CSS saves a lot of work. It can control the layout of multiple web pages all at once\n- External stylesheets are stored in CSS files\n\n### RSS\n- NOT JAVASCRIPT\n- **R**eally **S**imple **S**yndication\n- text-based format\n- delivers content from sites that are\n\t- updated on a regular basis,\n\t- such as news sites or blogs\n\n### SNS\n- NOT JAVASCRIPT\n- Social Networking Service(?)"
+    },
+    {
+        "id": "2021S_FE_AM_11",
+        "question": "Which of the following is a special register that contains the address of the next instruction to be fetched?",
+        "options": [
+        "Accumulator",
+        "Program Counter (PC)",
+        "Stack Pointer",
+        "Timer"
+        ],
+        "correctAnswer": 1,
+        "solution": "## Definitions\n\n### Accumulator\n- type of register for short-term, intermediate storage of arithmetic and logic data\n\n### Program Counter (ANSWER)\n- specialized register \n- indicates the position of the CPU in its instruction sequence \n- holds either the \n\t- ==address of the instruction being executed, ==\n\t- or the address of the next,\n\n### Stack Pointer\n- register in CPU\n- stores the memory address of the last item added to a stack\n\n### Timer\n- a hardware device or a software component \n- measures time or triggers events\n- increases value in a specific period of time"
+    },
+    {
+        "id": "2021S_FE_AM_12",
+        "question": "Which of the following is the performance of a CPU in MIPS when the instruction mix of the CPU is as listed in the table below? Here, the CPU does not use a pipeline architecture.\n\n|          Instruction type          | Instruction execution <br>time in μs | Appearance ratio |\n| :--------------------------------: | :----------------------------------: | :--------------: |\n| Register to register <br>operation |                 0.1                  |       40%        |\n| Register from memory <br>operation |                 0.3                  |       50%        |\n| Unconditional branch <br>operation |                 0.6                  |       10%        |",
+        "options": [
+        "0.04",
+        "0.25",
+        "4",
+        "25"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Step 1: Select and define details\n\n1) **MIPS**\n   - Million instructions per second\n   - Formula:  \n     $$\n     \\text{MIPS} = \\frac{1}{\\text{average CPI}} \\times \\frac{\\text{clock rate}}{10^6}\n     $$\n   - CPI = cycles per instruction\n2) **Pipeline architecture** - One execution at a time\n\n### Step 2: Find average CPI\n\nFormula based on table:\n\n$$\n\\text{average CPI} = \\sum_{n=1}^{3} (i_n \\cdot a_n)\n$$\n\nSubstituting values:\n\n$$\n\\begin{aligned}\n\\text{average CPI} &= (0.1 \\mu \\cdot 0.4) + (0.3 \\mu \\cdot 0.5) + (0.6 \\mu \\cdot 0.1) \\\\\n&= 0.04 + 0.15 + 0.06 \\\\\n\\text{average CPI} &= 0.25 \\mu s\n\\end{aligned}\n$$\n\n### Step 3: Find MIPS\n\n$$\n\\begin{aligned}\n\\text{MIPS} &= \\frac{1}{\\text{average CPI}} \\times \\frac{\\text{clock rate}}{10^6} \\\\\n\\text{*Clock rate unspecified (=1)} &= \\frac{1}{\\text{average CPI}} \\times \\frac{1}{10^6} \\\\\n\\text{*Convert } \\mu \\text{ to s} &= \\frac{1}{0.25\\mu s} \\times \\frac{10^6\\mu s}{s} \\times \\frac{1}{10^6} \\\\\n\\text{MIPS} &= 4\n\\end{aligned}\n$$\n\n### Hence, the answer is **c)**"
+    },
+    {
+        "id": "2021S_FE_AM_13",
+        "question": "Which of the following is a computer system or architecture where the CPU sequentially reads and executes the programs that are stored in the main memory?",
+        "options": [
+        "Addressing system",
+        "DMA control architecture",
+        "Stored program architecture",
+        "Virtual memory system"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Definitions\n### Addressing system\n- computer system\n- refers to the method used by a computer to access memory locations.\n\n### DMA control architecture\n- control architecture\n- Direct Memory Access (DMA)\n- allows peripherals to access the main memory independently of the CPU\n\n### Stored program architecture (ANSWER)\n- computer architecture\n- instructions to be executed are ==stored in the main memory alongside the data==\n- ==CPU sequentially fetches and executes these instructions==\n\n### Virtual memory system\n- computer system\n- allows a computer to use disk storage as an extension of RAM"
+    },
+    {
+        "id": "2021S_FE_AM_14",
+        "question": "Which of the following is an appropriate description of USB 3.0?",
+        "options": [
+        "It is a serial interface that adopts isochronous transmission that is suitable for audio or video, and has a broadcast transmission mode.",
+        "It is a serial interface that has a data transmission mode of 5 Gbit/s that is called super speed.",
+        "It is a serialized ATA specification that connects a PC to a peripheral device.",
+        "It is an interface that uses four (4) pairs of signal lines transmitting two (2) bits of information in one (1) clock and has a maximum throughput of 1 Gbit/s."
+        ],
+        "correctAnswer": 1,
+        "solution": "## Definition\nUSB 3.0, also known as SuperSpeed USB, is a Universal Serial Bus (USB) data transfer standard that's commonly used to connect external devices to computers: \n\n- **Speed**: 5–20 Gbps. \n- **Compatibility**: backwards compatible with USB 2.0 and USB 1.1 devices. \n- **Symbol**: standard USB trident logo with an 'SS' inscription and a transfer speed capability above the trident. \n- **Ports**: usually blue, while USB 2.0 ports are black or white. \n- **Uses**: connect external devices like thumb drives, network adapters, and high-resolution cameras.\n\n### Option a) - Wrong\n- does support isochronous transfers\n- BUT USB 3.0 also supports other types of data transfers\n\n\n### Option b) - Correct\n- USB 3.0 introduced the 'SuperSpeed' mode\n- maximum data transfer rate of **5 Gbit/s**\n\n### Option c) - Wrong\n- USB 3.0 is not an ATA\n- ATA refers to a different interface used primarily for connecting storage devices like hard drives and SSDs.\n\n### Option d) - Wrong\n- maximum throughput is 1 Gbit/s = WRONG"
+    },
+    {
+        "id": "2021S_FE_AM_15",
+        "question": "Which of the following is the RAID level where the entire stored data is lost when one of the multi-disks is damaged?",
+        "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+        ],
+        "correctAnswer": 0,
+        "solution": "## Definitions\n**RAID**\n- Redundant Array of Independent Drives or \n- Redundant Array of Inexpensive Disks\n\n### a) RAID 0 (ANSWER)\n- data is split across disks \n- but no data redundancy\n- good performance\n- but ==if a drive broken, data is permanently lost==\n### b) RAID 1\n- uses mirroring\n- data in one drive is duplicated to another\n- data is not lost on disk failure\n### c) RAID 5\n- stripes data across multiple disks\n- includes parity information\n- can reconstruct data on one disk failure\n### d) RAID 6\n- similar to raid 5\n- double parity\n- adds extra parity info\n- allows loss of two disks before data is compromised"
+    },
+    {
+        "id": "2021S_FE_AM_16",
+        "question": "Which of the following is the approximate availability of a system in percentage when the MTBF is 30 days and the MTTR is 6 hours?",
+        "options": [
+        "$0.83$",
+        "$83.33$",
+        "$98.36$",
+        "$99.17$"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Step 1: Get important definitions\n\n1) MTBF\n\n- mean time between failure\n\n- aka **uptime**\n\n2) MTTR\n\n- mean time to repair\n\n- aka **downtime**\n\n3) System availability\n\n- in `hours`\n\n- Formula: $$ \\text{Availability} = \\frac{\\text{uptime}}{\\text{uptime} + \\text{downtime}} \\cdot 100 $$\n\n### Step 2: Use availability formula\n\n$$ \\text{uptime} = 30 \\text{ days} = 30 \\cdot 24 = 720 \\text{ hours} $$\n$$ \\text{downtime} = 6 \\text{ hours} $$\n$$ \\text{Availability} = \\frac{720}{720 + 6} \\cdot 100 $$\n$$ \\text{Availability} \\approx \\boxed{99.17\\%} $$\n\n### Hence, the answer is d)"
+    },
+    {
+        "id": "2021S_FE_AM_17",
+        "question": "In the switching procedure of processes in the multiprogramming shown in the figure below, which of the following is an appropriate combination of OS processing from A to C?\n\n![Image](Files/Pasted%20image%2020241018222511.png)",
+        "options": [
+        "Restoration of the running state | Selection of the process | Saving of the running state",
+        "Saving of the running state | Restoration of the running state | Selection of the process",
+        "Saving of the running state | Selection of the process | Restoration of the running state",
+        "Selection of the process | Restoration of the running state | Saving of the running state"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Explanation\n\nIn the context of process switching the OS must do the following:\n\n1) **Save the current process**: The OS saves the state of the current process into a process control block (PCB).\n\n2) **Load the next process**: The OS loads the PCB of the next process to be executed.\n\n3) **Transfer control**: The OS transfers control to the next process.\n\n### Hence, the answer is c)"
+    },
+    {
+        "id": "2021S_FE_AM_18",
+        "question": "Among the page replacement methods in virtual memory management, which of the following is the LRU control method?",
+        "options": [
+        "Each page is managed by appending a reference flag and a change flag, and pages without reference or change are replaced with higher priority.",
+        "One of the pages in main memory is randomly chosen with the same probability and then replaced.",
+        "The page that has been stored in the main memory for the longest time is replaced.",
+        "The page that has not been referenced the longest time is replaced."
+        ],
+        "correctAnswer": 3,
+        "solution": "## Explanation\n\n**LRU Control Method**\n\n- least recently used (LRU)\n\n- virtual memory\n\n- a cache replacement policy\n\n- removes the least recently accessed data when a cache reaches its capacity"
+    },
+    {
+        "id": "2021S_FE_AM_19",
+        "question": "Which of the following is an appropriate function of a linker?",
+        "options": [
+        "To load a load module to the main memory ahead of execution",
+        "To monitor the execution of a program and to record the execution results for each step",
+        "To perform a resolution of cross references and to create one (1) load module from multiple object modules",
+        "To register a created program in a library"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Explanation\n\nA linker, also known as a link editor, is a computer program that performs several functions to combine object files into an executable program:\n\n1) **Combines object files**\n\n- The linker takes object files generated by a compiler and combines them into a single executable file. This process is called file linking.\n\n2) **Assigns memory addresses**\n\n- The linker assigns unique memory addresses to each symbol in the program, including functions and variables.\n\n3) **Resolves references**\n\nThe linker resolves references between object files by assigning definite addresses.\n\n4) **Allocates memory**\n\n- The linker allocates memory for static variables and arranges for the initialization of dynamic variables.\n\n5) **Handles relocations**\n\n- The linker adjusts the addresses of symbols when the executable is loaded into memory. This process allows the program to access the correct memory locations.\n\n6) **Sets up entry point**\n\n- The linker sets up the program's entry point.\n\nIf the linker encounters unresolved references during the linking process, it will produce an error and fail to create the executable file."
+    },
+    {
+        "id": "2021S_FE_AM_20",
+        "question": "Which of the following is the appropriate explanation of sequence control for controlling industrial devices?",
+        "options": [
+        "It is based on fuzziness, such as 'slightly more' or 'slightly less.'",
+        "It is resistant to unexpected disturbances because it continuously detects the amount of control and reflects it on the control.",
+        "It steps through each phase of control one after another according to a predefined order or set of conditions.",
+        "It takes corrective action in advance by assuming the occurrence of disturbances when disturbances can be expected."
+        ],
+        "correctAnswer": 2,
+        "solution": "## Definition\n\n**Sequence control**\n\n- a predefined `sequence` of steps to operate a machine\n\n- each step follows the previous one based on a set order of conditions\n\n### Option a)\n\n- describes fuzzy control\n\n### Option b)\n\n- describes feedback control\n\n### Option c) (ANSWER)\n\n- accurate to the definition of sequence control\n\n### Option d)\n\n- describes feedforward control"
+    },
+    {
+        "id": "2021S_FE_AM_21",
+        "question": "The half adder in the diagram below adds two (2) single-digit binary numbers, x and y, and produces z (the first digit of the sum) and c (the carry bit) as outputs. Which of the following is the appropriate combination of gate devices A and B?\n\n![Image](Files/Pasted%20image%2020241018230017.png)",
+        "options": [
+        "Exclusive logical sum (XOR) | Logical product (AND)",
+        "Logical product (AND) | Logical sum (OR)",
+        "Negative logical product (NAND) | Negative logical sum (NOR)",
+        "Negative logical sum (NOR) | Exclusive logical sum (XOR)"
+        ],
+        "correctAnswer": 0,
+        "solution": "## Explanation\n\nRecall definition of and **adder** circuit\n\n- sum bit becomes 1 ONLY when\n\n- $x$ = 1 and $y$ = 0\n\n- $x$ = 0 and $y$ = 1\n\n- ==XOR==\n\n- carry bit becomes 1 ONLY when\n\n- $x$ and $y$ = 1\n\n- ==AND==\n\n### Truth table of adder\n\n|  x  |  y  |  z  |  c  |\n|:---:|:---:|:---:|:---:|\n| $0$ | $0$ | $0$ | $0$ |\n| $0$ | $1$ | $1$ | $0$ |\n| $1$ | $0$ | $1$ | $0$ |\n| $1$ | $1$ | $0$ | $1$ |"
+    },
+    {
+        "id": "2021S_FE_AM_22",
+        "question": "Which of the following is not an implementation of the function F = A•B + C•D? Here, '•' represents the logic AND operation, and '+' represents the logic OR operation in the expression.\n\na)\n![Image](Files/Pasted%20image%2020241018231214.png)\n\nb)\n![Image](Files/Pasted%20image%2020241018231232.png)\n\nc)\n![Image](Files/Pasted%20image%2020241018231239.png)\n\nd)\n![Image](Files/Pasted%20image%2020241018231249.png)",
+        "options": [
+        "Circuit diagram A",
+        "Circuit diagram B",
+        "Circuit diagram C",
+        "Circuit diagram D"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Explanation\n\nRecall de Morgan's Law:\n\n1) $\\overline{A + B} = \\overline{A} \\cdot \\overline{B}$\n\n2) $\\overline{A \\cdot B} = \\overline{A}+\\overline{B}$\n\n3) $\\overline{\\overline{A}} = A$\n\nRecall logic gates:\n\n1) AND $\\rightarrow A\\cdot B$\n\n2) OR $\\rightarrow A + B$\n\n3) NAND $\\rightarrow \\overline{A \\cdot B} = \\overline{A}+\\overline{B}$\n\n4) NOR $\\rightarrow \\overline{A + B} = \\overline{A} \\cdot \\overline{B}$\n\n### Translating option a)\n\n1) upper `AND` gate =$A \\cdot B$\n\n2) lower `AND` gate = $C \\cdot D$\n\n3) final `OR` gate = $(A \\cdot B) + (C \\cdot D)$ = **the same**\n\n### Translating option b)\n\n1) upper `NAND` gate =$(\\overline{A \\cdot B})$\n\n2) lower `NAND` gate = $(\\overline{C \\cdot D})$\n\n3) final `NAND` gate = $\\overline{(\\overline{A \\cdot B}) \\cdot (\\overline{C \\cdot D})} =(A \\cdot B) + (C \\cdot D)$ = **the same**\n\n### Translating option c) (ANSWER)\n\n1) upper `NAND` gate =$(\\overline{A \\cdot B})$\n\n2) lower `NAND` gate = $(\\overline{C \\cdot D})$\n\n3) final `NOR` gate = $\\overline{(\\overline{A \\cdot B}) + (\\overline{C \\cdot D})} =(A \\cdot B) \\cdot (C \\cdot D)$ = **not the same**\n\n### Translating option b)\n\n1) upper `NAND` gate =$(\\overline{A \\cdot B})$\n\n2) lower `NAND` gate = $(\\overline{C \\cdot D})$\n\n3) final (alternate) `NAND` gate = $\\overline{(\\overline{A \\cdot B}) \\cdot (\\overline{C \\cdot D})} =(A \\cdot B) + (C \\cdot D)$ = **the same**"
+    },
+    {
+        "id": "2021S_FE_AM_23",
+        "question": "Which of the following is an appropriate purpose of check digit?",
+        "options": [
+        "To detect an error that an alphabet or a symbol is contained in a numeric item field",
+        "To detect an error that the number of digits of an entered code is incorrect",
+        "To detect an error that the value of an entered code is incorrect",
+        "To detect an error that the value of an entered data is not within a specified range"
+        ],
+        "correctAnswer": 2,
+        "solution": "## Explanation\n\n**Check digit**\n\n- extra digit added to a numeric or alphanumeric code typically at the end\n\n- help detect errors in the transmission or input of data.\n\n- calculated using the other digits of the code\n\n- used to verify that the code has been entered correctly\n\n- BASICALLY,\n\n- checks codes i.e., Barcode, ID numbers\n\n- detects common errors such as mistypes\n\n## Breakdown\n\n### Option a)\n\n- check digit doesn't validate characters\n\n### Option b)\n\n- doesn't check length of code, only validity\n\n### Option c)\n\n- accurate description\n\n### Option d)\n\n- this is data validation"
+    },
+    {
+        "id": "2021S_FE_AM_24",
+        "question": "Which of the following explains a drawing software?",
+        "options": [
+        "It can create a picture on a screen using the mouse as a brush that can be saved to a bitmap image file.",
+        "It can create a scenario-based content by editing and arranging several materials, such as text, images, video, and sound.",
+        "It can create a simple movie from a series of still images by gradually changing the differences among images.",
+        "It can create vector graphics composed of lines and curves defined mathematically with geometric characteristics that can then be transformed or combined."
+        ],
+        "correctAnswer": 3,
+        "solution": "## Explanation\n\n**Drawing software**\n\n- also known as a graphics program,\n\n- used to create digital images and graphics in 2D or 3D:\n\n- **Vector graphics**: Drawing programs use vector graphics, which allows users to isolate, move, and scale elements of an image independently.\n\n- **Special effects**: Drawing programs often include special effects for creating illustrations.\n\n- **Popular programs**: Some popular drawing programs include Adobe Illustrator, CorelDRAW, and Macromedia Freehand.\n\n## Breakdown\n\n### Option a)\n\n- describes bitmap or raster graphics software i.e., MS Paint,\n\n- **difference:** bitmap graphics software uses pixels rather than vectors\n\n### Option b)\n\n- describes multimedia software, uses a mix of video, audio, and images\n\n### Option c)\n\n- describes animation software\n\n### Option d) (ANSWER)\n\n- accurate description of drawing software"
+    },
+    {
+        "id": "2021S_FE_AM_25",
+        "question": "Which of the following is an appropriate explanation of a relational database?",
+        "options": [
+        "Data is represented as a table, and the tables are linked to one another using the column values of these tables.",
+        "Each attribute is represented as a pair of the attribute value and the storage location of the record having that value and used as an index.",
+        "The relationship among records is represented by a data structure using links that can represent both tree and network structures.",
+        "The relationship among records is represented by a data structure using pointers that are limited to representing a tree structure."
+        ],
+        "correctAnswer": 0,
+        "solution": "## Explanation\n\n**Relational Database** (RDB)\n\n- way of structuring information in tables, rows, and columns\n\n- has the ability to establish links or relationships between information by joining tables\n\n## Breakdown\n\n### Option a) (ANSWER)\n\n- accurate description\n\n### Option b)\n\n- more fluid approach, related to NoSQL or key-value databases\n\n### Option c)\n\n- describes graph or hierarchical databases\n\n### Option d)\n\n- describes hierarchical (tree structures)"
+    },
+    {
+        "id": "2021S_FE_AM_26",
+        "question": "Which of the following is performed periodically to prevent a decline in the access efficiency of a database?",
+        "options": [
+        "Backup",
+        "Database dump",
+        "Reorganization",
+        "Rollback"
+        ],
+        "correctAnswer": 2,
+        "solution": "### Option a)\n- the process of creating a copy (backing up) of an organization's structured data\n- does not help with efficiency\n- focuses on integrity and security of data\n\n### Option b)\n- process of pulling data from a database and saving it as a structured file\n- similar to option a)\n\n### Option c) (ANSWER)\n- process of applying changes to a database's data dictionary to the database itself\n- improve performance, save disk space, and **improve database efficiency**\n\n### Option d)\n- \"undo\" button for database changes\n- eliminates the problematic change and the issues it caused for the infrastructure, application, data, and end users\n- focuses on reliability instead of efficiency"
+    },
+    {
+        "id": "2021S_FE_AM_27",
+        "question": "A student’s ID, name, and class ID are recorded in the Student table. Which of the following SQL returns records of all students whose names start with A?",
+        "options": [
+        "SELECT * FROM Student WHERE name LIKE '%A';",
+        "SELECT * FROM Student WHERE name LIKE '%A_';",
+        "SELECT * FROM Student WHERE name LIKE 'A_';",
+        "SELECT * FROM Student WHERE name LIKE 'A%';"
+        ],
+        "correctAnswer": 3,
+        "solution": "## Explanation\n\nRecall `SQL`, specifically the `LIKE` operator:\n- used in a `WHERE` clause to search for a specified pattern in a column.\n- Has wildcards:\n  - percent sign `%` represents zero, one, or multiple characters\n    - `%A` - any as long as last character is `A`\n    - **`A%` - any as long as first character is `A`**\n    - `%A%` - any as long as there is a character `A` in between\n  - underscore sign `_` represents one, single character\n    - `A_` - first character is `A` and next/last character is any"
+    },
+    {
+        "id": "2021S_FE_AM_28",
+        "question": "Among the search processes for the 'Sales' table, which of the following is appropriate to set a hash index rather than a B+ tree index? Here, the column in which the index is set is shown inside <>.",
+        "options": [
+        "Searching for sales with a sales amount of 100 dollars or more. <sales amount>",
+        "Searching for sales with the product name beginning with 'DB'. <product name>",
+        "Searching for sales with the sales date as the current month. <sales date>",
+        "Searching for sales with the user ID as '1001'. <user ID>"
+        ],
+        "correctAnswer": 3,
+        "solution": "## Explanation\n**Hash Index**\n- typically used for equality searches, where the exact value of a field is known and needed\n- allows for very fast lookups for **specific values** because it directly computes the location of the data using a hash function.\n\n**B+ Trees**\n- data structures\n- used to store vast amounts of data that are too large to fit in the main memory.\n\n### Option a)\n- large range\n- fits for B+ Trees\n\n### Option b)\n- can contain many products\n- fits for B+ Trees\n\n### Option c)\n- can contain a large range of data\n- fits for B+ Trees\n\n### Option d) (ANSWER)\n- specific user\n- fits for hashing"
+    },
+    {
+        "id": "2021S_FE_AM_29",
+        "question": "Which of the following is the appropriate explanation of the key value store that is used in the processing of big data?",
+        "options": [
+        "It is represented by a two-dimensional table with rows and columns based on the set theory.",
+        "It represents the relationship among nodes with the three (3) elements, i.e., 'node,' 'relationship,' and 'property.'",
+        "It saves the desired data together with a value that enables this data to be uniquely identified as a pair.",
+        "The data for one (1) case is called a 'document,' and the data structure of each document is unrestricted and can be changed whenever data is added."
+        ],
+        "correctAnswer": 2,
+        "solution": "## Explanation\n**Key-value Store**\n- NoSQL database (non-relational)\n- key serves as unique identifier\n- efficient data retrieval by **using the key to access the corresponding value**\n- ideal for applications requiring fast lookups and scalability\n- good for big data"
+    },
+    {
+        "id": "2021S_FE_AM_30",
+        "question": "Which of the following is the response time when a client and server at different locations communicate under the conditions below? Here, the response time is in seconds and starts from the moment the client sends a message until a response is received from the server. 1 MB is 10^6 bytes. The propagation delay between the client and server can be ignored.",
+        "options": [
+        "1.4",
+        "3.8",
+        "5.0",
+        "5.8"
+        ],
+        "correctAnswer": 3,
+        "solution": "### Step 1: Get the given\n- Line speed: **8 Mbit/s** (which is **8 × 10^6** bits/s)\n- Transmission efficiency: **60%** (0.6)\n- Message size (upstream): **1 MB** = **8 × 10^6** bits\n- Message size (downstream): **2 MB** = **16 × 10^6** bits\n- Processing time at client side: **0.4 s**\n- Processing time at server side: **0.4 s**\n\n### Step 2: Get effective speed\nEffective Speed = 8 × 10^6 bits/s × 0.6 = **4.8 × 10^6 bits/s**\n\n### Step 3: Get transmission time\nUpstream Time = 8 × 10^6 / 4.8 × 10^6 ≈ **1.67 s**\n\nDownstream Time = 16 × 10^6 / 4.8 × 10^6 ≈ **3.33 s**\n\n### Step 4: Apply formula for response time\nResponse time = Upstream Time + Server PT + Downstream Time + Client PT\n≈ 1.67s + 0.4s + 3.33s + 0.4s\n≈ **5.8s**\n\n### Hence, the answer is **d)**"
+    }
 ]
