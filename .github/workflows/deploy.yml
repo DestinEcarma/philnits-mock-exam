@@ -21,6 +21,6 @@ jobs:
             cd ~/philnits.dcism.org/philnits-mock-exam
             git fetch --all
             git reset --hard origin/main
-            npm ci
+            npm install
             npm run build
             npx pm2 restart philnits || npx pm2 start npm --name 'philnits' -- start 
