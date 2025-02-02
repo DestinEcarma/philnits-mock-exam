@@ -171,10 +171,13 @@
         "id": "2021A_FE_AM_45",
         "question": "![Image](Files/Pasted%20image%2020241019123903.png)",
         "options": [
-        "![Image](Files/Pasted%20image%2020241019124046.png)"
+        "A",
+        "B",
+        "C",
+        "D"
         ],
         "correctAnswer": 2,
-        "solution": "- **Generalization:** In UML, a generalization relationship indicates that one class (subclass) is a specialized version of another class (superclass). This is often represented by a hollow triangle pointing from the subclass to the superclass.\n\n- **Option c:** In this diagram, the `Sports car` class is shown as a specialized version of the `Automobile` class. The hollow triangle pointing from `Sports car` to `Automobile` signifies this generalization relationship.\n\n### Why the Others Won't Fit\n\n**a) shows a composition relationship, where one object (Automobile inspection certificate) is part of another object (Automobile).\n\n**b) shows an association relationship, indicating a connection between two classes (Automobile and Driver).\n\n**d) shows an aggregation relationship, where one object (Automobile) is composed of multiple other objects (Tire and Engine)."
+        "solution": "- **Generalization:** In UML, a generalization relationship indicates that one class (subclass) is a specialized version of another class (superclass). This is often represented by a hollow triangle pointing from the subclass to the superclass.\n\n- **Option c:** In this diagram, the `Sports car` class is shown as a specialized version of the `Automobile` class.\n\n![Image](Files/Pasted%20image%2020241019124046.png)\n\nThe hollow triangle pointing from `Sports car` to `Automobile` signifies this generalization relationship.\n\n### Why the Others Won't Fit\n\n**a) shows a composition relationship, where one object (Automobile inspection certificate) is part of another object (Automobile).\n\n**b) shows an association relationship, indicating a connection between two classes (Automobile and Driver).\n\n**d) shows an aggregation relationship, where one object (Automobile) is composed of multiple other objects (Tire and Engine)."
     },
     {
         "id": "2021A_FE_AM_46",
