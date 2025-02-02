@@ -37,7 +37,7 @@
     },
     {
         "id": "2020A_FE_AM_4",
-        "question": "![Image](Files/Pasted%20image%2020241019155644.png)",
+        "question": "For an $8$-bit code with the most significant bit as its parity bit, which of the following is used to obtain the lower seven ($7$) bits other than parity?",
         "options": [
             "Perform a bitwise AND operation with $0$F in hexadecimal",
             "Perform a bitwise AND operation with $7$F in hexadecimal",
