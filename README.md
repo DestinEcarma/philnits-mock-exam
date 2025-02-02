@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PhilNITS Mock Examination
 
-## Getting Started
+This repository hosts an online PhilNITS FE AM Mock Examination, developed using Next.js.
 
-First, run the development server:
+## Quiz Details
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- The quiz consists of **60 randomly selected questions** from various topics covered in exams from previous years.
+- You have **1 hour and 30 minutes** to complete the quiz.
+- Some questions may include images.
+- After completing the quiz, you'll receive **detailed explanations** for each question.
+- You can **retake the quiz multiple times**, with different sets of questions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js, TypeScript, Tailwind CSS
+- **Deployment:** DCISM Web Server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   git clone https://github.com/elderfieldzeus/philnits-mock-exam.git
+   cd philnits-mock-exam
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-## Deploy on Vercel
+3. **Start the development server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open [http://localhost:3000](http://localhost:3000) in your web browser.
+
+## Contributing
+
+Contributions are welcome. Please fork the repository, create a new branch, and submit a pull request.
+
+## Credits
+
+Special thanks to [philnits-vault](https://github.com/usc-cisco/philnits-vault) repository for their solutions and explanations.
+
+## License
+
+This project is licensed under the MIT License.
