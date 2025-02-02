@@ -1,0 +1,122 @@
+[
+  {
+    "id": "2019S_FE_AM_1",
+    "question": "For logical variables *p* and *q*, which of the following is a logical expression that evaluates to true for any values *p* and *q*?",
+    "options": [
+      "$\\overline{p} + (p \\cdot q)$",
+      "$(p \\cdot q) + (\\overline{p} + (p \\cdot \\overline{q}))$",
+      "$(p \\cdot \\overline{q}) \\cdot (\\overline{p} + q)$",
+      "$((\\overline{p}\\cdot q)\\cdot(p \\cdot q))\\cdot\\overline{q}$"
+    ],
+    "correctAnswer": 1,
+    "solution": "### We can evaluate if logical expressions will always be true(1) by simplifying them.\n\n### Simplifying $\\overline{p} + (p \\cdot q)$\n1. $\\overline{p} + (p \\cdot q)=(\\overline{p}+p)\\cdot(\\overline{p}+q)$     by distributive law\n2. $\\overline{p}+p=1$                                   by inverse law\n3. $1\\cdot(\\overline{p}+q)=(\\overline{p}+q)$                   by identity law\n\n### Simplifying $(p \\cdot q) + (\\overline{p} + (p \\cdot \\overline{q}))$\n1. $\\overline{p} + (p \\cdot \\overline{q})=(\\overline{p}+p)\\cdot(\\overline{p}+\\overline{q})$     by distributive law\n2. $(\\overline{p}+p) = 1$                                by inverse law\n3. $1+(\\overline{p}+\\overline{q})=\\overline{p}+\\overline{q}$                    by identity law\n4. $(p\\cdot q)+\\overline{p}+\\overline{q}=((p\\cdot q)+\\overline{p})+\\overline{q}$     by associative law\n5. $(p\\cdot q)+\\overline{p}=(p+\\overline{p})\\cdot(q+\\overline{p})$      by distributive law\n6. $(p+\\overline{p}) = 1$                                 by inverse law\n7. $1\\cdot(q+\\overline{p})=q+\\overline{p}$                      by identity law\n8. $q+\\overline{p}+\\overline{q}=\\overline{p}+1$                       by inverse law\n9. $\\overline{p}+1=1$                                    by null law\n**expression will always be true**\n\n### Simplifying $(p \\cdot \\overline{q}) \\cdot (\\overline{p} + q)$\n1. $(p \\cdot \\overline{q})\\cdot(\\overline{p} + q)=p\\cdot\\overline{p}\\cdot\\overline{q}+p\\cdot q\\cdot\\overline{q}$    by distributive law\n2. $p\\cdot\\overline{p}\\cdot\\overline{q}+p\\cdot q\\cdot\\overline{q}=0\\cdot\\overline{q}+p\\cdot 0$    by inverse law\n3. $0\\cdot\\overline{q}+p\\cdot 0=0+0=0$                      by null law\n**expression will always be false**\n\n### Simplifying $((\\overline{p}\\cdot q)\\cdot(p \\cdot q))\\cdot\\overline{q}$\n1. $((\\overline{p}\\cdot q)\\cdot(p \\cdot q))\\cdot\\overline{q}=\\overline{p}\\cdot q\\cdot p\\cdot q\\cdot\\overline{q}$      by associative law\n2. $\\overline{p}\\cdot q\\cdot p\\cdot q\\cdot\\overline{q}=\\overline{p}\\cdot p\\cdot q\\cdot q\\cdot\\overline{q}$         by commutative law\n3. $\\overline{p}\\cdot p\\cdot q\\cdot q\\cdot\\overline{q}=\\overline{p}\\cdot p\\cdot q\\cdot\\overline{q}$             by  idempotent law\n4. $\\overline{p}\\cdot p\\cdot q\\cdot\\overline{q}=0\\cdot 0$                          by inverse law"
+  },
+  {
+    "id": "2019A_FE_AM_2",
+    "question": "What is the Hamming distance of bit strings 10101 and 11110?",
+    "options": [
+      "0",
+      "2",
+      "3",
+      "5"
+    ],
+    "correctAnswer": 2,
+    "solution": "### Hamming distance\n\nA metric for comparing two binary data strings. While comparing two binary strings of equal length, Hamming distance is the number of bit positions in which the two bits are different.\n\n### Calculating Hamming distance\n\nIn order to calculate the Hamming distance between two strings, and , we perform their XOR operation, (a⊕b), and then count the total number of 1s in the resultant string.\n\n##### Example\n\n101 ⊕ 111 = 010, d(011, 111) = 1\n\n011 ⊕ 101 = 110, d(011, 101) = 2\n\n010 ⊕ 101 = 111, d(010, 101) = 3\n\n##### Therefore\n\n10101 ⊕ 11110 = 01011, d(10101, 11110) = 3"
+  },
+  {
+    "id": "2019A_FE_AM_3",
+    "question": "A candy box contains four flavors of candies: 6 lemon-flavored, 12 strawberry-flavored, 8 orange-flavored, and 4 grape-flavored. When a candy is chosen from the box, what is the probability that it is either lemon- or orange-flavored?",
+    "options": [
+      "$4\\over{9}$",
+      "$7\\over{15}$",
+      "$6\\over{11}$",
+      "$7\\over{8}$"
+    ],
+    "correctAnswer": 1,
+    "solution": "### Total number of candies\n\n6 lemon + 12 strawberry + 8 orange + 4 grape = 30 total candies\n\n### Finding probability of choosing a lemon OR orange-flavored candy\n\n$6\\over{30}$+$8\\over{30}$=$14\\over{30}$=$7\\over{15}$"
+  },
+  {
+    "id": "2019A_FE_AM_4",
+    "question": "A vehicle travels along a circle in the figure below. Two sensors L and R are attached to the left and right rear wheels, whose revolution speeds are independently controlled. Sensors L and R are photo reflective sensors, whose values change according to the ratio of black and white regions they pass over. If the ratio increases, the sensor value decreases, and if the ratio decreases, the sensor value increases. Which of the following is an appropriate control for ensuring that the vehicle travels along the black outline of the circle? Here, if the values of the two sensors match, the revolution speeds of the motors return to the initial speed.\n\n![Image](Files/Pasted%20image%2020241019175703.png)\n\n![Image](Files/Pasted%20image%2020241019180752.png)",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "correctAnswer": 2,
+    "solution": "![Image](Files/Pasted%20image%2020241019180826.png)"
+  },
+  {
+    "id": "2019A_FE_AM_5",
+    "question": "What is the result after evaluation of the following postfix expression? Here, symbols +, -, x, and ÷ represent the arithmetic operators of addition, subtraction, multiplication, and division, respectively.\n\n5 4 6 + x 4 9 3 ÷ + x",
+    "options": [
+      "98",
+      "154",
+      "238",
+      "350"
+    ],
+    "correctAnswer": 3,
+    "solution": "### Solving postfix expression 5 4 6 + x 4 9 3 ÷ + x\n\n**1. push 5 to stack**\n\n| 5   |\n| --- |\n\n**2. push 4 to stack**\n\n| 4   |\n| --- |\n| 5   |\n\n**3. push 6 to stack**\n\n| 6   |\n| --- |\n| 4   |\n| 5   |\n\n**4. add 4 and 6**\n\n| 4 + 6 = 10 |\n| ---------- |\n| 5          |\n\n**5. multiply 10 and 5**\n\n| 5 x 10 = 50 |\n| ----------- |\n\n**6. push 4 to stack**\n\n| 4   |\n| --- |\n| 50  |\n\n**7. push 9 to stack**\n\n| 9   |\n| --- |\n| 4   |\n| 50  |\n\n**8. push 3 to stack**\n\n| 3   |\n| --- |\n| 9   |\n| 4   |\n| 50  |\n\n**9. divide 9 and 3**\n\n| 9 / 3 = 3 |\n| --------- |\n| 4         |\n| 50        |\n\n**10. add 4 and 3**\n\n| 4 + 3 = 7 |\n| --------- |\n| 50        |\n\n**11. multiply 50 and 7**\n\n| 50 x 7 = 350 |\n| ------------ |"
+  },
+  {
+    "id": "2019A_FE_AM_6",
+    "question": "Two stack operations are defined:\nPUSH n: Pushes a data (integer value n) to the stack.\nPOP: Pops a data from the stack.\nFor an empty stack, which of the following is the result of performing stack operations in the sequence below? PUSH 1 → PUSH 5 → POP → PUSH 7 → PUSH 6 → PUSH 4 → POP → POP → PUSH 3\n\n![Image](Files/Pasted%20image%2020241020164843.png)",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "correctAnswer": 2,
+    "solution": "### Visualizing the stack operations\n\n**1. PUSH 1**\n\n|     |\n| --- |\n| 1   |\n\n**2. PUSH 5**\n\n|     |\n| --- |\n| 5   |\n| 1   |\n\n**3. POP**\n\n|     |\n| --- |\n| 1   |\n\n**4. PUSH 7**\n\n|     |\n| --- |\n| 7   |\n| 1   |\n\n**5. PUSH 6**\n\n|     |\n| --- |\n| 6   |\n| 7   |\n| 1   |\n\n**6. PUSH 4**\n\n|     |\n| --- |\n| 4   |\n| 6   |\n| 7   |\n| 1   |\n\n**7. POP**\n\n|     |\n| --- |\n| 6   |\n| 7   |\n| 1   |\n\n**8. POP**\n\n|     |\n| --- |\n| 7   |\n| 1   |\n\n**9. PUSH 3**\n\n|     |\n| --- |\n| 3   |\n| 7   |\n| 1   |"
+  },
+  {
+    "id": "2019A_FE_AM_7",
+    "question": "In a table search, which of the following is a characteristic of the search technique known as hashing?",
+    "options": [
+      "It is a method in which a collision between storage locations of data does not occur.",
+      "It is a search technique that uses a binary tree.",
+      "The storage locations of data are determined based on the function values of their keys.",
+      "The time required to perform the search is approximately proportional to the size of the entire table."
+    ],
+    "correctAnswer": 2,
+    "solution": "### What is Hash Table?\n\n- A Hash table is defined as a data structure used to insert, look up, and remove key-value pairs quickly. It operates on the [hashing concept](https://www.geeksforgeeks.org/what-is-hashing/), where each key is translated by a hash function into a distinct index in an array. The index functions as a storage location for the matching value. In simple words, it maps the keys with the value."
+  },
+  {
+    "id": "2019A_FE_AM_8",
+    "question": "The binary search algorithm is used to search for a given item when items are sorted. If the number of items is 1 million, which of the following is the closest to the maximum number of comparisons required to find the item?",
+    "options": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "correctAnswer": 1,
+    "solution": "### Calculating time complexity of binary search algorithm\n\n**Time complexity of binary search**\n$O_{{\\log_{2}n}}$\nSearching 1 million items means n = 1,000,000\n\n\n$\\frac{\\log_{10}(1,000,000)}{\\log_{10}(2)}=\\log_{2}(1,000,000)$\n\n$\\log_{10}(1,000,000)=6$\n\n$\\log_{10}(2)\\approx0.301$\n\n$\\frac{6}{0.301}=19.93\\approx20$"
+  },
+  {
+    "id": "2019A_FE_AM_9",
+    "question": "In object-oriented programming, which of the following is an explanation of overriding that achieves polymorphism?",
+    "options": [
+      "A feature that allows a class to provide a specific implementation of a method that is already provided by one of its super classes",
+      "Creating a class through abstraction by collecting common properties of multiple classes",
+      "Defining multiple methods in a class that have the same name, but differ in terms of the number of arguments, argument types, or argument order",
+      "Hiding internal contracts and structures of an object from its external specification"
+    ],
+    "correctAnswer": 0,
+    "solution": "### What is polymorphism?\n\n- Polymorphism is a feature of object-oriented programming languages that allows a specific routine to use variables of different types at different times. It is the ability of a programming language to present the same interface for several different underlying data types and different objects to respond in a unique way to the same message.\n- Polymorphism describes the concept that you can access objects of different types through the same interface."
+  },
+  {
+    "id": "2019A_FE_AM_10",
+    "question": "A CPU has a clock frequency of 2.0 GHz. When the instructions consist of three types, as shown in the table below, what is the approximate CPU performance in MIPS?\n\n|     Time      | Execution Time (clocks) | Frequency of appearance ($\\%$) |\n| :-----------: | :---------------------: | :----------------------------: |\n| Instruction 1 |           15            |               40               |\n| Instruction 2 |           10            |               20               |\n| Instruction 3 |           10            |               40               |",
+    "options": [
+      "16.7",
+      "120",
+      "167",
+      "200"
+    ],
+    "correctAnswer": 2,
+    "solution": "### Finding clock frequency\n\nThe clock frequency is given as 2.0 GHz, which is equal to $2.0\\times 10^9$ cycles per second.\n\n### Average cycles per instruction\n\nTo find the average CPI, we will multiply each instruction’s clock cycles by its frequency of appearance (as a decimal), then sum them:\n$CPI_{avg}=(15\\times.40)+(10\\times.20)+(10\\times.40)=6+2+4=12$\n\n### Calculate MIPS\n\n$MIPS=\\frac{2.0\\times10^9}{12\\times10^6}=\\frac{2}{12}\\times 10^3=0.1667\\times 10^3=166.67\\approx 167MIPS$"
+  }
+]
