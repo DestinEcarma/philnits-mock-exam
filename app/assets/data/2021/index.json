@@ -183,10 +183,10 @@
         "id": "2021A_FE_AM_46",
         "question": "![Image](Files/Pasted%20image%2020241019124720.png)",
         "options": [
-        "External Entity",
-        "Data Flow",
-        "Data Store",
-        "Process"
+        "A",
+        "B",
+        "C",
+        "D"
         ],
         "correctAnswer": 3,
         "solution": "The circle 'O' in the DFD notation used in the example represents **d) Process**.\n\n- **Rectangle:** Represents an external entity, such as a person, organization, or system.\n\n- **Arrow:** Represents a data flow, showing the direction of data movement.\n\n- **Circle:** Represents a process, which transforms data.\n\n- **Open-ended rectangle:** Represents a data store, where data is stored.\n\n![Image](Files/Pasted%20image%2020241019124845.png)"
