@@ -44,7 +44,7 @@
       "C",
       "D"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "solution": "![Image](Files/Pasted%20image%2020241019180826.png)"
   },
   {
@@ -118,5 +118,65 @@
     ],
     "correctAnswer": 2,
     "solution": "### Finding clock frequency\n\nThe clock frequency is given as 2.0 GHz, which is equal to $2.0\\times 10^9$ cycles per second.\n\n### Average cycles per instruction\n\nTo find the average CPI, we will multiply each instruction’s clock cycles by its frequency of appearance (as a decimal), then sum them:\n$CPI_{avg}=(15\\times.40)+(10\\times.20)+(10\\times.40)=6+2+4=12$\n\n### Calculate MIPS\n\n$MIPS=\\frac{2.0\\times10^9}{12\\times10^6}=\\frac{2}{12}\\times 10^3=0.1667\\times 10^3=166.67\\approx 167MIPS$"
+  },
+  {
+    "id": "2019S_FE_AM_1",
+    "question": "For an eight-bit integer x represented in two’s complement format, which of the following yields the value of 5x? Here, the overflow or underflow can be ignored in this multiplication.",
+    "options": [
+      "Shift x to the left by 1 bit, then add the initial value of x to it.",
+      "Shift x to the left by 2 bits, then add the initial value of x to it.",
+      "Shift x to the right arithmetically by 1 bit, then subtract the initial value of x from it.",
+      "Shift x to the right arithmetically by 2 bits, then subtract the initial value of x from it."
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nTo multiply an integer by 5, we can break it down as:\n#### $5x=4x+x$\n\n- Shifting **x** to the left by 2 bits gives **4x** (since left-shifting by 2 bits is equivalent to multiplying by $2^2$ which is equal to 4).\n- Adding the original **x** to this gives **4x + x = 5x**.\n\n### Overview of other options:\n\n- **a)** Shifting **x** left by 1 bit gives **2x**, and adding **x** gives **3x**, not **5x**.\n- **c)** Shifting **x** right arithmetically by 1 bit divides it by 2 (rounding towards negative), and subtracting **x** gives something unrelated to **5x**.\n- **d)** Shifting **x** right arithmetically by 2 bits divides it by 4, and subtracting **x** gives something unrelated to **5x**."
+  },
+  {
+    "id": "2019S_FE_AM_2",
+    "question": "How many four-digit decimal numbers are made from four (4) different digits between 0 and 9? Here, a four-digit decimal number has a non-zero leading digit.",
+    "options": [
+      "4320",
+      "4436",
+      "4536",
+      "5040"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nWe need to calculate how many **four-digit decimal numbers** can be made from **four different digits** between 0 and 9, ensuring that the **leading digit is non-zero**.\n\n1. **First digit**: The leading digit must be from 1 to 9 (9 choices).\n2. **Second digit**: This can be any of the 9 remaining digits (including 0 but excluding the first digit).\n3. **Third digit**: This can be any of the remaining 8 digits.\n4. **Fourth digit**: This can be any of the remaining 7 digits.\n\nSo, the total number of possible four-digit numbers is:\n#### $9~\\times~9~\\times~8~\\times~7=4536$"
+  },
+  {
+    "id": "2019S_FE_AM_3",
+    "question": "What is the value of the postfix expression below when variables A, B, C, and D have values 4, 3, 5, and 6, respectively? Here, symbols ‘$+$’, ‘$-$’, ‘$\\times$’, and ‘$/$’ represent the arithmetic operators of addition, subtraction, multiplication, and division, respectively.\n\n![Image](Files/Pasted%20image%2020241020100735.png)",
+    "options": [
+      "-3",
+      "0",
+      "3",
+      "40/3"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nIf the arithmetic expression is in **postfix notation**, then the operators come **after** the operands. Find 2 operands that has an operator **after** them. Then perform the operation according to the operator. Repeat until you get the result. In this problem, substitute the variables with their respective values first before solving the expression.\n\n![Image](Files/Pasted%20image%2020241020102836.png)\n\nAfter performing the operations correctly, we get 0 as our answer, so the answer to the question is **b)**."
+  },
+  {
+    "id": "2019S_FE_AM_4",
+    "question": "Which of the following is an appropriate explanation of the feedback control?",
+    "options": [
+      "It performs a control in a predetermined order.",
+      "It performs a control so that the output matches the target.",
+      "It performs a control to avoid external disturbances to the output.",
+      "It performs a control without using the output."
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n**Feedback control** is a process where the output of a system is measured, and adjustments are made to ensure that the output remains aligned with the desired target or set point. The feedback loop uses the difference between the actual output and the target to adjust the system's behavior.\n\n### Overview of other options:\n\n- **a)** Performing control in a predetermined order describes **open-loop control**, not feedback control.\n- **c)** Controlling to avoid external disturbances may describe a type of feedback control but is not a complete or precise explanation.\n- **d)** Performing control without using the output refers to **open-loop control**, where feedback from the output is not used to adjust the system."
+  },
+  {
+    "id": "2019S_FE_AM_5",
+    "question": "Which of the following is a binary search tree?\n\n![Image](Files/Pasted%20image%2020241020103659.png)",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nA **binary search tree (BST)** is a type of binary tree where:\n\n1. Each node has at most two children.\n2. For any given node:\n    - The **left child** contains a value **less than** the value of the node.\n    - The **right child** contains a value **greater than** the value of the node.\n3. This property applies recursively to all nodes in the tree.\n\n### Overview of other options:\n\n- **a)** The right child of the node containing the element 15 is contains an element that is lesser than its parent which violates the rules of a BST.\n- **c)** The right child of the node containing the element 16 is contains an element that is lesser than its parent which violates the rules of a BST.\n- **d)** The right child of the node containing the element 20 is contains an element that is lesser than its parent which violates the rules of a BST.\n\n![Image](Files/Pasted%20image%2020241020103710.png)"
   }
 ]
