@@ -228,10 +228,10 @@
         "id": "2023A_FE_AM_21",
         "question": "Use DeMorgan's Law\n\n![Image](Files/Pasted%20image%2020241019133645.png)\n\nOur original circuit expressed in Boolean Algebra is: $((B\\cap C)' \\cup A)'$",
         "options": [
-        "(B∩C)' ∪ A)",
-        "(B∩C) ∩ A'",
-        "(B∩C)' ∩ A'",
-        "(B∩C) ∩ A"
+        "A",
+        "B",
+        "C",
+        "D"
         ],
         "correctAnswer": 2,
         "solution": "Our original circuit expressed in Boolean Algebra is: $((B\\cap C)' \\cup A)'$. Let's simplify this.\n\n1. $(B\\cap C) \\cap A'$ by DeMorgan's & Double Negation Law\n- double negation happened when we distributed the `'` to $(B \\cap C)'$ making it $(B \\cap C)'.$\n\nAs we can see, this is equivalent to answer C.\n\n![Image](Files/Pasted%20image%2020241019134139.png)"
@@ -612,12 +612,12 @@
         "id": "2023A_FE_AM_53",
         "question": "![Image](Files/Pasted%20image%2020241019204336.png)",
         "options": [
-        "7",
-        "8",
-        "9",
-        "10"
+        "A",
+        "B",
+        "C",
+        "D"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "solution": "### Step 1: Calculate the total coding effort (in person-days)\n\nWe need to calculate how many person-days are required for coding each type of program and then sum them up:\n\n1. **Input processing**:\n   - Number of programs: 20\n   - Person-days per program: 1\n   $\\text{Total for input processing} = 20 \\times 1 = 20 \\text{ person-days}$\n\n2. **Output processing**:\n   - Number of programs: 10\n   - Person-days per program: 3\n   $\\text{Total for output processing} = 10 \\times 3 = 30 \\text{ person-days}$\n\n3. **Calculation processing**:\n   - Number of programs: 5\n   - Person-days per program: 9\n   $\\text{Total for calculation processing} = 5 \\times 9 = 45 \\text{ person-days}$\n\n#### Total coding effort:\n$\\text{Total coding person-days} = 20 + 30 + 45 = 95 \\text{ person-days}$\n\n### Step 2: Calculate the design and testing effort\n\nAccording to the problem, design and testing activities require **8 times as many person-days** as coding.\n\n$\\text{Design and testing person-days} = 8 \\times 95 = 760 \\text{ person-days}$\n\n### Step 3: Calculate the total effort\n\nThe total effort required to develop the system is the sum of the coding effort and the design and testing effort:\n\n$\\text{Total effort} = 95 \\text{ (coding)} + 760 \\text{ (design and testing)} = 855 \\text{ person-days}$\n\n### Step 4: Calculate the minimum number of staff members\n\nWe need to complete the project in **95 days**, and the total effort is **855 person-days**. To find the number of staff members required, we divide the total effort by the number of days:\n\n$\\text{Number of staff members} = \\frac{855 \\text{ person-days}}{95 \\text{ days}} = 9 \\text{ staff members}$\n\n### Final Answer:\nThe minimum number of staff members required is **9**. Therefore, the correct answer is **b) 9**."
     },
     {
