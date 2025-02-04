@@ -39,10 +39,10 @@
     "id": "2019A_FE_AM_4",
     "question": "A vehicle travels along a circle in the figure below. Two sensors L and R are attached to the left and right rear wheels, whose revolution speeds are independently controlled. Sensors L and R are photo reflective sensors, whose values change according to the ratio of black and white regions they pass over. If the ratio increases, the sensor value decreases, and if the ratio decreases, the sensor value increases. Which of the following is an appropriate control for ensuring that the vehicle travels along the black outline of the circle? Here, if the values of the two sensors match, the revolution speeds of the motors return to the initial speed.\n\n![Image](Files/Pasted%20image%2020241019175703.png)\n\n![Image](Files/Pasted%20image%2020241019180752.png)",
     "options": [
-      "a",
-      "b",
-      "c",
-      "d"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "correctAnswer": 2,
     "solution": "![Image](Files/Pasted%20image%2020241019180826.png)"
@@ -63,10 +63,10 @@
     "id": "2019A_FE_AM_6",
     "question": "Two stack operations are defined:\nPUSH n: Pushes a data (integer value n) to the stack.\nPOP: Pops a data from the stack.\nFor an empty stack, which of the following is the result of performing stack operations in the sequence below? PUSH 1 → PUSH 5 → POP → PUSH 7 → PUSH 6 → PUSH 4 → POP → POP → PUSH 3\n\n![Image](Files/Pasted%20image%2020241020164843.png)",
     "options": [
-      "a",
-      "b",
-      "c",
-      "d"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "correctAnswer": 2,
     "solution": "### Visualizing the stack operations\n\n**1. PUSH 1**\n\n|     |\n| --- |\n| 1   |\n\n**2. PUSH 5**\n\n|     |\n| --- |\n| 5   |\n| 1   |\n\n**3. POP**\n\n|     |\n| --- |\n| 1   |\n\n**4. PUSH 7**\n\n|     |\n| --- |\n| 7   |\n| 1   |\n\n**5. PUSH 6**\n\n|     |\n| --- |\n| 6   |\n| 7   |\n| 1   |\n\n**6. PUSH 4**\n\n|     |\n| --- |\n| 4   |\n| 6   |\n| 7   |\n| 1   |\n\n**7. POP**\n\n|     |\n| --- |\n| 6   |\n| 7   |\n| 1   |\n\n**8. POP**\n\n|     |\n| --- |\n| 7   |\n| 1   |\n\n**9. PUSH 3**\n\n|     |\n| --- |\n| 3   |\n| 7   |\n| 1   |"
