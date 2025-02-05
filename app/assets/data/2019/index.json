@@ -238,5 +238,65 @@
     ],
     "correctAnswer": 3,
     "solution": "## **Explanation:**\n\n- **SRAM (Static Random Access Memory)** uses **six transistors** (6T) to store a single bit of data. This design allows SRAM to maintain data without needing to refresh it, making it faster and more stable than DRAM.\n- **DRAM (Dynamic Random Access Memory)**, on the other hand, typically uses **one transistor and one capacitor** (1T1C) to store each bit. This design is simpler and allows DRAM to have a higher density and lower cost per bit compared to SRAM.\n\n### Overview of Other Options:\n\n- **a)** **SRAM consumes more power, particularly when idle, compared to DRAM.** This is incorrect; SRAM generally consumes less power when active but can consume more power during idle states.\n- **b)** **SRAM is non-volatile, whereas DRAM is volatile.** This is incorrect; both SRAM and DRAM are volatile memory types, meaning they lose their stored data when power is turned off.\n- **c)** **SRAM needs to be refreshed, whereas DRAM does not.** This is incorrect; DRAM requires periodic refreshing to maintain data, while SRAM does not require refreshing.\n\nTherefore, the answer is **d)**."
+  },
+  {
+    "id": "2019S_FE_AM_11",
+    "question": "In a memory system that has a cache memory, which of the following causes an increase in the average memory access time?",
+    "options": [
+      "A decrease in the access time to the cache memory",
+      "A decrease in the cache hit rate",
+      "A decrease in the cache miss penalty",
+      "A decrease in the cache miss rate"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n- The **average memory access time** (AMAT) is calculated using the formula:  \n    $\\text{Average~Memory~Access~time} = \\text{Hit time} + (\\text{Miss rate} \\times \\text{Miss penalty})$\n    \n- A **decrease in the cache hit rate** means that fewer memory accesses are satisfied by the cache. As a result, more accesses will require fetching data from the slower main memory, increasing the average memory access time.\n\n### Overview of Other Options:\n\n- **a)** **A decrease in the access time to the cache memory.** This would decrease the average memory access time since faster cache access improves the overall performance.\n- **c)** **A decrease in the cache miss penalty.** This would also decrease the average memory access time, as it reduces the time taken to retrieve data from main memory when a cache miss occurs.\n- **d)** **A decrease in the cache miss rate.** This would lead to a decrease in average memory access time since fewer misses mean that most accesses are satisfied by the cache."
+  },
+  {
+    "id": "2019S_FE_AM_12",
+    "question": "There exists a storage system in which one (1) block is composed of eight (8) sectors of 500 bytes each, and the storage area is block-wise allocated to the files. When a 2,000-byte file and 9,000-byte file are to be saved, what is the total number of sectors that is allocated to these two (2) files? Here, the sectors that are occupied by the directory information and other such management information can be ignored.",
+    "options": [
+      "22",
+      "26",
+      "28",
+      "32"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\n### Storage System Details:\n\n- **1 block** = **8 sectors**\n- **1 sector** = **500 bytes**\n- Therefore, **1 block** = $8 \\text{ sectors} \\times 500 \\text{ bytes/sector} = 4,000 \\text{ bytes}$\n\n### File Allocations:\n\n1. **2,000-byte file:**\n    \n    - $\\text{Sectors needed} = \\lceil \\frac{2000 \\text{ bytes}}{500 \\text{ bytes/sector}} \\rceil = \\lceil 4 \\rceil = 4 \\text{ sectors}$\n\tSince 4 sectors are needed, you need 1 block which houses 8 sectors. Therefore, in a 2000-byte file, 8 sectors are allocated even if the file doesn't use all sectors.\n2. **9,000-byte file:**\n    \n    - $\\text{Sectors needed} = \\lceil \\frac{9000 \\text{ bytes}}{500 \\text{ bytes/sector}} \\rceil = \\lceil 18 \\rceil = 18 \\text{ sectors}$\n    Since 18 sectors are needed, you need 3 blocks which houses 24 sectors, Therefore, in a 9000-byte file, 24 sectors are allocated even if the file doesn't use all sectors.\n\n### **Conclusion:**\n\nSo 8 + 24 = 32 sectors are allocated to these 2 files.\nTherefore, the answer is **d)**."
+  },
+  {
+    "id": "2019S_FE_AM_13",
+    "question": "Which of the following is an appropriate description concerning the recording method of RAID5?",
+    "options": [
+      "It distributes the data over multiple hard disk drives, writes the data in units of bits, and writes the ECC (Error Correction Codes) on multiple hard disk drives.",
+      "It distributes the data over multiple hard disk drives, writes the data in units of blocks, and distributes and writes the parity on multiple hard disk drives.",
+      "It distributes the data over multiple hard disk drives, writes the data in units of bytes, and writes the parity on one (1) hard disk drive.",
+      "It writes the same data on two (2) hard disk drives to create a mirror disk."
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n- **RAID 5** is a type of **redundant array of independent disks (RAID)** that provides data redundancy and improved performance.\n- In RAID 5:\n    - **Data is striped across multiple drives** in units called blocks. This means that data is divided into blocks and written across several disks.\n    - **Parity information** (used for error recovery) is also distributed across all drives. This allows for the recovery of data in case one of the drives fails without the need for a complete mirror of the data, making RAID 5 efficient in terms of storage utilization.\n\n### Overview of Other Options:\n\n- **a)** **It distributes the data over multiple hard disk drives, writes the data in units of bits, and writes the ECC (Error Correction Codes) on multiple hard disk drives.**  \n    This is incorrect as RAID 5 does not write in units of bits but in blocks, and it specifically uses parity rather than ECC.\n    \n- **c)** **It distributes the data over multiple hard disk drives, writes the data in units of bytes, and writes the parity on one (1) hard disk drive.**  \n    This is incorrect; RAID 5 writes data in blocks and distributes the parity across multiple drives, not just one.\n    \n- **d)** **It writes the same data on two (2) hard disk drives to create a mirror disk.**  \n    This describes **RAID 1**, which is a mirroring method, rather than RAID 5.\n    \n\nThus, **b)** is the correct description of RAID 5."
+  },
+  {
+    "id": "2019S_FE_AM_14",
+    "question": "Which of the following is the most appropriate description of a dual system?",
+    "options": [
+      "It loads the online processing program of the active system on to a backup system and sets it to a standby status. In the event of a failure in the active system, it immediately switches to the backup system and continues the processing.",
+      "It prepares a duplicate processor, memory, communication channel, and power supply system and continues the processing even in the event of a failure in any of the devices.",
+      "It provides a duplicate system for performing the same processing and checks the accuracy of the processing by collating the processing results. In the event of a failure in either system, it continues the processing by the degraded operation.",
+      "It provides an active system for performing online processing and keeps a backup system on standby while batch processing is being performed. In the event of a failure in the active system, it switches to the backup system and continues the online processing"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n- A **dual system** a system configuration in which two CPUs perform the same processing and compare the processing results to each other. This configuration is applied when the process is not allowed to stop, even for a moment. If one CPU fails, the system cuts off the failed CPU and continues processing on the other CPU.\n\n### Overview of Other Options:\n\n- **a)** This describes a **hot standby system**. In this setup, a backup system is kept ready to take over the operations of an active system in the event of a failure. It emphasizes immediate availability without active processing of results by the backup system, which is common in hot standby configurations.\n\n- **b)** This describes a **fault-tolerant system** or **redundant system**. In this configuration, all components (processors, memory, etc.) are duplicated to ensure that the system continues functioning even if one component fails. The focus here is on hardware redundancy rather than system-level redundancy or active verification of outputs.\n    \n- **d)** This describes a **duplex system**. In this arrangement, one system is actively processing while another is on standby, ready to take over if the active system fails. The term 'duplex' is often associated with maintaining two systems that can alternate tasks but doesn't necessarily focus on cross-checking outputs like a dual system does.\n    \n\nThus, **c)** is the correct and most suitable description of a dual system."
+  },
+  {
+    "id": "2019S_FE_AM_15",
+    "question": "A system has devices with availability R, connected as shown in the figure below. Which of the following is the expression that represents the availability of the entire system? Here, a parallel connection only requires either of the two devices to be functional, whereas a series connection requires both the devices to be functional.\n\n![Image](Files/Pasted%20image%2020241020124140.png)",
+    "options": [
+      "$(1- (1-R)^2 )^2$",
+      "$(1- (1-R^2))^2$",
+      "$1- (1-R)^4$",
+      "$1- (1-R^2)^2$"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n1. **Parallel Connection**:\n    - For two devices in parallel, the availability is given by the formula: \n\t    $A_{\\text{parallel}} = 1 - (1 - R)^2$\n    \n    This formula means the system remains available as long as at least one of the devices is functional.\n    \n2. **Series Connection**:\n    \n    - For two devices in series, the availability is simply the product of their availabilities: \n\t    $A_{\\text{series}} = R \\times R = R^2$\n\n### Combining the Configurations\n\nSince the two parallel devices are connected in a series, we can denote:\n\n- Let $A_{\\text{parallel}}$ be the availability of the first parallel configuration (which consists of two devices).\n- The overall availability of the series connection with the result from the parallel configuration is: $A_{\\text{total}} = A_{\\text{parallel}}^2 = \\left(1 - (1 - R)^2\\right)^2$\n\n### **Conclusion**\n\nThe most appropriate expression representing the availability of the entire system with the described configuration is:\n\n**a)** $(1- (1-R)^2 )^2$ \n\nThis corresponds to the availability of the two parallel devices squared."
   }
 ]
