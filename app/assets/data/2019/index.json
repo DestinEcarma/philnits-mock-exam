@@ -298,5 +298,65 @@
     ],
     "correctAnswer": 0,
     "solution": "## **Explanation:**\n\n1. **Parallel Connection**:\n    - For two devices in parallel, the availability is given by the formula: \n\t    $A_{\\text{parallel}} = 1 - (1 - R)^2$\n    \n    This formula means the system remains available as long as at least one of the devices is functional.\n    \n2. **Series Connection**:\n    \n    - For two devices in series, the availability is simply the product of their availabilities: \n\t    $A_{\\text{series}} = R \\times R = R^2$\n\n### Combining the Configurations\n\nSince the two parallel devices are connected in a series, we can denote:\n\n- Let $A_{\\text{parallel}}$ be the availability of the first parallel configuration (which consists of two devices).\n- The overall availability of the series connection with the result from the parallel configuration is: $A_{\\text{total}} = A_{\\text{parallel}}^2 = \\left(1 - (1 - R)^2\\right)^2$\n\n### **Conclusion**\n\nThe most appropriate expression representing the availability of the entire system with the described configuration is:\n\n**a)** $(1- (1-R)^2 )^2$ \n\nThis corresponds to the availability of the two parallel devices squared."
+  },
+  {
+    "id": "2019S_FE_AM_16",
+    "question": "Which of the following is an appropriate explanation of paging?",
+    "options": [
+      "A method of memory management in which multiple records are read and written as a block on an auxiliary storage",
+      "A method of memory management in which the main memory is divided into multiple areas so that reading and writing can be performed simultaneously",
+      "A method of memory management in which the programs are relocated for execution in a different area of the main memory",
+      "A method of memory management in which the virtual memory space and real memory space are divided into fixed-length blocks for management"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\n- **Paging** is a memory management scheme that eliminates the need for contiguous allocation of physical memory and thus eliminates the problems of fitting varying sized memory chunks onto the backing store.\n- In this method, both the **virtual memory** (used by processes) and **physical memory** (actual RAM) are divided into fixed-size blocks called **pages** (for virtual memory) and **frames** (for physical memory).\n- When a program is executed, its pages can be loaded into any available memory frames, which helps in utilizing memory more efficiently and allows for easier management of memory allocation.\n\n### Overview of Other Options:\n\n- **a)** **A method of memory management in which multiple records are read and written as a block on auxiliary storage.**\n    \n    - This describes **block storage** or **batch processing**, not specifically paging.\n- **b)** **A method of memory management in which the main memory is divided into multiple areas so that reading and writing can be performed simultaneously.**\n    \n    - This is a more general description of memory segmentation or parallel processing rather than paging.\n- **c)** **A method of memory management in which the programs are relocated for execution in a different area of the main memory.**\n    \n    - This refers to **memory relocation** or **dynamic loading**, which is not specifically the definition of paging.\n\nThus, option **d** accurately describes the concept of paging in memory management."
+  },
+  {
+    "id": "2019S_FE_AM_17",
+    "question": "Which of the following is a method that performs data transfer between the main memory and a low-speed output device via a high-speed auxiliary storage device to increase the throughput of the entire system?",
+    "options": [
+      "Blocking",
+      "Paging",
+      "Spooling",
+      "Swapping"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n- **Spooling** (Simultaneous Peripheral Operation On-Line) is a process that allows data to be temporarily stored in a high-speed storage area (such as a disk) before being sent to a slower output device (like a printer).\n- This technique enables the system to continue processing other tasks while the data is being transferred, effectively improving the overall throughput and efficiency of the system by allowing I/O operations to occur concurrently with computation.\n\n### Overview of Other Options:\n\n- **a)** **Blocking**: This typically refers to a method of grouping data into blocks for more efficient storage and transfer but does not directly involve the transfer process between devices as described.\n    \n- **b)** **Paging**: This is a memory management scheme that involves dividing memory into fixed-size pages and does not involve data transfer between a high-speed storage device and output devices.\n    \n- **d)** **Swapping**: This refers to the process of moving data between main memory and disk storage to free up memory but does not specifically relate to output devices or the auxiliary storage acting as a buffer for data transfer to slow devices.\n    \n\nThus, **c) Spooling** is the correct answer as it directly addresses the data transfer method described in your question."
+  },
+  {
+    "id": "2019S_FE_AM_18",
+    "question": "In the figure below, data are sent continuously for T seconds from the send task to the receive task. When the volume of the data sent per second is S and volume of the data received per second is R, which of the following is an appropriate relational expression for buffer size L for a buffer that does not overflow? Here, the transmission speed for the send task is faster than the transmission speed for the receive task, and there is sufficient time between the transmissions.\n\n![Image](Files/Pasted%20image%2020241020124140.png)",
+    "options": [
+      "$L<(R-S)\\times T$",
+      "$L<(S-R)\\times T$",
+      "$L\\geq(R-S)\\times T$",
+      "$L\\geq(S-R)\\times T$"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\nTo determine the appropriate relational expression for buffer size $L$ for a buffer that does not overflow, we need to analyze the data transmission dynamics between the send and receive tasks over a time period $T$.\n\n### Given:\n\n- **Volume of data sent per second**: $S$\n- **Volume of data received per second**: $R$\n- **Transmission speed for the send task is faster than for the receive task**: $S>R$\n\n### Explanation:\n\nSince the send task transmits data at a faster rate than the receive task (i.e., $S>R$), this means that there will be a backlog of data that needs to be buffered since the send task will continually produce more data than the receive task can handle.\n\n1. **Net Data Sent in $T$ Seconds**:\n    \n    - In $T$seconds, the send task will send: $\\text{Total Sent} = S \\times T$\n2. **Net Data Received in $T$ Seconds**:\n    \n    - In the same $T$ seconds, the receive task will receive: $\\text{Total Received} = R \\times T$\n3. **Net Data That Needs to Be Buffered**:\n    \n    - The amount of data that needs to be buffered (the difference between sent and received) is: $\\text{Data to Buffer} = \\text{Total Sent} - \\text{Total Received} = (S \\times T) - (R \\times T) = (S - R) \\times T$\n\n### Buffer Size Requirement:\n\nFor the buffer to not overflow, the buffer size $L$ must be at least equal to the amount of data that needs to be buffered:\n\n$L \\geq (S - R) \\times T$\n\n### **Conclusion:**\n\nThus, the appropriate relational expression for buffer size $L$ is:\n\n**d)** $L \\geq (S - R) \\times T$\n\nThis means the buffer size must accommodate the excess data sent by the send task over the data received by the receive task within the specified time period $T$."
+  },
+  {
+    "id": "2019S_FE_AM_19",
+    "question": "On a virtual memory computer, the number of pages that can be allocated to the real memory is three (3), and the two (2) algorithms of FIFO and LRU are used for selecting the page to be removed. When a page reference string shown below accesses the three (3) pages, which of the following is an appropriate combination of the number of page replacement operations? Here, the three (3) pages are initially empty and filling of an empty page is not considered as a page replacement operation.\n\n\t1, 3, 2, 1, 4, 5, 2, 3, 4, 5\n\n![Image](Files/Pasted%20image%2020241020141213.png)",
+    "options": [
+      "$L<(R-S)\\times T$",
+      "$L<(S-R)\\times T$",
+      "$L\\geq(R-S)\\times T$",
+      "$L\\geq(S-R)\\times T$"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nTo determine the number of **page replacement operations** for both **FIFO** (First-In-First-Out) and **LRU** (Least Recently Used) algorithms, let's go step by step through the **page reference string**:\n\n**Page reference string**: `1, 3, 2, 1, 4, 5, 2, 3, 4, 5`\n\n### Given:\n\n- The number of pages that can be allocated to real memory is **3**.\n- Initially, the memory is empty, so the first three accesses are just page fills, not page replacements.\n- We need to calculate the number of page replacements using both **FIFO** and **LRU**.\n\n### FIFO (First-In-First-Out)\n\n1. **1**: (Page fill, memory: `[1]`)\n2. **3**: (Page fill, memory: `[1, 3]`)\n3. **2**: (Page fill, memory: `[1, 3, 2]`)\n4. **1**: (Page hit, no replacement, memory: `[1, 3, 2]`)\n5. **4**: (Page replacement, replace `1`, memory: `[4, 3, 2]`)\n6. **5**: (Page replacement, replace `3`, memory: `[4, 5, 2]`)\n7. **2**: (Page hit, no replacement, memory: `[4, 5, 2]`)\n8. **3**: (Page replacement, replace `2`, memory: `[4, 5, 3]`)\n9. **4**: (Page hit, no replacement, memory: `[4, 5, 3]`)\n10. **5**: (Page hit, no replacement, memory: `[4, 5, 3]`)\n\n- **Total page replacements (FIFO)**: **3**\n\n### LRU (Least Recently Used)\n\n1. **1**: (Page fill, memory: `[1]`)\n2. **3**: (Page fill, memory: `[1, 3]`)\n3. **2**: (Page fill, memory: `[1, 3, 2]`)\n4. **1**: (Page hit, memory: `[1, 3, 2]`)\n5. **4**: (Page replacement, replace `3` (least recently used), memory: `[1, 4, 2]`)\n6. **5**: (Page replacement, replace `2` (least recently used), memory: `[1, 4, 5]`)\n7. **2**: (Page replacement, replace `1` (least recently used), memory: `[2, 4, 5]`)\n8. **3**: (Page replacement, replace `4` (least recently used), memory: `[2, 3, 5]`)\n9. **4**: (Page replacement, replace `5`, memory: `[2, 3, 4]`)\n10. **5**: (Page replacement, replace `2`, memory: `[5, 3, 4]`)\n\n- **Total page replacements (LRU)**: **6**\n\n### **Conclusion:**\n\nThe correct combination is:\n\n**b)** **FIFO = 3, LRU = 6**"
+  },
+  {
+    "id": "2019S_FE_AM_20",
+    "question": "A real-time OS performs preemptive scheduling on a priority basis and schedules two (2) tasks A and B. When A has a higher priority than B, which of the following is an appropriate task management by the real-time OS?",
+    "options": [
+      "When A is launched during the execution of B, B is assigned a 'ready' status and A is executed.",
+      "When A is launched during the execution of B, B is assigned a 'waiting' status and A is executed.",
+      "When B is launched during the execution of A, A is assigned a 'ready' status and B is executed.",
+      "When B is launched during the execution of A, A is assigned a 'waiting' status and B is executed."
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nIn a **preemptive scheduling** system, tasks with **higher priority** can interrupt or 'preempt' the execution of lower-priority tasks. Here’s the breakdown:\n\n- **Task A** has **higher priority** than Task B.\n- If **Task A is launched while Task B is executing**, the **real-time OS** will **pause** Task B, assigning it to a **'ready' status**.\n- The system will then immediately switch to executing the **higher-priority Task A**.\n- Once Task A is done, Task B can resume execution from where it was paused.\n\n### Other Options:\n\n- **b)** Incorrect: B should be assigned a **'ready' status**, not a **'waiting' status**. A **waiting status** is typically used when a task is waiting for an event or resource.\n- **c)** Incorrect: Task B, being of **lower priority**, should not preempt Task A. Instead, Task A continues execution.\n- **d)** Incorrect: Similar to c, Task A would not enter a **waiting status** for Task B, as A has a higher priority.\n\nIn **preemptive scheduling**, the higher-priority task always preempts the lower-priority one. Therefore, the answer is **a)**."
   }
 ]
