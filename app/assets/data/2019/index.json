@@ -171,12 +171,72 @@
     "id": "2019S_FE_AM_5",
     "question": "Which of the following is a binary search tree?\n\n![Image](Files/Pasted%20image%2020241020103659.png)",
     "options": [
-      "a",
-      "b",
-      "c",
-      "d"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "correctAnswer": 1,
     "solution": "## **Explanation:**\n\nA **binary search tree (BST)** is a type of binary tree where:\n\n1. Each node has at most two children.\n2. For any given node:\n    - The **left child** contains a value **less than** the value of the node.\n    - The **right child** contains a value **greater than** the value of the node.\n3. This property applies recursively to all nodes in the tree.\n\n### Overview of other options:\n\n- **a)** The right child of the node containing the element 15 is contains an element that is lesser than its parent which violates the rules of a BST.\n- **c)** The right child of the node containing the element 16 is contains an element that is lesser than its parent which violates the rules of a BST.\n- **d)** The right child of the node containing the element 20 is contains an element that is lesser than its parent which violates the rules of a BST.\n\n![Image](Files/Pasted%20image%2020241020103710.png)"
+  },
+  {
+    "id": "2019S_FE_AM_6",
+    "question": "When the procedure described below is executed in sequence for an empty stack and empty queue, what is the value assigned to variable x? Here, the functions used in the procedure are defined as follows:\n\n[Function definitions]\n\n\tpush(y): pushes data y onto the top of the stack.\n\n\tpop(): removes the data from the top of the stack and returns it as the function value.\n\n\tenq(y): inserts data y at the tail of the queue.\n\n\tdeq(): removes the data from the head of the queue and returns it as the function value.\n\n[Procedure]\n\n\tpush(a)\n\tpush(b)\n\tenq(pop())\n\tenq(c)\n\tpush(d)\n\tpush(deq())\n\tx ← pop()",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n### Initial conditions:\n\n- **Stack**: empty\n- **Queue**: empty\n\n### Procedure:\n\n1. **push(a)**: Pushes **'a'** onto the stack.\n    **Stack**: `['a']`\n    **Queue**: `[]`\n\n2. **push(b)**: Pushes **'b'** onto the stack.\n    **Stack**: `['a', 'b']`\n    **Queue**: `[]`\n\n3. **enq(pop())**: Pops the top element from the stack (**'b'**) and enqueues it into the queue.\n    **Stack**: `['a']`\n    **Queue**: `['b']`\n\n4. **enq(c)**: Enqueues **'c'** into the queue.\n    **Stack**: `['a']`\n    **Queue**: `['b', 'c']`\n\n5. **push(d)**: Pushes **'d'** onto the stack.\n    **Stack**: `['a', 'd']`\n    **Queue**: `['b', 'c']`\n\n6. **push(deq())**: Dequeues the front element of the queue (**'b'**) and pushes it onto the stack.\n    **Stack**: `['a', 'd', 'b']`\n    **Queue**: `['c']`\n\n7. **x ← pop()**: Pops the top element from the stack (**'b'**) and assigns it to **x**.\n    **Stack**: `['a', 'd']`\n    **Queue**: `['c']`\n\nThe value of x is 'b'. Therefore the answer to the question is **b)**."
+  },
+  {
+    "id": "2019S_FE_AM_7",
+    "question": "For a function f(x, y) defined below, what is the value of f(775, 527)? Here, x mod y represents the remainder after division of x by y.\n\n\tf(x, y): if y = 0 then return x else return f(y, x mod y)",
+    "options": [
+      "0",
+      "31",
+      "248",
+      "527"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nTo determine the value of the function $f(775,527)$ defined as:\n\n#### $f(x,y)=x~if~y=0,~else~f(y,x~mod  y)$\n\nwe will follow the recursive steps defined in the function.\n\n### Step 1: Initial Call\n\n- $f(775,527)$\n\nSince $527 \\neq 0$, we need to evaluate $f(775 \\mod 527)$.\n\n### Step 2: Calculate $775 \\mod 527$\n\n$775 \\div 527 = 1 \\quad \\text{(integer part)}$\n$775 - (1 \\times 527) = 775 - 527 = 248$\n\nSo, $775 \\mod 527 = 248$.\n\nNow, we have:\n\n$f(775, 527) = f(527, 248)$\n\n### Step 3: Second Call\n\n- $f(527,248)$\n\nSince $248 \\neq 0$, we evaluate $f(527 \\mod 248)$.\n\n### Step 4: Calculate $527 \\mod 248$\n\n$527 \\div 248 = 2 \\quad \\text{(integer part)}$\n$527 - (2 \\times 248) = 527 - 496 = 31$\n\nSo, $527 \\mod 248 = 31$.\n\nNow, we have:\n\n$f(527, 248) = f(248, 31)$\n\n### Step 5: Third Call\n\n- $f(248, 31)$\n\nSince $31 \\neq 0$, we evaluate $f(248 \\mod 31)$.\n\n### Step 6: Calculate $248 \\mod 31$\n\n$248 \\div 31 = 8 \\quad \\text{(integer part)}$\n$248 - (8 \\times 31) = 248 - 248 = 0$\n\nSo, $248 \\mod 31 = 0$.\n\nNow, we have:\n\n$f(248, 31) = f(31, 0)$\n\n### Step 7: Fourth Call\n\n- $f(31, 0)$\n\nSince $y=0$, we return $x$:\n\n$f(31,0)=31$\n\n### Final Result\n\nThus, the value of $f(775,527)$ is **31**.\n\n**Answer: b) 31**"
+  },
+  {
+    "id": "2019S_FE_AM_8",
+    "question": "The flowchart below shows the algorithm of concatenating two character strings in X and Y, with the resulting character string in Z. Which of the following is the appropriate pair of operations to insert in the blanks, A and B? Here, X and Y are character arrays of dimensions m and n, respectively, where the i-th character of each string is stored as the i-th element of the character array.\n\n![Image](Files/Pasted%20image%2020241020111646.png)\n\n![Image](Files/Pasted%20image%2020241020111705.png)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nTo correctly fill in the blanks **A** and **B** in the algorithm for concatenating two character strings **X** and **Y** into a resulting character string **Z**, let's break down the operations involved.\n\n### Given Information:\n\n- **X** is a character array of dimension **m**.\n- **Y** is a character array of dimension **n**.\n- The resulting string **Z** will have a total length of **m + n**.\n\n### Flowchart Analysis:\n\n1. **Loop 1** iterates over the characters in **X** from **1** to **m**.\n\n    - In this loop, we need to copy characters from **X** to **Z**. Each character from **X** should be placed in the first part of **Z**.\n    - Thus, the operation should be: **A: X(k) → Z(k)** (where k varies from 1 to m).\n\n2. **Loop 2** iterates over the characters in **Y** from **1** to **n**.\n\n    - In this loop, we need to copy characters from **Y** to **Z** starting after the last character from **X**. Since the first **m** positions in **Z** are filled by **X**, the characters from **Y** should start from position **m + 1** in **Z**.\n    - Thus, the operation should be: **B: Y(k) → Z(m + k)** (where k varies from 1 to n).\n\n### **Conclusion:**\n\nBased on the analysis, the appropriate operations to insert in the blanks **A** and **B** are:\n\n- **A**: **X(k) → Z(k)**\n- **B**: **Y(k) → Z(m + k)**\n\n### **Final Answer:**\n\nThe correct pair of operations is:\n**a)** $X(k)→Z(k)$ and $Y(k)→Z(m+k)$\n**Answer: a)**\n\n![Image](Files/Pasted%20image%2020241020111719.png)"
+  },
+  {
+    "id": "2019S_FE_AM_9",
+    "question": "For a processor running at 50 MIPS, what is the average execution time per instruction?",
+    "options": [
+      "20 ns",
+      "50 ns",
+      "2 $\\mu$s",
+      "5 $\\mu$s"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nTo calculate the average execution time per instruction for a processor running at 50 MIPS (Million Instructions Per Second), we can use the following formula:\n\n#### $Execution~Time~per~Instruction=\\frac{1}{\\text{MIPS}}$\n\n### Step 1: Convert MIPS to Execution Time\n\nGiven that the processor runs at 50 MIPS, we can calculate the execution time as follows:\n\n$\\text{Execution Time per Instruction} = \\frac{1}{50 \\text{ MIPS}} = \\frac{1}{50 \\times 10^6} \\text{ seconds}$\n\n### Step 2: Calculate Execution Time\n\nNow, calculate the execution time:\n\n$\\text{Execution Time per Instruction} = \\frac{1}{50,000,000} = 20 \\text{ ns}$\n\n### Final Answer\n\nThus, the average execution time per instruction is **20 ns**.\n\n**Answer: a) 20 ns**"
+  },
+  {
+    "id": "2019S_FE_AM_10",
+    "question": "Which of the following is an appropriate characteristic of SRAM compared to DRAM? Here, SRAM and DRAM are compared in products manufactured in the same or similar semiconductor geometric process.",
+    "options": [
+      "SRAM consumes more power, particularly when idle, compared to DRAM.",
+      "SRAM is non-volatile, whereas DRAM is volatile.",
+      "SRAM needs to be refreshed, whereas DRAM does not.",
+      "SRAM uses more transistors in a memory cell compared to DRAM."
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\n- **SRAM (Static Random Access Memory)** uses **six transistors** (6T) to store a single bit of data. This design allows SRAM to maintain data without needing to refresh it, making it faster and more stable than DRAM.\n- **DRAM (Dynamic Random Access Memory)**, on the other hand, typically uses **one transistor and one capacitor** (1T1C) to store each bit. This design is simpler and allows DRAM to have a higher density and lower cost per bit compared to SRAM.\n\n### Overview of Other Options:\n\n- **a)** **SRAM consumes more power, particularly when idle, compared to DRAM.** This is incorrect; SRAM generally consumes less power when active but can consume more power during idle states.\n- **b)** **SRAM is non-volatile, whereas DRAM is volatile.** This is incorrect; both SRAM and DRAM are volatile memory types, meaning they lose their stored data when power is turned off.\n- **c)** **SRAM needs to be refreshed, whereas DRAM does not.** This is incorrect; DRAM requires periodic refreshing to maintain data, while SRAM does not require refreshing.\n\nTherefore, the answer is **d)**."
   }
 ]
