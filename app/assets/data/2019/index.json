@@ -171,10 +171,10 @@
     "id": "2019S_FE_AM_5",
     "question": "Which of the following is a binary search tree?\n\n![Image](Files/Pasted%20image%2020241020103659.png)",
     "options": [
-      "a",
-      "b",
-      "c",
-      "d"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "correctAnswer": 1,
     "solution": "## **Explanation:**\n\nA **binary search tree (BST)** is a type of binary tree where:\n\n1. Each node has at most two children.\n2. For any given node:\n    - The **left child** contains a value **less than** the value of the node.\n    - The **right child** contains a value **greater than** the value of the node.\n3. This property applies recursively to all nodes in the tree.\n\n### Overview of other options:\n\n- **a)** The right child of the node containing the element 15 is contains an element that is lesser than its parent which violates the rules of a BST.\n- **c)** The right child of the node containing the element 16 is contains an element that is lesser than its parent which violates the rules of a BST.\n- **d)** The right child of the node containing the element 20 is contains an element that is lesser than its parent which violates the rules of a BST.\n\n![Image](Files/Pasted%20image%2020241020103710.png)"
