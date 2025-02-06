@@ -685,12 +685,12 @@
     },
     {
         "id": "2021S_FE_AM_28",
-        "question": "Among the search processes for the 'Sales' table, which of the following is appropriate to set a hash index rather than a B+ tree index? Here, the column in which the index is set is shown inside <>.",
+        "question": "Among the search processes for the 'Sales' table, which of the following is appropriate to set a hash index rather than a B+ tree index? Here, the column in which the index is set is shown inside <>.\n\nSales (form number, sales date, product name, user ID, store number, sales amount)",
         "options": [
-        "Searching for sales with a sales amount of 100 dollars or more. <sales amount>",
-        "Searching for sales with the product name beginning with 'DB'. <product name>",
-        "Searching for sales with the sales date as the current month. <sales date>",
-        "Searching for sales with the user ID as '1001'. <user ID>"
+        "Searching for sales with a sales amount of 100 dollars or more. \\<sales amount\\>",
+        "Searching for sales with the product name bedginning with 'DB'. \\<product name\\>",
+        "Searching for sales with the sales date as the current month. \\<sales date\\>",
+        "Searching for sales with the user ID as '1001'. \\<user ID\\>"
         ],
         "correctAnswer": 3,
         "solution": "## Explanation\n**Hash Index**\n- typically used for equality searches, where the exact value of a field is known and needed\n- allows for very fast lookups for **specific values** because it directly computes the location of the data using a hash function.\n\n**B+ Trees**\n- data structures\n- used to store vast amounts of data that are too large to fit in the main memory.\n\n### Option a)\n- large range\n- fits for B+ Trees\n\n### Option b)\n- can contain many products\n- fits for B+ Trees\n\n### Option c)\n- can contain a large range of data\n- fits for B+ Trees\n\n### Option d) (ANSWER)\n- specific user\n- fits for hashing"

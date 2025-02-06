@@ -183,10 +183,10 @@
     "id": "2019S_FE_AM_6",
     "question": "When the procedure described below is executed in sequence for an empty stack and empty queue, what is the value assigned to variable x? Here, the functions used in the procedure are defined as follows:\n\n[Function definitions]\n\n\tpush(y): pushes data y onto the top of the stack.\n\n\tpop(): removes the data from the top of the stack and returns it as the function value.\n\n\tenq(y): inserts data y at the tail of the queue.\n\n\tdeq(): removes the data from the head of the queue and returns it as the function value.\n\n[Procedure]\n\n\tpush(a)\n\tpush(b)\n\tenq(pop())\n\tenq(c)\n\tpush(d)\n\tpush(deq())\n\tx ← pop()",
     "options": [
-      "A",
-      "B",
-      "C",
-      "D"
+      "'a'",
+      "'b'",
+      "'c'",
+      "'d'"
     ],
     "correctAnswer": 1,
     "solution": "## **Explanation:**\n\n### Initial conditions:\n\n- **Stack**: empty\n- **Queue**: empty\n\n### Procedure:\n\n1. **push(a)**: Pushes **'a'** onto the stack.\n    **Stack**: `['a']`\n    **Queue**: `[]`\n\n2. **push(b)**: Pushes **'b'** onto the stack.\n    **Stack**: `['a', 'b']`\n    **Queue**: `[]`\n\n3. **enq(pop())**: Pops the top element from the stack (**'b'**) and enqueues it into the queue.\n    **Stack**: `['a']`\n    **Queue**: `['b']`\n\n4. **enq(c)**: Enqueues **'c'** into the queue.\n    **Stack**: `['a']`\n    **Queue**: `['b', 'c']`\n\n5. **push(d)**: Pushes **'d'** onto the stack.\n    **Stack**: `['a', 'd']`\n    **Queue**: `['b', 'c']`\n\n6. **push(deq())**: Dequeues the front element of the queue (**'b'**) and pushes it onto the stack.\n    **Stack**: `['a', 'd', 'b']`\n    **Queue**: `['c']`\n\n7. **x ← pop()**: Pops the top element from the stack (**'b'**) and assigns it to **x**.\n    **Stack**: `['a', 'd']`\n    **Queue**: `['c']`\n\nThe value of x is 'b'. Therefore the answer to the question is **b)**."
