@@ -358,5 +358,65 @@
     ],
     "correctAnswer": 0,
     "solution": "## **Explanation:**\n\nIn a **preemptive scheduling** system, tasks with **higher priority** can interrupt or 'preempt' the execution of lower-priority tasks. Here’s the breakdown:\n\n- **Task A** has **higher priority** than Task B.\n- If **Task A is launched while Task B is executing**, the **real-time OS** will **pause** Task B, assigning it to a **'ready' status**.\n- The system will then immediately switch to executing the **higher-priority Task A**.\n- Once Task A is done, Task B can resume execution from where it was paused.\n\n### Other Options:\n\n- **b)** Incorrect: B should be assigned a **'ready' status**, not a **'waiting' status**. A **waiting status** is typically used when a task is waiting for an event or resource.\n- **c)** Incorrect: Task B, being of **lower priority**, should not preempt Task A. Instead, Task A continues execution.\n- **d)** Incorrect: Similar to c, Task A would not enter a **waiting status** for Task B, as A has a higher priority.\n\nIn **preemptive scheduling**, the higher-priority task always preempts the lower-priority one. Therefore, the answer is **a)**."
+  },
+  {
+    "id": "2019S_FE_AM_21",
+    "question": "Which of the following is an appropriate explanation of the function of an actuator?",
+    "options": [
+      "It changes an analog electrical signal into a digital electrical signal, which a computer can process.",
+      "It changes an electrical control signal that is supplied by a computer into a mechanical motion.",
+      "It identifies a physical quantity and changes it into an electrical signal.",
+      "It is used in devices such as a keyboard or touch panel to enter data in a computer."
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nAn **actuator** is a device that converts an **electrical control signal** into a form of **mechanical motion**. It is commonly used in control systems to perform physical tasks, such as moving a robotic arm, opening a valve, or controlling a motor.\n\n### Other Options:\n\n- **a)** Incorrect: This describes an **analog-to-digital converter (ADC)**, not an actuator.\n- **c)** Incorrect: This describes a **sensor**, which converts a physical quantity (e.g., temperature, pressure) into an electrical signal.\n- **d)** Incorrect: This describes an **input device**, such as a keyboard or touch panel, which is used for entering data into a computer.\n\nAn actuator works in the opposite direction of a sensor—it takes electrical input and converts it into physical action. Therefore, the answer is **b)**."
+  },
+  {
+    "id": "2019S_FE_AM_22",
+    "question": "Which of the following is an appropriate example of utilizing an RFID?",
+    "options": [
+      "Close range transmission of data using infrared rays",
+      "Identification and management of personnel or items by using a very small wireless chip",
+      "Input of information by using a reader to read a digital code that is printed on a paper",
+      "Transmission of audio data between a cellphone and headphones"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n**RFID (Radio Frequency Identification)** is a technology that uses **radio waves** to identify and manage objects, people, or animals. It typically involves a **small wireless chip (RFID tag)** that contains data, which can be read by an **RFID reader**. This technology is commonly used in areas such as inventory management, access control, and tracking.\n\n### Other Options:\n\n- **a)** Incorrect: This describes **infrared communication**, not RFID. Infrared is used for short-range data transmission, but RFID uses radio waves, not infrared rays.\n- **c)** Incorrect: This describes the use of **barcodes** or **QR codes**. These require optical scanning and are not related to RFID.\n- **d)** Incorrect: This describes **Bluetooth or other wireless audio transmission technologies**, not RFID. RFID is not typically used for transmitting audio data.\n\nRFID is primarily used for identification and tracking, not for data transmission like Bluetooth or infrared. Therefore, the answer is **b)**."
+  },
+  {
+    "id": "2019S_FE_AM_23",
+    "question": "Which of the following is a logical expression that is equivalent to the logic circuit shown below?\n\n![Image](Files/Pasted%20image%2020241020145017.png)",
+    "options": [
+      "A AND B",
+      "A AND (A OR B)",
+      "A OR B",
+      "B AND (A OR B)"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nThe logic circuit can be expressed as:\n\n$(AB) + (A + B)$\n\nThis can be simplified step-by-step:\n\n1. **Distribute** the terms:\n    - The term $(A+B)$ covers all cases where either $A$ or $B$ is true, so it essentially dominates the expression (AB)(AB)(AB) because any condition satisfied by $AB$ is also satisfied by $A+B$.\n2. Thus, the simplified expression is:\n\n$A+B$\n\nTherefore, the logical expression simplifies to:\n\n**c)** **A OR B**"
+  },
+  {
+    "id": "2019S_FE_AM_24",
+    "question": "For a given data, the check digit is calculated with the method below and is appended to the original data. When the given data are 7394, what is the result? Here, the weight is 1234 and base number is 11.\n\n\t(1) For each digit of the data, calculate the product with the digit at the same radix of the weight; then calculate the sum of the products.\n\t(2) Calculate the remainder of dividing the sum by the base number.\n\t(3) Subtract the remainder from the base number; then take the one’s place of the result as the check digit.",
+    "options": [
+      "73940",
+      "73941",
+      "73944",
+      "73947"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nTo find the check digit for the given decimal data 7394 using the specified method, we will follow the steps outlined:\n\n#### Given:\n- Data: **7394**\n- Weight: **1234**\n- Base Number: **11**\n\n### 1. Calculate the sum of products\nFor each digit of the data, we calculate the product with the corresponding weight:\n\n#### $7~\\cdot~1 = 7$\n#### $3~\\cdot~2 = 6$\n#### $9~\\cdot~3 = 27$\n#### $4~\\cdot~4 = 16$\n\nSum the products\n#### $7+6+27+16=56$\n\n### 2. Calculate the remainder\nNow we calculate the remainder when the sum is divided by the base number (11):\n#### $56~\\text{mod}~11 =1$\n\n### 3. Calculate the check digit\nNext, we subtract the remainder from the base number and take the last digit of the result:\n#### $11-1=10$\n\nThe last digit of 10 is 0, which means the check digit is 0.\n\n### **Conclusion:**\nAppending the check digit to the original data gives:\n#### $7394~\\text{becomes}~73940$\n\nTherefore, the answer is **a)**."
+  },
+  {
+    "id": "2019S_FE_AM_25",
+    "question": "In 3D computer graphics, which of the following is an explanation of hidden-line removal or hidden-surface removal in rendering?",
+    "options": [
+      "By analyzing the position of the light source and how much light hits the target object, its color and brightness are determined.",
+      "For the generated image, only the portion that fits the computer display is rendered.",
+      "For the target object, only the portion that is viewable from a specified viewpoint is rendered.",
+      "Using a wireframe model with translucency, not only the surface but also the inside of the target object is rendered."
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n**Hidden-line removal** or **hidden-surface removal** refers to the process in **3D computer graphics** where only the visible parts of an object from a certain viewpoint are rendered. This technique ensures that any surfaces or lines that are obscured by other parts of the object or other objects are not drawn, improving the realism of the rendered scene by showing only what would be visible to the viewer.\n\n### Other Options:\n\n- **a)** Incorrect: This describes **lighting and shading**, where light interaction with an object determines its appearance, such as brightness and color, but it is not related to hidden-line or hidden-surface removal.\n- **b)** Incorrect: This describes **clipping**, which ensures that only the part of the scene that fits within the viewable area (such as the display) is rendered.\n- **d)** Incorrect: This describes **rendering a translucent or wireframe model**, where both the surface and the internal structure can be viewed, but this is not related to hiding non-visible parts.\n\nHidden-line or hidden-surface removal is essential for rendering realistic 3D scenes, ensuring only visible elements from the specified viewpoint are displayed. Therefore, the answer is **c)**."
   }
 ]
