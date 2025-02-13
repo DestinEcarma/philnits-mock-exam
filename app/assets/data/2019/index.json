@@ -418,5 +418,305 @@
     ],
     "correctAnswer": 2,
     "solution": "## **Explanation:**\n\n**Hidden-line removal** or **hidden-surface removal** refers to the process in **3D computer graphics** where only the visible parts of an object from a certain viewpoint are rendered. This technique ensures that any surfaces or lines that are obscured by other parts of the object or other objects are not drawn, improving the realism of the rendered scene by showing only what would be visible to the viewer.\n\n### Other Options:\n\n- **a)** Incorrect: This describes **lighting and shading**, where light interaction with an object determines its appearance, such as brightness and color, but it is not related to hidden-line or hidden-surface removal.\n- **b)** Incorrect: This describes **clipping**, which ensures that only the part of the scene that fits within the viewable area (such as the display) is rendered.\n- **d)** Incorrect: This describes **rendering a translucent or wireframe model**, where both the surface and the internal structure can be viewed, but this is not related to hiding non-visible parts.\n\nHidden-line or hidden-surface removal is essential for rendering realistic 3D scenes, ensuring only visible elements from the specified viewpoint are displayed. Therefore, the answer is **c)**."
+  },
+  {
+    "id": "2019S_FE_AM_26",
+    "question": "An employee works for a department, which can be located in multiple regions. Three tables EMP, DEPT, and DEPT_LOCS are created as shown below for recording the employee, department, and department location data, respectively.\n\n![Image](Files/Pasted%20image%2020241020151447.png)\n\n![Image](Files/Pasted%20image%2020241020151505.png)\n\n![Image](Files/Pasted%20image%2020241020151634.png)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nThe SQL query operates as follows:\n\n1. **Subquery 1 (`SELECT DNO FROM DEPT`)**: This part retrieves all department numbers (DNO) from the **DEPT** table, essentially fetching the list of all departments.\n\n2. **Subquery 2 (`SELECT DNO FROM DEPT_LOCS WHERE Region=’L2’)**: This part retrieves the department numbers (DNO) for departments located in the **L2** region from the **DEPT_LOCS** table.\n\n3. **MINUS Operator**: The `MINUS` operator is used to exclude department numbers from Subquery 1 that are also present in Subquery 2. This results in the department numbers that are **not** located in region **L2**.\n\n4. **Main Query**: The outer query selects the employee names (`EName`) and their corresponding salaries from the **EMP** table, where the department number (`DNO`) of the employee matches the department numbers retrieved by the `MINUS` operation (i.e., departments that are not located in region **L2**).\n\nGiven this process, the SQL query will return the employees who work for departments that are **not located in region L2**. Based on the table data:\n\n- **John Bate** (20000) and **Sadat Hossain** (50000) are associated with departments that are not located in region **L2**.\n\nTherefore, the answer is **b)**."
+  },
+  {
+    "id": "2019S_FE_AM_27",
+    "question": "In an SQL statement, which of the following is a constraint that is specified with FOREIGN KEY and REFERENCES?",
+    "options": [
+      "Assertion",
+      "Check constraint",
+      "Key constraint",
+      "Referential constraint"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\nIn SQL, when you define a **FOREIGN KEY** that references another table, it creates a **referential constraint**. This constraint ensures that the values in the foreign key column of a table must correspond to existing values in the primary key column of the referenced table. It maintains the **referential integrity** between two related tables.\n\n### Other Options:\n\n- **a) Assertion**: Assertions are more general constraints that ensure certain conditions are always true in a database, but they are not specifically tied to foreign key constraints.\n- **b) Check constraint**: A **CHECK constraint** ensures that the values in a column satisfy a specified condition but is not directly related to foreign key relationships.\n- **c) Key constraint**: A **key constraint** (like a primary or unique key) ensures uniqueness in a column or combination of columns but is different from a foreign key.\n\nThus, **referential constraint** is the correct term used for constraints defined using **FOREIGN KEY** and **REFERENCES**."
+  },
+  {
+    "id": "2019S_FE_AM_28",
+    "question": "In a client/server system, which of the following is the mechanism that reduces the network load between the client and server by placing the frequently used commands on the DBMS on the server in advance?",
+    "options": [
+      "Group commitment",
+      "Multithreading of server processes",
+      "Stored procedure",
+      "Two-phase commitment"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nA **stored procedure** is a set of SQL statements that can be stored and executed on the database server. By placing frequently used commands on the DBMS (Database Management System) server, stored procedures help reduce the amount of data that needs to be sent over the network between the client and server.\n\n### Other Options:\n\n- **a) Group commitment**: This is a method used to improve the performance of transactions by grouping multiple transactions together for committing, but it does not specifically focus on reducing network load.\n- **b) Multithreading of server processes**: This technique allows the server to handle multiple requests simultaneously, improving performance but not specifically addressing network load reduction.\n- **d) Two-phase commitment**: This is a protocol used to ensure that all parts of a distributed transaction are completed successfully, but it does not relate to pre-storing commands on the server.\n\nThus, **stored procedures** are specifically designed to minimize network traffic by executing commands directly on the server."
+  },
+  {
+    "id": "2019S_FE_AM_29",
+    "question": "Which of the following is a characteristic to guarantee that the result of an update transaction is either performed completely or canceled as if nothing happened?",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Durability",
+      "Isolation"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Atomicity** is one of the key properties of a transaction in database systems, often summarized as part of the ACID (Atomicity, Consistency, Isolation, Durability) principles. It ensures that a transaction is treated as a single, indivisible unit of work. This means that either all operations within the transaction are completed successfully, or none of them are applied to the database, effectively rolling back any changes if an error occurs.\n\n### Other Options:\n\n- **b) Consistency**: This ensures that a transaction brings the database from one valid state to another, maintaining all predefined rules and constraints. It does not specifically guarantee the all-or-nothing property of an update.\n- **c) Durability**: This guarantees that once a transaction has been committed, its effects are permanent, even in the event of a system failure. It does not relate to whether the transaction is completed or canceled.\n- **d) Isolation**: This property ensures that transactions are executed in isolation from one another, meaning the operations of one transaction do not affect those of another. It does not guarantee that a transaction is completed or canceled.\n\nThus, **atomicity** is the characteristic that ensures the all-or-nothing nature of transactions."
+  },
+  {
+    "id": "2019S_FE_AM_30",
+    "question": "Which of the following is the process that is executed periodically to prevent reducing the access efficiency of the database?",
+    "options": [
+      "Backup",
+      "Database dump",
+      "Reorganization",
+      "Roll back"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n**Reorganization** is the process executed periodically to optimize the structure of the database. Over time, as data is inserted, updated, and deleted, the organization of the data can become fragmented, leading to decreased access efficiency. Reorganization helps to improve the physical layout of the data, reduce fragmentation, and enhance performance by ensuring that related data is stored closer together, which can speed up access times.\n\n### Other Options:\n\n- **a) Backup**: This involves creating copies of the database to safeguard against data loss, but it does not directly address access efficiency.\n- **b) Database dump**: This is a method of exporting the entire database to a file for backup or migration, not focused on improving access efficiency.\n- **d) Roll back**: This refers to reverting the database to a previous state in case of an error, which does not pertain to maintenance for efficiency.\n\nThus, **reorganization** is specifically aimed at preventing reduced access efficiency in a database."
+  },
+  {
+    "id": "2019S_FE_AM_31",
+    "question": "In IPv4, which of following describes the NAT function of a router that connects some computers to the Internet?",
+    "options": [
+      "It caches the Internet access to speed up the connections when revisiting the same websites.",
+      "It converts between private and global IP addresses.",
+      "It inspects the IP packets in a transmission to detect possible attacks and intrusions from the Internet.",
+      "It only passes the IP packets intended for specific terminals."
+    ],
+    "correctAnswer": 1,
+    "solution": "**Network Address Translation (NAT)** is a function performed by routers that allows multiple devices on a local network to share a single public IP address for accessing the Internet. NAT translates the private IP addresses of the devices on the local network to a public IP address when they send data out to the Internet. When responses are received, NAT translates the public IP address back to the appropriate private IP address, ensuring that the data reaches the correct device on the local network.\n\n### Other Options:\n\n- **a)** Caching is not a function of NAT; it relates more to web proxies or caching servers that store frequently accessed web content to improve loading times.\n- **c)** Inspecting IP packets for attacks relates to security functions such as a firewall, not specifically to NAT.\n- **d)** While NAT does manage the flow of packets, it does not limit traffic to specific terminals; instead, it enables all devices behind the NAT to share the same public IP address.\n\nThus, **option b** accurately describes the primary function of NAT in a router."
+  },
+  {
+    "id": "2019S_FE_AM_32",
+    "question": "Which of the following is a feature of a switching hub (layer 2 switch) network device?",
+    "options": [
+      "It breaks a received packet into smaller pieces (fragments) in the network layer.",
+      "It dynamically allocates an IP address for a terminal connected to its LAN port.",
+      "It forwards a received packet only to its LAN port connected to a device with the packet’s destination MAC address.",
+      "It forwards a received packet to all its LAN ports (broadcast)."
+    ],
+    "correctAnswer": 2,
+    "solution": "A **switching hub** (or Layer 2 switch) operates primarily at the Data Link layer of the OSI model. Its main function is to receive data packets and intelligently forward them to the appropriate destination device based on the **MAC address**. By doing this, it reduces unnecessary traffic on the network and improves overall efficiency.\n\n### Other Options:\n\n- **a)** Fragmentation of packets is a function of Layer 3 devices (routers), which handle IP packets, not Layer 2 switches.\n- **b)** Dynamically allocating an IP address is a function of a DHCP server, not a switching hub.\n- **d)** Forwarding a packet to all LAN ports is characteristic of a hub, not a switching hub. A switch only sends packets to the specific port corresponding to the destination MAC address, rather than broadcasting to all ports.\n\nTherefore, **option c** accurately describes a feature of a switching hub."
+  },
+  {
+    "id": "2019S_FE_AM_33",
+    "question": "Which of the following is the network routing and addressing mechanism that is used in IPv6 but not in IPv4?",
+    "options": [
+      "Anycast",
+      "Broadcast",
+      "Multicast",
+      "Unicast"
+    ],
+    "correctAnswer": 0,
+    "solution": "**Anycast** is a network addressing and routing mechanism that is used in **IPv6** but not in **IPv4**. It allows for a single address to be assigned to multiple interfaces (typically on different devices), and the network will route packets to the nearest interface (in terms of routing distance) that has that address.\n\n### Other Options:\n\n- **b)** **Broadcast** is used in IPv4 to send packets to all devices on a network segment, but it is not used in IPv6. IPv6 does not support broadcast; instead, it relies on multicast for similar purposes.\n- **c)** **Multicast** is available in both IPv4 and IPv6 and allows packets to be sent to multiple specific devices at once.\n- **d)** **Unicast** is also used in both IPv4 and IPv6 and refers to a one-to-one communication between a sender and a receiver.\n\nThus, **option a (Anycast)** is the only mechanism that is uniquely associated with IPv6."
+  },
+  {
+    "id": "2019S_FE_AM_34",
+    "question": "In an IPv4 network with subnet mask 255.255.255.224, what is the maximum number of host addresses assigned?",
+    "options": [
+      "14",
+      "20",
+      "26",
+      "30"
+    ],
+    "correctAnswer": 3,
+    "solution": "- The subnet mask **255.255.255.224** corresponds to a **/27** prefix, which means there are **27 bits** for the network portion and **5 bits** for the host portion.\n- To calculate the maximum number of host addresses:\n    - Use the formula: **$2^n - 2$**, where **n** is the number of bits for the host.\n    - Here, **n = 5**: $2^5 - 2 = 32 - 2 = 30$\n    - The subtraction of 2 accounts for the network address and the broadcast address, which cannot be assigned to hosts.\nTherefore, the answer is **d)**."
+  },
+  {
+    "id": "2019S_FE_AM_35",
+    "question": "Which of the following is a protocol that uses TCP as its transport layer protocol?",
+    "options": [
+      "DHCP",
+      "SNMP",
+      "TELNET",
+      "TFTP"
+    ],
+    "correctAnswer": 2,
+    "solution": "- **TELNET**: This is a network protocol that allows for command-line interface access to remote computers. It uses **TCP** as its transport layer protocol to ensure reliable communication.\n\n### Overview of Other Options:\n\n- **a) DHCP (Dynamic Host Configuration Protocol)**: This protocol uses **UDP** (User Datagram Protocol) rather than TCP.\n- **b) SNMP (Simple Network Management Protocol)**: SNMP typically operates over **UDP**, although there is a version (SNMPv3) that can use TCP.\n- **d) TFTP (Trivial File Transfer Protocol)**: This protocol also uses **UDP** as its transport layer protocol, not TCP.\n\nThus, the only option that uses **TCP** as its transport layer protocol is **TELNET**."
+  },
+  {
+    "id": "2019S_FE_AM_36",
+    "question": "The IP address of Server X prepared by an attacker was stored in a DNS cache server of Company B as the IP address corresponding to the FQDN of the web server of Company A. Which of the following users will be unintentionally guided to Server X because of this attack? Here, each employee of Company A and Company B performs name resolution by using the DNS cache server of his/her own company.",
+    "options": [
+      "An employee of Company A who wishes to access the web server of Company A",
+      "An employee of Company A who wishes to access the web server of Company B",
+      "An employee of Company B who wishes to access the web server of Company A",
+      "An employee of Company B who wishes to access the web server of Company B"
+    ],
+    "correctAnswer": 2,
+    "solution": "In this scenario, the attacker has manipulated the DNS cache server of Company B to store the IP address of Server X as the corresponding IP for the Fully Qualified Domain Name (FQDN) of the web server of Company A. As a result:\n\n- When an employee of **Company B** attempts to access the web server of **Company A**, their request will resolve to the IP address of Server X instead of the legitimate server.\n\n### Overview of Other Options:\n\n- **a) An employee of Company A who wishes to access the web server of Company A**: This employee uses their own DNS cache server, which is not affected by the attack on Company B's DNS cache.\n- **b) An employee of Company A who wishes to access the web server of Company B**: This employee also uses their own DNS server, which is unaffected by the attack.\n- **d) An employee of Company B who wishes to access the web server of Company B**: This request resolves correctly as it points to the server of Company B, unaffected by the attack.\n\nThus, the employee of Company B attempting to access the web server of Company A will be misled to Server X due to the DNS cache poisoning attack."
+  },
+  {
+    "id": "2019S_FE_AM_37",
+    "question": "Which of the following is a description of a directory traversal attack?",
+    "options": [
+      "An attacker enters data consisting of database command statements as the input data for a web application and forces the execution of SQL statements that are not intended by the administrator.",
+      "An attacker guides a user to a web site, where a defect in the escape processing of the HTML output by a web application is exploited, and forces the execution of a malicious script on the user’s web browser.",
+      "An attacker illegally obtains the session ID for a user, who has logged into a session managed by the session ID, and accesses the server by spoofing the identity of the user.",
+      "An attacker specifies a file by using the path name and illegally views a file that is not intended for viewing by the administrator."
+    ],
+    "correctAnswer": 3,
+    "solution": "A **directory traversal attack** (also known as path traversal attack) occurs when an attacker exploits insufficient security validation in a web application to gain access to files and directories stored outside the intended directory. By manipulating the file path, attackers can specify arbitrary paths, allowing them to access sensitive files that should not be accessible, such as configuration files or password files.\n\n### Overview of Other Options:\n\n- **a)** Describes **SQL injection**, where an attacker inputs SQL statements to manipulate a database.\n- **b)** Describes **Cross-Site Scripting (XSS)**, where an attacker injects malicious scripts into web pages viewed by users.\n- **c)** Describes **Session hijacking**, where an attacker steals or predicts a valid session ID to impersonate a user.\n\nThus, option **d** is the closest description of a directory traversal attack."
+  },
+  {
+    "id": "2019S_FE_AM_38",
+    "question": "Which of the following is a description of a brute force attack by which an attempt is made to find the key of private key cryptography?",
+    "options": [
+      "Finding the key by observing the ciphertext change when the plaintext is changed by a certain amount",
+      "Finding the key by testing all key combinations sequentially when a set of plaintext and ciphertext is given",
+      "Finding the key by using as a clue the algebraic expression representing the relationship between the plaintext, ciphertext, and key",
+      "Finding the key by using as a clue the statistical correlation between a part of the information of the plaintext and part of the information of the ciphertext"
+    ],
+    "correctAnswer": 1,
+    "solution": "A **brute force attack** on private key cryptography involves systematically trying every possible key combination until the correct key is found. This method does not rely on any knowledge about the plaintext or ciphertext beyond what is required to confirm whether a guessed key produces the correct decryption.\n\n### Overview of Other Options:\n\n- **a)** Describes a method related to **differential cryptanalysis**, where changes in plaintext lead to changes in ciphertext.\n- **c)** Describes a method related to **algebraic attacks**, where the attacker uses mathematical relationships to derive the key.\n- **d)** Describes a method related to **statistical attacks**, where the attacker exploits patterns in plaintext and ciphertext to determine the key.\n\nThus, option **b** is the most accurate description of a brute force attack."
+  },
+  {
+    "id": "2019S_FE_AM_39",
+    "question": "Which of the following is an explanation of the time stamp service in information security?",
+    "options": [
+      "It is a service that authenticates biometric information, such as fingerprint, voice print, vein patterns, retina, and iris, by using the date and time when the information is registered in the authentication system.",
+      "It is a service that certifies that electronic data certainly exist on a particular date and time and that the data have not been falsified since that date and time.",
+      "It is a service that securely notifies that the date and time information is not falsified midway for setting the clock of the PCs and servers on the network.",
+      "It is a web service that securely displays the global date and time information used in the official records by using encrypted communication."
+    ],
+    "correctAnswer": 1,
+    "solution": "The **time stamp service** in information security is designed to provide proof of the existence of electronic data at a specific moment in time and to ensure that the data has not been altered since that time. This service is crucial for maintaining the integrity and authenticity of digital documents, making it vital in legal and compliance contexts.\n\n### Overview of Other Options:\n\n- **a)** Describes a service related to **biometric authentication**, not specifically time stamps.\n- **c)** Refers to a clock synchronization service, which ensures accurate timekeeping across devices but does not provide evidence of data existence or integrity.\n- **d)** Describes a web service for displaying time, but it does not pertain to the authentication or certification of data existence.\n\nThus, option **b** accurately captures the purpose and function of the time stamp service in information security."
+  },
+  {
+    "id": "2019S_FE_AM_40",
+    "question": "Which of the following is an encryption algorithm for public key cryptography?",
+    "options": [
+      "AES",
+      "KCipher-2",
+      "RSA",
+      "SHA-256"
+    ],
+    "correctAnswer": 2,
+    "solution": "**RSA (Rivest-Shamir-Adleman)** is a widely used public key cryptography algorithm that enables secure data transmission. It uses a pair of keys: a public key for encryption and a private key for decryption. RSA is commonly employed for secure communications and digital signatures.\n\n### Overview of Other Options:\n\n- **a) AES (Advanced Encryption Standard)**: A symmetric encryption algorithm, meaning it uses the same key for both encryption and decryption.\n- **b) KCipher-2**: A symmetric encryption algorithm used for securing data, not a public key algorithm.\n- **d) SHA-256 (Secure Hash Algorithm 256-bit)**: A cryptographic hash function, not an encryption algorithm. It is used to generate a fixed-size hash value from input data, primarily for integrity verification.\n\nThus, RSA is the only option that is specifically designed for public key cryptography."
+  },
+  {
+    "id": "2019S_FE_AM_41",
+    "question": "Which of the following is a security attack that prevents users from accessing their accounts?",
+    "options": [
+      "Brute force",
+      "Denial of Service",
+      "Man in the middle",
+      "Sniffing"
+    ],
+    "correctAnswer": 1,
+    "solution": "A **Denial of Service (DoS)** attack aims to make a system or service unavailable to its intended users, effectively preventing them from accessing their accounts. This can be achieved by overwhelming the server with requests, causing legitimate users to be unable to access the service.\n\n### Overview of Other Options:\n\n- **a) Brute Force**: This attack involves attempting to guess passwords or encryption keys by trying all possible combinations until the correct one is found. It does not inherently prevent access; instead, it attempts to gain access.\n- **c) Man in the Middle**: This attack occurs when an attacker intercepts communication between two parties, allowing them to eavesdrop or alter the communication. It does not directly prevent users from accessing their accounts but compromises the security of their communication.\n- **d) Sniffing**: This is the act of capturing network traffic to intercept data packets, often used to gather information like passwords. It doesn't prevent access but can lead to unauthorized access if sensitive information is obtained.\n\nThus, the most appropriate option for an attack that prevents users from accessing their accounts is the **Denial of Service** attack."
+  },
+  {
+    "id": "2019S_FE_AM_42",
+    "question": "Which of the following is an appropriate description of a botnet?",
+    "options": [
+      "A collection of internet-connected devices, including IoT devices, infected and controlled by a common type of malware",
+      "A scalable and reliable network of self-driving vehicles communicating with each other to avoid accidents/collisions",
+      "A set of honeypots designed to detect and analyze malicious activities by hackers to secure the production systems in the future",
+      "A wireless network for industrial robots created for collaborative manufacturing in a factory to ensure quality at all levels"
+    ],
+    "correctAnswer": 0,
+    "solution": "A **botnet** refers to a network of compromised computers and devices that are controlled remotely by an attacker. These devices, often referred to as 'bots' or 'zombies,' can include a variety of internet-connected devices, including personal computers, servers, and Internet of Things (IoT) devices. Botnets are typically used to perform various malicious activities, such as launching Distributed Denial of Service (DDoS) attacks, stealing personal information, or sending spam.\n\n### Overview of Other Options:\n\n- **b) A scalable and reliable network of self-driving vehicles communicating with each other to avoid accidents/collisions**: This describes a network of autonomous vehicles, not a botnet.\n- **c) A set of honeypots designed to detect and analyze malicious activities by hackers to secure the production systems in the future**: Honeypots are decoy systems used to attract and analyze attacks, which is different from a botnet.\n- **d) A wireless network for industrial robots created for collaborative manufacturing in a factory to ensure quality at all levels**: This describes a specific application of robotics and IoT in manufacturing, not a botnet.\n\nTherefore, the most appropriate description of a botnet is **a)**."
+  },
+  {
+    "id": "2019S_FE_AM_43",
+    "question": "An attacker captures unencrypted network traffic with a tool and later analyzes it offline to learn about the information contained in those transmissions. Which of the following is this attack?",
+    "options": [
+      "Buffer overflow attack",
+      "Phishing attack",
+      "Smurf attack",
+      "Sniffing attack"
+    ],
+    "correctAnswer": 3,
+    "solution": "A **sniffing attack** involves capturing and analyzing network traffic as it travels across a network. Attackers use tools called packet sniffers to intercept unencrypted data packets, which may contain sensitive information such as usernames, passwords, and other confidential data. Once the attacker has captured this data, they can analyze it offline to extract useful information.\n\n### Overview of Other Options:\n\n- **a) Buffer overflow attack**: This attack exploits vulnerabilities in a program by overflowing a buffer to execute arbitrary code or crash the program.\n- **b) Phishing attack**: This is a social engineering attack where attackers impersonate legitimate entities to trick users into providing sensitive information, typically via email or fraudulent websites.\n- **c) Smurf attack**: This is a type of DDoS attack where an attacker sends ICMP echo requests to a network's broadcast address, causing all devices on the network to respond to a targeted victim, overwhelming it with traffic.\n\nTherefore, the appropriate classification for the described scenario is **d) Sniffing attack**."
+  },
+  {
+    "id": "2019S_FE_AM_44",
+    "question": "Which of the following is the technique of actually attempting an attack and intrusion on a system to detect the security-related vulnerabilities of a computer or network?",
+    "options": [
+      "Penetration test",
+      "Regression test",
+      "Software inspection",
+      "Walk-through"
+    ],
+    "correctAnswer": 0,
+    "solution": "A **penetration test** (or pen test) is a simulated cyber attack against a computer system, network, or web application to identify security vulnerabilities that an attacker could exploit. The goal is to assess the security posture of the system and provide recommendations for improving security measures.\n\n### Overview of Other Options:\n\n- **b) Regression test**: This is a type of software testing that ensures that recent changes or updates to a program do not negatively affect its existing functionality.\n- **c) Software inspection**: This is a formal process of examining software artifacts (like requirements, design, or code) to identify defects, ensure quality, and improve the development process.\n- **d) Walk-through**: This is a review process in software development where a developer explains the logic of their code to peers or stakeholders to gather feedback and identify potential issues.\n\nTherefore, the appropriate classification for the technique described is **a) Penetration test**."
+  },
+  {
+    "id": "2019S_FE_AM_45",
+    "question": "As shown in the figure below, an application on a client accesses the data of the database on a server via database connection programs. Which of the following is a measure for preventing the leakage of the commands and execution results transmitted between the application and database?\n\n![Image](Files/Pasted%20image%2020241020162048.png)",
+    "options": [
+      "Changing the port number from its initial value that the database connection programs use for communication in the database management system",
+      "Encrypting the communication between the database connection programs",
+      "Restricting the IP addresses of the clients that can access the database connection program on the server to only those that are required",
+      "Setting a password for starting or stopping the database connection program on the server"
+    ],
+    "correctAnswer": 1,
+    "solution": "**Encrypting the communication between the database connection programs** is the most effective measure to prevent the leakage of commands and execution results transmitted between the application and the database. Encryption ensures that any data intercepted by an attacker while it is being transmitted is unreadable without the decryption key, thereby protecting sensitive information from unauthorized access.\n\n### Overview of Other Options:\n\n- **a) Changing the port number from its initial value that the database connection programs use for communication in the database management system**: While this may reduce the likelihood of automated attacks, it does not secure the data being transmitted.\n- **c) Restricting the IP addresses of the clients that can access the database connection program on the server to only those that are required**: This enhances security by limiting access but does not protect the data in transit.\n- **d) Setting a password for starting or stopping the database connection program on the server**: This measure protects the database connection program itself but does not address the protection of data during transmission.\n\nIn summary, encryption is the key measure for ensuring the confidentiality and integrity of data exchanged between the client application and the database server."
+  },
+  {
+    "id": "2019S_FE_AM_46",
+    "question": "In the UML class diagram, which of the following represents the relationship between the classes as shown in the figure below?\n\n![Image](Files/Pasted%20image%2020241020162314.png)",
+    "options": [
+      "Aggregation",
+      "Association",
+      "Composition", 
+      "Generalization"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\n- **Generalization** is a relationship where one class (the child) inherits the properties and behaviors of another class (the parent). It represents an 'is-a' relationship.\n- In UML, this is depicted with a hollow triangle pointing towards the parent class from the child class.\n\n### Other Options Overview:\n\n- **Aggregation**: Represents a whole-part relationship but implies that the part can exist independently of the whole. It's often depicted with an empty diamond.\n- **Association**: Represents a relationship between two classes without implying ownership. It's shown with a solid line.\n- **Composition**: A stronger form of aggregation where the part cannot exist without the whole. It's depicted with a filled diamond."
+  },
+  {
+    "id": "2019S_FE_AM_47",
+    "question": "Which of the following is an explanation of encapsulation in object orientation?",
+    "options": [
+      "Abstraction and sorting of several objects that have the same nature",
+      "Combination of the data and procedures that operate the data into a single object, and their concealment from outside the object",
+      "Extraction of the nature shared between classes and creation of a base class",
+      "Inheritance of the nature of a base class by a subclass"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n**Encapsulation** is a fundamental principle of object-oriented programming that combines data (attributes) and methods (functions) into a single unit or class. It restricts direct access to some of the object's components, which is a means of preventing unintended interference and misuse of the methods and data.\n\n### Other Options Overview:\n\n- **a) Abstraction and sorting of several objects that have the same nature**: This refers more to the concept of grouping similar objects but does not capture the essence of encapsulation.\n- **c) Extraction of the nature shared between classes and creation of a base class**: This describes the process of **generalization** or **abstraction**, which focuses on shared characteristics, not encapsulation.\n- **d) Inheritance of the nature of a base class by a subclass**: This describes **inheritance**, which allows a subclass to inherit properties and methods from a parent class, but is distinct from encapsulation."
+  },
+  {
+    "id": "2019S_FE_AM_48",
+    "question": "Which of the following can generally be called a subclass of an 'automobile' based on the concept of object orientation?",
+    "options": [
+      "Engine",
+      "Manufacturing number",
+      "Tire",
+      "Truck"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\nIn object-oriented programming, a **subclass** is a class that derives from another class (the superclass) and inherits its properties and behaviors. In this case, 'automobile' serves as the superclass, and 'truck' is a specific type of automobile, making it a valid subclass.\n\n### Other Options Overview:\n\n- **a) Engine**: While an engine is a critical component of an automobile, it is not a subclass; it's more of a part or attribute of the automobile.\n- **b) Manufacturing number**: This is an identifier and not a subclass or type of automobile.\n- **c) Tire**: Like the engine, a tire is a part of an automobile and does not qualify as a subclass."
+  },
+  {
+    "id": "2019S_FE_AM_49",
+    "question": "In the flowchart below, what is the minimum number of test cases that satisfies the decision condition coverage (branch coverage)?\n\n![Image](Files/Pasted%20image%2020241020163005.png)",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nTo satisfy the **decision condition coverage** (also known as branch coverage), each decision point in the flowchart must evaluate to both true and false at least once.\n\nIn this case, we have two conditions:\n\n1. **X > 1**\n2. **A = 2 or B = 0**\n\n### Test Cases:\n\n1. **Test Case 1**:\n    \n    - **X = 2** (True for X > 1)\n    - **A = 2**, **B = 1** (True for A = 2)\n    - Outcome: This test case would evaluate the first condition as True and the second condition as True.\n2. **Test Case 2**:\n    \n    - **X = 0** (False for X > 1)\n    - **A = 1**, **B = 0** (True for B = 0)\n    - Outcome: This test case would evaluate the first condition as False and the second condition as True.\n\n### Coverage Achieved:\n\n- **First Test Case**: Covers the True branch for both conditions.\n- **Second Test Case**: Covers the False branch for the first condition and the True branch for the second condition.\n\nTo cover all branches, we would ideally need more test cases, but to meet the minimum requirement for decision condition coverage, **2 test cases are sufficient**."
+  },
+  {
+    "id": "2019S_FE_AM_50",
+    "question": "Among the software development activities, which of the following corresponds to refactoring, which is also emphasized in agile development?",
+    "options": [
+      "To improve the maintainability of a software, the internal structure of a program is changed without any change in the external specifications.",
+      "To improve the quality of a software, two (2) programmers cooperate with each other and perform coding of one (1) program.",
+      "To obtain feedback from the users, a prototype of the software to be provided is created at an early stage.",
+      "To promptly develop a software to be operated, test cases are set in advance, and then the program is coded."
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Refactoring** is a process in software development where the internal structure of the code is improved without altering its external behavior or functionality. The goal is to make the code cleaner, more efficient, and easier to maintain, which aligns with agile development principles that emphasize adaptability and continuous improvement.\n\n### Other Options Overview:\n\n- **b)** This describes **pair programming**, a practice in agile development but not specifically refactoring.\n- **c)** This refers to **prototyping**, which is a technique used to gather user feedback but not related to refactoring.\n- **d)** This describes **test-driven development (TDD)**, where tests are created before coding, not refactoring."
   }
 ]
