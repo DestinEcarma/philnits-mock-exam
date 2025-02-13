@@ -658,5 +658,65 @@
     ],
     "correctAnswer": 1,
     "solution": "**Encrypting the communication between the database connection programs** is the most effective measure to prevent the leakage of commands and execution results transmitted between the application and the database. Encryption ensures that any data intercepted by an attacker while it is being transmitted is unreadable without the decryption key, thereby protecting sensitive information from unauthorized access.\n\n### Overview of Other Options:\n\n- **a) Changing the port number from its initial value that the database connection programs use for communication in the database management system**: While this may reduce the likelihood of automated attacks, it does not secure the data being transmitted.\n- **c) Restricting the IP addresses of the clients that can access the database connection program on the server to only those that are required**: This enhances security by limiting access but does not protect the data in transit.\n- **d) Setting a password for starting or stopping the database connection program on the server**: This measure protects the database connection program itself but does not address the protection of data during transmission.\n\nIn summary, encryption is the key measure for ensuring the confidentiality and integrity of data exchanged between the client application and the database server."
+  },
+  {
+    "id": "2019S_FE_AM_46",
+    "question": "In the UML class diagram, which of the following represents the relationship between the classes as shown in the figure below?\n\n![Image](Files/Pasted%20image%2020241020162314.png)",
+    "options": [
+      "Aggregation",
+      "Association",
+      "Composition", 
+      "Generalization"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\n- **Generalization** is a relationship where one class (the child) inherits the properties and behaviors of another class (the parent). It represents an 'is-a' relationship.\n- In UML, this is depicted with a hollow triangle pointing towards the parent class from the child class.\n\n### Other Options Overview:\n\n- **Aggregation**: Represents a whole-part relationship but implies that the part can exist independently of the whole. It's often depicted with an empty diamond.\n- **Association**: Represents a relationship between two classes without implying ownership. It's shown with a solid line.\n- **Composition**: A stronger form of aggregation where the part cannot exist without the whole. It's depicted with a filled diamond."
+  },
+  {
+    "id": "2019S_FE_AM_47",
+    "question": "Which of the following is an explanation of encapsulation in object orientation?",
+    "options": [
+      "Abstraction and sorting of several objects that have the same nature",
+      "Combination of the data and procedures that operate the data into a single object, and their concealment from outside the object",
+      "Extraction of the nature shared between classes and creation of a base class",
+      "Inheritance of the nature of a base class by a subclass"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n**Encapsulation** is a fundamental principle of object-oriented programming that combines data (attributes) and methods (functions) into a single unit or class. It restricts direct access to some of the object's components, which is a means of preventing unintended interference and misuse of the methods and data.\n\n### Other Options Overview:\n\n- **a) Abstraction and sorting of several objects that have the same nature**: This refers more to the concept of grouping similar objects but does not capture the essence of encapsulation.\n- **c) Extraction of the nature shared between classes and creation of a base class**: This describes the process of **generalization** or **abstraction**, which focuses on shared characteristics, not encapsulation.\n- **d) Inheritance of the nature of a base class by a subclass**: This describes **inheritance**, which allows a subclass to inherit properties and methods from a parent class, but is distinct from encapsulation."
+  },
+  {
+    "id": "2019S_FE_AM_48",
+    "question": "Which of the following can generally be called a subclass of an 'automobile' based on the concept of object orientation?",
+    "options": [
+      "Engine",
+      "Manufacturing number",
+      "Tire",
+      "Truck"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\nIn object-oriented programming, a **subclass** is a class that derives from another class (the superclass) and inherits its properties and behaviors. In this case, 'automobile' serves as the superclass, and 'truck' is a specific type of automobile, making it a valid subclass.\n\n### Other Options Overview:\n\n- **a) Engine**: While an engine is a critical component of an automobile, it is not a subclass; it's more of a part or attribute of the automobile.\n- **b) Manufacturing number**: This is an identifier and not a subclass or type of automobile.\n- **c) Tire**: Like the engine, a tire is a part of an automobile and does not qualify as a subclass."
+  },
+  {
+    "id": "2019S_FE_AM_49",
+    "question": "In the flowchart below, what is the minimum number of test cases that satisfies the decision condition coverage (branch coverage)?\n\n![Image](Files/Pasted%20image%2020241020163005.png)",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nTo satisfy the **decision condition coverage** (also known as branch coverage), each decision point in the flowchart must evaluate to both true and false at least once.\n\nIn this case, we have two conditions:\n\n1. **X > 1**\n2. **A = 2 or B = 0**\n\n### Test Cases:\n\n1. **Test Case 1**:\n    \n    - **X = 2** (True for X > 1)\n    - **A = 2**, **B = 1** (True for A = 2)\n    - Outcome: This test case would evaluate the first condition as True and the second condition as True.\n2. **Test Case 2**:\n    \n    - **X = 0** (False for X > 1)\n    - **A = 1**, **B = 0** (True for B = 0)\n    - Outcome: This test case would evaluate the first condition as False and the second condition as True.\n\n### Coverage Achieved:\n\n- **First Test Case**: Covers the True branch for both conditions.\n- **Second Test Case**: Covers the False branch for the first condition and the True branch for the second condition.\n\nTo cover all branches, we would ideally need more test cases, but to meet the minimum requirement for decision condition coverage, **2 test cases are sufficient**."
+  },
+  {
+    "id": "2019S_FE_AM_50",
+    "question": "Among the software development activities, which of the following corresponds to refactoring, which is also emphasized in agile development?",
+    "options": [
+      "To improve the maintainability of a software, the internal structure of a program is changed without any change in the external specifications.",
+      "To improve the quality of a software, two (2) programmers cooperate with each other and perform coding of one (1) program.",
+      "To obtain feedback from the users, a prototype of the software to be provided is created at an early stage.",
+      "To promptly develop a software to be operated, test cases are set in advance, and then the program is coded."
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Refactoring** is a process in software development where the internal structure of the code is improved without altering its external behavior or functionality. The goal is to make the code cleaner, more efficient, and easier to maintain, which aligns with agile development principles that emphasize adaptability and continuous improvement.\n\n### Other Options Overview:\n\n- **b)** This describes **pair programming**, a practice in agile development but not specifically refactoring.\n- **c)** This refers to **prototyping**, which is a technique used to gather user feedback but not related to refactoring.\n- **d)** This describes **test-driven development (TDD)**, where tests are created before coding, not refactoring."
   }
 ]
