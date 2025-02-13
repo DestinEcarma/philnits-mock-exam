@@ -598,5 +598,65 @@
     ],
     "correctAnswer": 2,
     "solution": "**RSA (Rivest-Shamir-Adleman)** is a widely used public key cryptography algorithm that enables secure data transmission. It uses a pair of keys: a public key for encryption and a private key for decryption. RSA is commonly employed for secure communications and digital signatures.\n\n### Overview of Other Options:\n\n- **a) AES (Advanced Encryption Standard)**: A symmetric encryption algorithm, meaning it uses the same key for both encryption and decryption.\n- **b) KCipher-2**: A symmetric encryption algorithm used for securing data, not a public key algorithm.\n- **d) SHA-256 (Secure Hash Algorithm 256-bit)**: A cryptographic hash function, not an encryption algorithm. It is used to generate a fixed-size hash value from input data, primarily for integrity verification.\n\nThus, RSA is the only option that is specifically designed for public key cryptography."
+  },
+  {
+    "id": "2019S_FE_AM_41",
+    "question": "Which of the following is a security attack that prevents users from accessing their accounts?",
+    "options": [
+      "Brute force",
+      "Denial of Service",
+      "Man in the middle",
+      "Sniffing"
+    ],
+    "correctAnswer": 1,
+    "solution": "A **Denial of Service (DoS)** attack aims to make a system or service unavailable to its intended users, effectively preventing them from accessing their accounts. This can be achieved by overwhelming the server with requests, causing legitimate users to be unable to access the service.\n\n### Overview of Other Options:\n\n- **a) Brute Force**: This attack involves attempting to guess passwords or encryption keys by trying all possible combinations until the correct one is found. It does not inherently prevent access; instead, it attempts to gain access.\n- **c) Man in the Middle**: This attack occurs when an attacker intercepts communication between two parties, allowing them to eavesdrop or alter the communication. It does not directly prevent users from accessing their accounts but compromises the security of their communication.\n- **d) Sniffing**: This is the act of capturing network traffic to intercept data packets, often used to gather information like passwords. It doesn't prevent access but can lead to unauthorized access if sensitive information is obtained.\n\nThus, the most appropriate option for an attack that prevents users from accessing their accounts is the **Denial of Service** attack."
+  },
+  {
+    "id": "2019S_FE_AM_42",
+    "question": "Which of the following is an appropriate description of a botnet?",
+    "options": [
+      "A collection of internet-connected devices, including IoT devices, infected and controlled by a common type of malware",
+      "A scalable and reliable network of self-driving vehicles communicating with each other to avoid accidents/collisions",
+      "A set of honeypots designed to detect and analyze malicious activities by hackers to secure the production systems in the future",
+      "A wireless network for industrial robots created for collaborative manufacturing in a factory to ensure quality at all levels"
+    ],
+    "correctAnswer": 0,
+    "solution": "A **botnet** refers to a network of compromised computers and devices that are controlled remotely by an attacker. These devices, often referred to as 'bots' or 'zombies,' can include a variety of internet-connected devices, including personal computers, servers, and Internet of Things (IoT) devices. Botnets are typically used to perform various malicious activities, such as launching Distributed Denial of Service (DDoS) attacks, stealing personal information, or sending spam.\n\n### Overview of Other Options:\n\n- **b) A scalable and reliable network of self-driving vehicles communicating with each other to avoid accidents/collisions**: This describes a network of autonomous vehicles, not a botnet.\n- **c) A set of honeypots designed to detect and analyze malicious activities by hackers to secure the production systems in the future**: Honeypots are decoy systems used to attract and analyze attacks, which is different from a botnet.\n- **d) A wireless network for industrial robots created for collaborative manufacturing in a factory to ensure quality at all levels**: This describes a specific application of robotics and IoT in manufacturing, not a botnet.\n\nTherefore, the most appropriate description of a botnet is **a)**."
+  },
+  {
+    "id": "2019S_FE_AM_43",
+    "question": "An attacker captures unencrypted network traffic with a tool and later analyzes it offline to learn about the information contained in those transmissions. Which of the following is this attack?",
+    "options": [
+      "Buffer overflow attack",
+      "Phishing attack",
+      "Smurf attack",
+      "Sniffing attack"
+    ],
+    "correctAnswer": 3,
+    "solution": "A **sniffing attack** involves capturing and analyzing network traffic as it travels across a network. Attackers use tools called packet sniffers to intercept unencrypted data packets, which may contain sensitive information such as usernames, passwords, and other confidential data. Once the attacker has captured this data, they can analyze it offline to extract useful information.\n\n### Overview of Other Options:\n\n- **a) Buffer overflow attack**: This attack exploits vulnerabilities in a program by overflowing a buffer to execute arbitrary code or crash the program.\n- **b) Phishing attack**: This is a social engineering attack where attackers impersonate legitimate entities to trick users into providing sensitive information, typically via email or fraudulent websites.\n- **c) Smurf attack**: This is a type of DDoS attack where an attacker sends ICMP echo requests to a network's broadcast address, causing all devices on the network to respond to a targeted victim, overwhelming it with traffic.\n\nTherefore, the appropriate classification for the described scenario is **d) Sniffing attack**."
+  },
+  {
+    "id": "2019S_FE_AM_44",
+    "question": "Which of the following is the technique of actually attempting an attack and intrusion on a system to detect the security-related vulnerabilities of a computer or network?",
+    "options": [
+      "Penetration test",
+      "Regression test",
+      "Software inspection",
+      "Walk-through"
+    ],
+    "correctAnswer": 0,
+    "solution": "A **penetration test** (or pen test) is a simulated cyber attack against a computer system, network, or web application to identify security vulnerabilities that an attacker could exploit. The goal is to assess the security posture of the system and provide recommendations for improving security measures.\n\n### Overview of Other Options:\n\n- **b) Regression test**: This is a type of software testing that ensures that recent changes or updates to a program do not negatively affect its existing functionality.\n- **c) Software inspection**: This is a formal process of examining software artifacts (like requirements, design, or code) to identify defects, ensure quality, and improve the development process.\n- **d) Walk-through**: This is a review process in software development where a developer explains the logic of their code to peers or stakeholders to gather feedback and identify potential issues.\n\nTherefore, the appropriate classification for the technique described is **a) Penetration test**."
+  },
+  {
+    "id": "2019S_FE_AM_45",
+    "question": "As shown in the figure below, an application on a client accesses the data of the database on a server via database connection programs. Which of the following is a measure for preventing the leakage of the commands and execution results transmitted between the application and database?\n\n![Image](Files/Pasted%20image%2020241020162048.png)",
+    "options": [
+      "Changing the port number from its initial value that the database connection programs use for communication in the database management system",
+      "Encrypting the communication between the database connection programs",
+      "Restricting the IP addresses of the clients that can access the database connection program on the server to only those that are required",
+      "Setting a password for starting or stopping the database connection program on the server"
+    ],
+    "correctAnswer": 1,
+    "solution": "**Encrypting the communication between the database connection programs** is the most effective measure to prevent the leakage of commands and execution results transmitted between the application and the database. Encryption ensures that any data intercepted by an attacker while it is being transmitted is unreadable without the decryption key, thereby protecting sensitive information from unauthorized access.\n\n### Overview of Other Options:\n\n- **a) Changing the port number from its initial value that the database connection programs use for communication in the database management system**: While this may reduce the likelihood of automated attacks, it does not secure the data being transmitted.\n- **c) Restricting the IP addresses of the clients that can access the database connection program on the server to only those that are required**: This enhances security by limiting access but does not protect the data in transit.\n- **d) Setting a password for starting or stopping the database connection program on the server**: This measure protects the database connection program itself but does not address the protection of data during transmission.\n\nIn summary, encryption is the key measure for ensuring the confidentiality and integrity of data exchanged between the client application and the database server."
   }
 ]
