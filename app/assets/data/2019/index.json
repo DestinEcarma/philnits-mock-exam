@@ -418,5 +418,65 @@
     ],
     "correctAnswer": 2,
     "solution": "## **Explanation:**\n\n**Hidden-line removal** or **hidden-surface removal** refers to the process in **3D computer graphics** where only the visible parts of an object from a certain viewpoint are rendered. This technique ensures that any surfaces or lines that are obscured by other parts of the object or other objects are not drawn, improving the realism of the rendered scene by showing only what would be visible to the viewer.\n\n### Other Options:\n\n- **a)** Incorrect: This describes **lighting and shading**, where light interaction with an object determines its appearance, such as brightness and color, but it is not related to hidden-line or hidden-surface removal.\n- **b)** Incorrect: This describes **clipping**, which ensures that only the part of the scene that fits within the viewable area (such as the display) is rendered.\n- **d)** Incorrect: This describes **rendering a translucent or wireframe model**, where both the surface and the internal structure can be viewed, but this is not related to hiding non-visible parts.\n\nHidden-line or hidden-surface removal is essential for rendering realistic 3D scenes, ensuring only visible elements from the specified viewpoint are displayed. Therefore, the answer is **c)**."
+  },
+  {
+    "id": "2019S_FE_AM_26",
+    "question": "An employee works for a department, which can be located in multiple regions. Three tables EMP, DEPT, and DEPT_LOCS are created as shown below for recording the employee, department, and department location data, respectively.\n\n![Image](Files/Pasted%20image%2020241020151447.png)\n\n![Image](Files/Pasted%20image%2020241020151505.png)\n\n![Image](Files/Pasted%20image%2020241020151634.png)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\nThe SQL query operates as follows:\n\n1. **Subquery 1 (`SELECT DNO FROM DEPT`)**: This part retrieves all department numbers (DNO) from the **DEPT** table, essentially fetching the list of all departments.\n\n2. **Subquery 2 (`SELECT DNO FROM DEPT_LOCS WHERE Region=’L2’)**: This part retrieves the department numbers (DNO) for departments located in the **L2** region from the **DEPT_LOCS** table.\n\n3. **MINUS Operator**: The `MINUS` operator is used to exclude department numbers from Subquery 1 that are also present in Subquery 2. This results in the department numbers that are **not** located in region **L2**.\n\n4. **Main Query**: The outer query selects the employee names (`EName`) and their corresponding salaries from the **EMP** table, where the department number (`DNO`) of the employee matches the department numbers retrieved by the `MINUS` operation (i.e., departments that are not located in region **L2**).\n\nGiven this process, the SQL query will return the employees who work for departments that are **not located in region L2**. Based on the table data:\n\n- **John Bate** (20000) and **Sadat Hossain** (50000) are associated with departments that are not located in region **L2**.\n\nTherefore, the answer is **b)**."
+  },
+  {
+    "id": "2019S_FE_AM_27",
+    "question": "In an SQL statement, which of the following is a constraint that is specified with FOREIGN KEY and REFERENCES?",
+    "options": [
+      "Assertion",
+      "Check constraint",
+      "Key constraint",
+      "Referential constraint"
+    ],
+    "correctAnswer": 3,
+    "solution": "## **Explanation:**\n\nIn SQL, when you define a **FOREIGN KEY** that references another table, it creates a **referential constraint**. This constraint ensures that the values in the foreign key column of a table must correspond to existing values in the primary key column of the referenced table. It maintains the **referential integrity** between two related tables.\n\n### Other Options:\n\n- **a) Assertion**: Assertions are more general constraints that ensure certain conditions are always true in a database, but they are not specifically tied to foreign key constraints.\n- **b) Check constraint**: A **CHECK constraint** ensures that the values in a column satisfy a specified condition but is not directly related to foreign key relationships.\n- **c) Key constraint**: A **key constraint** (like a primary or unique key) ensures uniqueness in a column or combination of columns but is different from a foreign key.\n\nThus, **referential constraint** is the correct term used for constraints defined using **FOREIGN KEY** and **REFERENCES**."
+  },
+  {
+    "id": "2019S_FE_AM_28",
+    "question": "In a client/server system, which of the following is the mechanism that reduces the network load between the client and server by placing the frequently used commands on the DBMS on the server in advance?",
+    "options": [
+      "Group commitment",
+      "Multithreading of server processes",
+      "Stored procedure",
+      "Two-phase commitment"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nA **stored procedure** is a set of SQL statements that can be stored and executed on the database server. By placing frequently used commands on the DBMS (Database Management System) server, stored procedures help reduce the amount of data that needs to be sent over the network between the client and server.\n\n### Other Options:\n\n- **a) Group commitment**: This is a method used to improve the performance of transactions by grouping multiple transactions together for committing, but it does not specifically focus on reducing network load.\n- **b) Multithreading of server processes**: This technique allows the server to handle multiple requests simultaneously, improving performance but not specifically addressing network load reduction.\n- **d) Two-phase commitment**: This is a protocol used to ensure that all parts of a distributed transaction are completed successfully, but it does not relate to pre-storing commands on the server.\n\nThus, **stored procedures** are specifically designed to minimize network traffic by executing commands directly on the server."
+  },
+  {
+    "id": "2019S_FE_AM_29",
+    "question": "Which of the following is a characteristic to guarantee that the result of an update transaction is either performed completely or canceled as if nothing happened?",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Durability",
+      "Isolation"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Atomicity** is one of the key properties of a transaction in database systems, often summarized as part of the ACID (Atomicity, Consistency, Isolation, Durability) principles. It ensures that a transaction is treated as a single, indivisible unit of work. This means that either all operations within the transaction are completed successfully, or none of them are applied to the database, effectively rolling back any changes if an error occurs.\n\n### Other Options:\n\n- **b) Consistency**: This ensures that a transaction brings the database from one valid state to another, maintaining all predefined rules and constraints. It does not specifically guarantee the all-or-nothing property of an update.\n- **c) Durability**: This guarantees that once a transaction has been committed, its effects are permanent, even in the event of a system failure. It does not relate to whether the transaction is completed or canceled.\n- **d) Isolation**: This property ensures that transactions are executed in isolation from one another, meaning the operations of one transaction do not affect those of another. It does not guarantee that a transaction is completed or canceled.\n\nThus, **atomicity** is the characteristic that ensures the all-or-nothing nature of transactions."
+  },
+  {
+    "id": "2019S_FE_AM_30",
+    "question": "Which of the following is the process that is executed periodically to prevent reducing the access efficiency of the database?",
+    "options": [
+      "Backup",
+      "Database dump",
+      "Reorganization",
+      "Roll back"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n**Reorganization** is the process executed periodically to optimize the structure of the database. Over time, as data is inserted, updated, and deleted, the organization of the data can become fragmented, leading to decreased access efficiency. Reorganization helps to improve the physical layout of the data, reduce fragmentation, and enhance performance by ensuring that related data is stored closer together, which can speed up access times.\n\n### Other Options:\n\n- **a) Backup**: This involves creating copies of the database to safeguard against data loss, but it does not directly address access efficiency.\n- **b) Database dump**: This is a method of exporting the entire database to a file for backup or migration, not focused on improving access efficiency.\n- **d) Roll back**: This refers to reverting the database to a previous state in case of an error, which does not pertain to maintenance for efficiency.\n\nThus, **reorganization** is specifically aimed at preventing reduced access efficiency in a database."
   }
 ]
