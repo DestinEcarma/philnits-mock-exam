@@ -538,5 +538,65 @@
     ],
     "correctAnswer": 2,
     "solution": "- **TELNET**: This is a network protocol that allows for command-line interface access to remote computers. It uses **TCP** as its transport layer protocol to ensure reliable communication.\n\n### Overview of Other Options:\n\n- **a) DHCP (Dynamic Host Configuration Protocol)**: This protocol uses **UDP** (User Datagram Protocol) rather than TCP.\n- **b) SNMP (Simple Network Management Protocol)**: SNMP typically operates over **UDP**, although there is a version (SNMPv3) that can use TCP.\n- **d) TFTP (Trivial File Transfer Protocol)**: This protocol also uses **UDP** as its transport layer protocol, not TCP.\n\nThus, the only option that uses **TCP** as its transport layer protocol is **TELNET**."
+  },
+  {
+    "id": "2019S_FE_AM_36",
+    "question": "The IP address of Server X prepared by an attacker was stored in a DNS cache server of Company B as the IP address corresponding to the FQDN of the web server of Company A. Which of the following users will be unintentionally guided to Server X because of this attack? Here, each employee of Company A and Company B performs name resolution by using the DNS cache server of his/her own company.",
+    "options": [
+      "An employee of Company A who wishes to access the web server of Company A",
+      "An employee of Company A who wishes to access the web server of Company B",
+      "An employee of Company B who wishes to access the web server of Company A",
+      "An employee of Company B who wishes to access the web server of Company B"
+    ],
+    "correctAnswer": 2,
+    "solution": "In this scenario, the attacker has manipulated the DNS cache server of Company B to store the IP address of Server X as the corresponding IP for the Fully Qualified Domain Name (FQDN) of the web server of Company A. As a result:\n\n- When an employee of **Company B** attempts to access the web server of **Company A**, their request will resolve to the IP address of Server X instead of the legitimate server.\n\n### Overview of Other Options:\n\n- **a) An employee of Company A who wishes to access the web server of Company A**: This employee uses their own DNS cache server, which is not affected by the attack on Company B's DNS cache.\n- **b) An employee of Company A who wishes to access the web server of Company B**: This employee also uses their own DNS server, which is unaffected by the attack.\n- **d) An employee of Company B who wishes to access the web server of Company B**: This request resolves correctly as it points to the server of Company B, unaffected by the attack.\n\nThus, the employee of Company B attempting to access the web server of Company A will be misled to Server X due to the DNS cache poisoning attack."
+  },
+  {
+    "id": "2019S_FE_AM_37",
+    "question": "Which of the following is a description of a directory traversal attack?",
+    "options": [
+      "An attacker enters data consisting of database command statements as the input data for a web application and forces the execution of SQL statements that are not intended by the administrator.",
+      "An attacker guides a user to a web site, where a defect in the escape processing of the HTML output by a web application is exploited, and forces the execution of a malicious script on the user’s web browser.",
+      "An attacker illegally obtains the session ID for a user, who has logged into a session managed by the session ID, and accesses the server by spoofing the identity of the user.",
+      "An attacker specifies a file by using the path name and illegally views a file that is not intended for viewing by the administrator."
+    ],
+    "correctAnswer": 3,
+    "solution": "A **directory traversal attack** (also known as path traversal attack) occurs when an attacker exploits insufficient security validation in a web application to gain access to files and directories stored outside the intended directory. By manipulating the file path, attackers can specify arbitrary paths, allowing them to access sensitive files that should not be accessible, such as configuration files or password files.\n\n### Overview of Other Options:\n\n- **a)** Describes **SQL injection**, where an attacker inputs SQL statements to manipulate a database.\n- **b)** Describes **Cross-Site Scripting (XSS)**, where an attacker injects malicious scripts into web pages viewed by users.\n- **c)** Describes **Session hijacking**, where an attacker steals or predicts a valid session ID to impersonate a user.\n\nThus, option **d** is the closest description of a directory traversal attack."
+  },
+  {
+    "id": "2019S_FE_AM_38",
+    "question": "Which of the following is a description of a brute force attack by which an attempt is made to find the key of private key cryptography?",
+    "options": [
+      "Finding the key by observing the ciphertext change when the plaintext is changed by a certain amount",
+      "Finding the key by testing all key combinations sequentially when a set of plaintext and ciphertext is given",
+      "Finding the key by using as a clue the algebraic expression representing the relationship between the plaintext, ciphertext, and key",
+      "Finding the key by using as a clue the statistical correlation between a part of the information of the plaintext and part of the information of the ciphertext"
+    ],
+    "correctAnswer": 1,
+    "solution": "A **brute force attack** on private key cryptography involves systematically trying every possible key combination until the correct key is found. This method does not rely on any knowledge about the plaintext or ciphertext beyond what is required to confirm whether a guessed key produces the correct decryption.\n\n### Overview of Other Options:\n\n- **a)** Describes a method related to **differential cryptanalysis**, where changes in plaintext lead to changes in ciphertext.\n- **c)** Describes a method related to **algebraic attacks**, where the attacker uses mathematical relationships to derive the key.\n- **d)** Describes a method related to **statistical attacks**, where the attacker exploits patterns in plaintext and ciphertext to determine the key.\n\nThus, option **b** is the most accurate description of a brute force attack."
+  },
+  {
+    "id": "2019S_FE_AM_39",
+    "question": "Which of the following is an explanation of the time stamp service in information security?",
+    "options": [
+      "It is a service that authenticates biometric information, such as fingerprint, voice print, vein patterns, retina, and iris, by using the date and time when the information is registered in the authentication system.",
+      "It is a service that certifies that electronic data certainly exist on a particular date and time and that the data have not been falsified since that date and time.",
+      "It is a service that securely notifies that the date and time information is not falsified midway for setting the clock of the PCs and servers on the network.",
+      "It is a web service that securely displays the global date and time information used in the official records by using encrypted communication."
+    ],
+    "correctAnswer": 1,
+    "solution": "The **time stamp service** in information security is designed to provide proof of the existence of electronic data at a specific moment in time and to ensure that the data has not been altered since that time. This service is crucial for maintaining the integrity and authenticity of digital documents, making it vital in legal and compliance contexts.\n\n### Overview of Other Options:\n\n- **a)** Describes a service related to **biometric authentication**, not specifically time stamps.\n- **c)** Refers to a clock synchronization service, which ensures accurate timekeeping across devices but does not provide evidence of data existence or integrity.\n- **d)** Describes a web service for displaying time, but it does not pertain to the authentication or certification of data existence.\n\nThus, option **b** accurately captures the purpose and function of the time stamp service in information security."
+  },
+  {
+    "id": "2019S_FE_AM_40",
+    "question": "Which of the following is an encryption algorithm for public key cryptography?",
+    "options": [
+      "AES",
+      "KCipher-2",
+      "RSA",
+      "SHA-256"
+    ],
+    "correctAnswer": 2,
+    "solution": "**RSA (Rivest-Shamir-Adleman)** is a widely used public key cryptography algorithm that enables secure data transmission. It uses a pair of keys: a public key for encryption and a private key for decryption. RSA is commonly employed for secure communications and digital signatures.\n\n### Overview of Other Options:\n\n- **a) AES (Advanced Encryption Standard)**: A symmetric encryption algorithm, meaning it uses the same key for both encryption and decryption.\n- **b) KCipher-2**: A symmetric encryption algorithm used for securing data, not a public key algorithm.\n- **d) SHA-256 (Secure Hash Algorithm 256-bit)**: A cryptographic hash function, not an encryption algorithm. It is used to generate a fixed-size hash value from input data, primarily for integrity verification.\n\nThus, RSA is the only option that is specifically designed for public key cryptography."
   }
 ]
