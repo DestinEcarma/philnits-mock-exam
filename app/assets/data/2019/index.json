@@ -718,5 +718,65 @@
     ],
     "correctAnswer": 0,
     "solution": "## **Explanation:**\n\n**Refactoring** is a process in software development where the internal structure of the code is improved without altering its external behavior or functionality. The goal is to make the code cleaner, more efficient, and easier to maintain, which aligns with agile development principles that emphasize adaptability and continuous improvement.\n\n### Other Options Overview:\n\n- **b)** This describes **pair programming**, a practice in agile development but not specifically refactoring.\n- **c)** This refers to **prototyping**, which is a technique used to gather user feedback but not related to refactoring.\n- **d)** This describes **test-driven development (TDD)**, where tests are created before coding, not refactoring."
+  },
+  {
+    "id": "2019S_FE_AM_51",
+    "question": "Which of the following is an appropriate explanation of the PERT diagram as shown in the figure below?\n\n![Image](Files/Pasted%20image%2020241020163736.png)",
+    "options": [
+      "The critical path is A - C - G",
+      "This project needs at least 11 days",
+      "When the activity F becomes unnecessary, the project will end 1 day earlier",
+      "When the activity H has a delay of 2 days, it will cause the project to be delayed by 2 days"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nThe **Critical Path** is the longest stretch of dependent activities and is crucial for determining the project's duration. Any delay in the activities on the critical path will result in a delay in the overall project completion. The critical path of this diagram is B - F - G as the sum of its values is 12 days. Removing F out of the equation will transfer the critical path to B - D - H whose sum of its values is equal to 11 days. Therefore, the project will end 1 day earlier.\n\n### Other Options Overview:\n\n- **a)** This is incorrect. The path of A - C - G only takes 8 days to complete whereas the path B - F - G takes 12 days, the longest time it takes to complete, which makes it a critical path.\n- b)** This is incorrect. Since the critical path B - F - G takes 12 days to complete, the entire project takes 12 days to complete as opposed to 11.\n- **d)** This is incorrect. If activity H has a delay of 2 days, the path B - D - H would certainly become the critical path of the project as it will take 13 days instead for the project to complete. However, the project would only be delayed by 1 day as the former critical path B - F - G only takes 12 days to complete."
+  },
+  {
+    "id": "2019S_FE_AM_52",
+    "question": "By using the triangular distribution formula of the three-point estimation technique, which of the following is the expected duration (in days) required for an activity? The estimations are as shown below. Conditions - Estimations for the activity duration\n\nCase 1: Two (2) days. If an experienced employee is assigned for this activity.\n\nCase 2: Four (4) days. If a general employee is assigned for this activity.\n\nCase3: Twelve (12) days. If an unexperienced employee is assigned for this activity.",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nTo calculate the expected duration using the **triangular distribution** formula, we use the following formula:\n\n$\\text{Expected Duration} = \\frac{(O + M + P)}{3}​$\n\nWhere:\n\n- OOO = Optimistic time (minimum duration)\n- MMM = Most likely time (most probable duration)\n- PPP = Pessimistic time (maximum duration)\n\nFrom the conditions provided:\n\n- Case 1 (Optimistic): 2 days\n- Case 2 (Most Likely): 4 days\n- Case 3 (Pessimistic): 12 days\n\nPlugging in these values:\n\n$\\text{Expected Duration} = \\frac{(2 + 4 + 12)}{3} = \\frac{18}{3} = 6 \\text{ days}$\n\nTherefore, the answer is **c)**."
+  },
+  {
+    "id": "2019S_FE_AM_53",
+    "question": "A project is planned to complete in 12 months and the budget for the completion of the project is $100,000. After six months, it is found that $60,000 are spent, but only 40% of the work is completed. If the Cost Performance Index (CPI) is not changed, what is the estimated amount (in dollars) required to complete the remaining tasks of the project?",
+    "options": [
+      "40,000",
+      "60,000",
+      "90,000", 
+      "150,000"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nTo estimate the amount required to complete the remaining tasks of the project, we can use the **Cost Performance Index (CPI)**. The CPI is calculated using the following formula:\n\n$CPI = \\frac{EV}{AC}​$\n\nWhere:\n\n- **EV** = Earned Value (value of work performed)\n- **AC** = Actual Cost (cost incurred)\n\n### Given:\n\n- **Total Budget** = $100,000 (Planned Value)\n- **Project Duration** = 12 months\n- **Actual Cost (AC)** after 6 months = $60,000\n- **Percentage of work completed** = 40%\n\n### Step 1: Calculate Earned Value (EV)\n\nThe Earned Value (EV) can be calculated as follows:\n\n$EV = \\text{Percentage of work completed} \\times \\text{Total Budget}$ \n$EV = 0.4 \\times 100,000 = 40,000$\n\n### Step 2: Calculate CPI\n\nNow, we can calculate the Cost Performance Index (CPI):\n\n$CPI = \\frac{EV}{AC} = \\frac{40,000}{60,000} = \\frac{2}{3} \\approx 0.67$\n\n### Step 3: Estimate Total Cost at Completion (EAC)\n\nWe can estimate the total cost at completion (EAC) using the formula:\n\n$EAC = \\frac{BAC}{CPI}$\n\nWhere **BAC** is the Budget at Completion, which is $100,000:\n\n$EAC = \\frac{100,000}{0.67} \\approx 149,253$\n\n### Step 4: Calculate Amount Required to Complete Remaining Tasks\n\nNow, to find the estimated amount required to complete the remaining tasks, we can use the formula:\n\n$\\text{Amount Required} = EAC - AC$ \n$\\text{Amount Required} = 149,253 - 60,000 \\approx 89,253$\n\n### **Conclusion:**\n\nThe estimated amount required to complete the remaining tasks of the project is approximately **90,000**. Therefore, the answer is **c)**."
+  },
+  {
+    "id": "2019S_FE_AM_54",
+    "question": "Which of the following is an appropriate cost estimation technique that estimates the cost of an activity or project using the historical data from a similar project?",
+    "options": [
+      "Analogous estimating",
+      "Bottom-up estimating",
+      "Function point method",
+      "Parametric estimating"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Analogous Estimating**: This technique uses the costs of similar past projects to estimate the costs of the current project. It is useful when there is limited detailed information about the project at hand but sufficient historical data is available.\n\n### Overview of Other Options\n\n- **b) Bottom-up estimating**: This method involves estimating the cost of each component or activity individually and then aggregating them to get the total project cost. It is usually more detailed and time-consuming.\n- **c) Function point method**: This technique is specifically used in software development to estimate the size of the software project based on its functionality. It's not typically a direct cost estimation technique.\n- **d) Parametric estimating**: This method uses statistical relationships between historical data and other variables (like cost per square foot) to calculate an estimate. It requires relevant parameters but is distinct from using historical project data directly.\n\nThus, **analogous estimating** is the correct choice for the given question."
+  },
+  {
+    "id": "2019S_FE_AM_55",
+    "question": "Which of the following is the most appropriate description concerning a backup method for data in a new system?",
+    "options": [
+      "In consideration of a possible increase in the response time in the business processes, the backup schedule is adjusted so that it does not overlap with the business processes",
+      "To save the backup data for a long period of time, a random-access medium is used",
+      "To shorten the time taken for recovery from the backup data, a differential backup is used",
+      "To shorten the time taken for the backup process, the backup data are placed in the same storage medium as the source data"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nThis option highlights the importance of scheduling backups during off-peak times to avoid impacting business operations, which is a critical consideration in backup strategies.\n\n### Overview of Other Options:\n\n- **b)** Random-access media are useful but are not specifically linked to the overall performance or operational considerations during backups.\n- **c)** Differential backups speeds up the backup process, not recovery.\n- **d)** Storing backups on the same medium as source data is generally not recommended due to increased risk."
   }
 ]
