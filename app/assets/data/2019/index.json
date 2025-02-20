@@ -778,5 +778,125 @@
     ],
     "correctAnswer": 0,
     "solution": "## **Explanation:**\n\nThis option highlights the importance of scheduling backups during off-peak times to avoid impacting business operations, which is a critical consideration in backup strategies.\n\n### Overview of Other Options:\n\n- **b)** Random-access media are useful but are not specifically linked to the overall performance or operational considerations during backups.\n- **c)** Differential backups speeds up the backup process, not recovery.\n- **d)** Storing backups on the same medium as source data is generally not recommended due to increased risk."
+  },
+  {
+    "id": "2019S_FE_AM_56",
+    "question": "For servers, the total cost of ownership (TCO) is calculated over a period of 5-years. The purchase price of the servers is $120,500 and the other annual costs are listed as below.\n\n![Image](Files/Pasted%20image%2020241020171327.png)\n\nWhat is the TCO of the servers (in dollars)?",
+    "options": [
+      "28,100",
+      "120,500",
+      "140,500",
+      "622,500"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nTo calculate the **Total Cost of Ownership (TCO)** of the servers over a period of 5 years, we need to consider both the **purchase price** and the **annual costs** incurred each year.\n\n### Given:\n\n- **Purchase Price of Servers:** $120,500\n- **Annual Costs:**\n    - Insurance: $2,030\n    - Maintenance: $1,000\n    - Repair (average): $700\n    - Registration: $270\n\n### Step 1: Calculate Total Annual Costs\n\n$\\text{Total Annual Cost} = \\text{Insurance} + \\text{Maintenance} + \\text{Repair} + \\text{Registration}$\n$\\text{Total Annual Cost} = 2,030 + 1,000 + 700 + 270 = 4,000$\n\n### Step 2: Calculate Total Costs Over 5 Years\n\n$\\text{Total Costs Over 5 Years} = \\text{Purchase Price} + (\\text{Total Annual Cost} \\times 5)$\n$\\text{Total Costs Over 5 Years} = 120,500 + (4,000 \\times 5) = 120,500 + 20,000 = 140,500$\n\n### **Conclusion:**\n\nThe **Total Cost of Ownership (TCO)** of the servers over 5 years is **$140,500**. Therefore, the answer is **c)**."
+  },
+  {
+    "id": "2019S_FE_AM_57",
+    "question": "In ITIL, the reduction in the index value expressing the maintainability is cited as an example of a KPI (Key Performance Index) in availability management. Which of the following corresponds to such an index?",
+    "options": [
+      "Mean time between failures",
+      "Mean time between service incidents",
+      "Mean time to restore service",
+      "Number of interruptions in a certain period"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n**Mean time to restore service (MTRS)** is a key performance indicator (KPI) in availability management, particularly in the context of maintainability. This metric measures the average time taken to restore service after a failure has occurred. It directly relates to how quickly an organization can respond to and recover from incidents, which is crucial for maintaining service availability.\n\nThe reduction in MTRS indicates improved maintainability, as it reflects the efficiency and effectiveness of the incident response and recovery processes. If the MTRS decreases over time, it suggests that the organization has implemented better practices, tools, or resources to resolve issues more quickly, thereby enhancing overall service availability.\n\n### Overview of Other Options\n\n- **a) Mean time between failures (MTBF)**: This metric measures the average time between system failures. It focuses more on reliability than maintainability.\n    \n- **b) Mean time between service incidents**: This metric indicates how often incidents occur, but it does not directly measure the time taken to recover from those incidents.\n    \n- **d) Number of interruptions in a certain period**: This simply counts the number of service interruptions and does not provide insight into the time required to restore service.\n    \n\nOverall, MTRS is the most relevant KPI for assessing maintainability in availability management."
+  },
+  {
+    "id": "2019S_FE_AM_58",
+    "question": "Which of the following is the system audit implementation structure that should be avoided from the standpoint of independence of the system auditors?",
+    "options": [
+      "A person, who five (5) years ago was transferred to the audit department from a development manager position in the information systems department, audits the status of the Internet usage in the marketing department",
+      "A person in the audit department audits the status of the personal information management in the external contractor to whom personal information handling is outsourced",
+      "A person in the general affairs department, who is appointed as a member of the audit team, audits the status of the entrance and exit control in the general affairs department, together with the other members",
+      "A person in the legal department, in response to a request by the audit department, cooperates with the auditors in auditing of the validity of the outsourcing contracts"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\nIn this scenario, the individual from the **general affairs department** auditing their own department raises significant **independence concerns**. Auditing one's own department can create a conflict of interest and compromise the objectivity of the audit. This situation may lead to:\n\n- **Bias**: The auditor might have a personal stake in the outcome and may unconsciously (or consciously) overlook issues or fail to report them accurately.\n- **Lack of Objectivity**: The auditor may not be able to provide an unbiased perspective when assessing processes or controls they are directly involved with.\n- **Credibility Issues**: Stakeholders may question the findings and conclusions of the audit if they know the auditor is part of the same department, leading to potential distrust in the audit process.\n\n### Overview of Other Options\n\n- **a)** A person, who five (5) years ago was transferred to the audit department from a development manager position in the information systems department, audits the status of the Internet usage in the marketing department: Although there may be some residual connections, the auditor is now in the audit department, which helps to establish some independence.\n    \n- **b)** A person in the audit department audits the status of the personal information management in the external contractor to whom personal information handling is outsourced: This is acceptable as the auditor is from the audit department and assessing an external entity, ensuring independence.\n    \n- **d)** A person in the legal department, in response to a request by the audit department, cooperates with the auditors in auditing the validity of the outsourcing contracts: This collaboration is acceptable as it does not involve the legal department conducting the audit but rather providing necessary expertise, preserving the independence of the audit process."
+  },
+  {
+    "id": "2019S_FE_AM_59",
+    "question": "Which of the following is an appropriate activity that is undertaken by a system auditor who audits access control?",
+    "options": [
+      "Confirmation of the management status of the access control concerning the data",
+      "Creation and storage of a management table for the access control concerning the software",
+      "Establishment of a management policy for the access control concerning the network",
+      "Implementation of the operations management for the access control concerning the hardware"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nAuditing access control primarily involves evaluating how access to systems and data is managed, ensuring that only authorized users have access to specific resources. The auditor's role is to assess the effectiveness of existing access control measures and their alignment with organizational policies and compliance requirements.\n\n**Confirmation of the management status of access control concerning data** means that the auditor verifies and evaluates how access rights and permissions are granted, monitored, and reviewed for data access. This involves checking whether:\n\n- Access controls are properly defined and documented.\n- User permissions align with their job roles.\n- There are processes for regular review of access rights.\n- Any changes to access rights are appropriately authorized and recorded.\n\n### Overview of Other Options\n\n- **b)** Creation and storage of a management table for the access control concerning the software: This activity is more of a management function than an auditing function. The auditor should evaluate such tables rather than create them.\n    \n- **c)** Establishment of a management policy for the access control concerning the network: This is typically a responsibility of management or IT security professionals rather than the auditor. The auditor reviews existing policies rather than creating them.\n    \n- **d)** Implementation of the operations management for the access control concerning the hardware: Like option **c**, this falls under the domain of management or operational roles. The auditor assesses the implementation and effectiveness of such controls instead of executing them.\n\nIn summary, option **a** is the correct activity for a system auditor auditing access control, as it focuses on verifying the effectiveness and management of access controls regarding data, which is a critical component of an auditor's responsibilities."
+  },
+  {
+    "id": "2019S_FE_AM_60",
+    "question": "Which of the following is subject to system audits that evaluate and verify the internal control related to IT?",
+    "options": [
+      "The methods for ensuring accuracy in the processes of input and update of a database performed by the sales department",
+      "The process for the creation of a mid-term business plan by the business planning department",
+      "The results of the employee personnel evaluations by the personnel department",
+      "The status of the production equipment review conducted by the manufacturing department for the purpose of reducing defects"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nSystem audits related to IT focus on evaluating the effectiveness and efficiency of controls over IT systems and processes. This includes ensuring that data is accurately inputted, processed, and updated in databases, as well as verifying the integrity and security of that data.\n\nIn this case, the methods used by the sales department to ensure accuracy in database input and updates are critical for:\n\n- **Data Integrity**: Ensuring that the data entered into the system is correct and reliable.\n- **Process Control**: Verifying that there are adequate controls and procedures in place to prevent errors during data entry and updates.\n- **Compliance**: Making sure that the processes adhere to organizational policies and regulatory requirements.\n\n### Overview of Other Options\n\n- **b)** The process for the creation of a mid-term business plan by the business planning department: This activity is more focused on strategic planning and is less directly related to IT controls.\n    \n- **c)** The results of the employee personnel evaluations by the personnel department: While this may involve IT systems, the evaluations themselves are not primarily focused on internal controls related to IT.\n    \n- **d)** The status of the production equipment review conducted by the manufacturing department for the purpose of reducing defects: This pertains to operational controls in manufacturing rather than IT-related internal controls.\n    \nIn summary, option **a** is the correct choice because it specifically addresses the internal controls related to IT processes, particularly regarding data accuracy in database management, which is a key focus area for system audits."
+  },
+  {
+    "id": "2019S_FE_AM_61",
+    "question": "Which of the following is a case that enables the customer support operations at a call center to improve the quality by applying a pattern recognition function or machine learning function to the accumulated data?",
+    "options": [
+      "Deriving the most appropriate response in real time from the related materials and all the previous support history according to the content of the inquiry made by a customer",
+      "Displaying the digital content of a response manual or basic customer information on a pop-up window of a screen for responding to the requests from the operators",
+      "Repeatedly providing a roll play training to new operators from an experienced operator who serves as a lecturer by using the response manual as the teaching material",
+      "Transferring a phone call or the relevant support screen to an experienced operator or a dedicated staff when the operator who is responding to a customer over the phone is unable to provide an answer"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nThis option illustrates how a pattern recognition or machine learning function can analyze accumulated data to provide real-time, context-sensitive responses. By leveraging historical support data and the specifics of the current inquiry, the system can suggest the best possible responses to customer inquiries. This enhances the quality of customer support by ensuring operators have immediate access to relevant information, which can lead to quicker and more accurate resolutions.\n\n### Overview of Other Options\n\n- **b)** Displaying the digital content of a response manual or basic customer information on a pop-up window of a screen for responding to the requests from the operators: While this option supports operators by providing access to information, it does not involve pattern recognition or machine learning. It is more about presenting static information rather than analyzing data to derive responses.\n    \n- **c)** Repeatedly providing a role-play training to new operators from an experienced operator who serves as a lecturer by using the response manual as the teaching material: This option focuses on training rather than leveraging accumulated data for improved customer support quality. While valuable, it does not utilize machine learning or pattern recognition techniques.\n    \n- **d)** Transferring a phone call or the relevant support screen to an experienced operator or a dedicated staff when the operator who is responding to a customer over the phone is unable to provide an answer: This is a traditional escalation process that ensures customers receive help but does not improve the quality of support through data analysis or machine learning.\n    \n\nIn summary, option **a** is the most aligned with using machine learning and pattern recognition to enhance customer support quality by providing real-time, tailored responses based on historical data."
+  },
+  {
+    "id": "2019S_FE_AM_62",
+    "question": "When an UML is used for business modeling, which of the following is the diagram that can represent a workflow such as the execution sequence of the business processes and branching based on conditions?",
+    "options": [
+      "Activity diagram",
+      "Class diagram",
+      "Component diagram",
+      "Object diagram"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nIn UML, an activity diagram **provides a view of the behavior of a system by describing the sequence of actions in a process**. It visualizes the flow of activities and decisions in a process, showcasing how different tasks are carried out, including branching based on conditions (e.g., decision points).\n\n### Overview of Other Options\n\n- **b) Class Diagram**: This diagram is used to model the static structure of a system by showing classes, their attributes, operations, and the relationships among objects. It does not represent workflows or the sequence of processes.\n    \n- **c) Component Diagram**: This type of diagram focuses on the physical components of a system, such as software modules, and how they interact. While it can show relationships, it is not used for detailing workflows or process sequences.\n    \n- **d) Object Diagram**: This diagram provides a snapshot of the instances of classes at a particular moment in time. It illustrates the relationships between objects but does not depict the flow of processes or workflows.\n    \n\nIn summary, the **activity diagram** is the most appropriate UML diagram for modeling workflows, execution sequences, and branching in business processes."
+  },
+  {
+    "id": "2019S_FE_AM_63",
+    "question": "Which of the following is a description of the SOA?",
+    "options": [
+      "A concept of constructing a system by considering the software functions as components called services and combining them",
+      "A concept of improving the sales efficiency and quality by using IT for the sales activities to increase the sales and profits as well as to improve customer satisfaction",
+      "A concept of re-designing the business processes to innovatively improve the cost, quality, service, and speed",
+      "Outsourcing the in-house operations other than those of the core businesses to concentrate the management resources on the core businesses"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Service-Oriented Architecture (SOA)** is a design paradigm that focuses on organizing and utilizing software functions as distinct, interoperable services. In SOA, these services can communicate with each other over a network, enabling systems to be constructed by combining existing services. This approach promotes reusability, scalability, and flexibility in software development, as services can be developed independently and integrated into various applications.\n\n### Overview of Other Options\n\n- **b)** A concept of improving the sales efficiency and quality by using IT for the sales activities to increase the sales and profits as well as to improve customer satisfaction: This description aligns more closely with concepts like **Sales Force Automation (SFA)** or Customer Relationship Management (CRM) systems rather than SOA.\n    \n- **c)** A concept of re-designing the business processes to innovatively improve the cost, quality, service, and speed: This option describes **Business Process Reengineering (BPR)**, which focuses on improving organizational processes rather than the architectural framework of software systems.\n    \n- **d)** Outsourcing the in-house operations other than those of the core businesses to concentrate the management resources on the core businesses: This describes **outsourcing** rather than SOA. While outsourcing involves delegating non-core functions to third parties, it is not related to the architectural principles of software design.\n    \n\nIn summary, option **a** accurately defines SOA as a framework for building systems based on services, emphasizing the modular and combinatory nature of software components."
+  },
+  {
+    "id": "2019S_FE_AM_64",
+    "question": "Which of the following is a scheme where the user establishes a connection to the system of a service provider via the Internet and makes online use of only the necessary functions of the applications provided by the service provider at the necessary time?",
+    "options": [
+      "ERP",
+      "SaaS",
+      "SCM",
+      "XBRL"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n**SaaS (Software as a Service)** is a cloud computing model where users connect to applications hosted by a service provider over the Internet. In this model, users can access and utilize only the necessary functions of the applications on a pay-per-use or subscription basis. SaaS eliminates the need for local installation and maintenance of software, allowing for flexibility and scalability in accessing software applications as needed.\n\n### Overview of Other Options\n\n- **a) ERP (Enterprise Resource Planning)**: This is a type of software used to manage and integrate the essential parts of a business. While ERP systems can be delivered as SaaS, ERP itself is not a service model but rather a type of application.\n    \n- **c) SCM (Supply Chain Management)**: SCM refers to the management of the flow of goods and services and includes all processes that transform raw materials into final products. Like ERP, SCM can be implemented as a SaaS solution but is not a scheme itself.\n    \n- **d) XBRL (eXtensible Business Reporting Language)**: This is a language for the electronic communication of business and financial data. It is primarily used for reporting purposes and does not pertain to a service delivery model like SaaS.\n    \n\nIn summary, **SaaS** is the most accurate option that describes a scheme where users connect to a service provider's system over the Internet to access only the necessary functions of applications as needed."
+  },
+  {
+    "id": "2019S_FE_AM_65",
+    "question": "A company chooses products and services that are acknowledged as actively addressing environmental concerns. What is this initiative called?",
+    "options": [
+      "CSR",
+      "Environmental assessment",
+      "Green procurement",
+      "Macro environment analysis"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n**Green Procurement** refers to the process of selecting products and services that have a reduced environmental impact throughout their life cycle. This initiative involves sourcing environmentally friendly products and services that minimize waste, conserve resources, and contribute to sustainable practices. Companies that engage in green procurement actively consider environmental criteria in their purchasing decisions, aiming to support sustainability and reduce their ecological footprint.\n\n### Overview of Other Options\n\n- **a) CSR (Corporate Social Responsibility)**: This is a broader concept that encompasses a company's initiatives to operate ethically and contribute positively to society, including environmental, social, and economic responsibilities. While green procurement can be a part of a company's CSR strategy, CSR itself is not limited to environmentally focused initiatives.\n    \n- **b) Environmental Assessment**: This is a process used to evaluate the potential environmental impacts of a proposed project or action. While it involves considering environmental factors, it does not specifically refer to the selection of products and services.\n    \n- **d) Macro Environment Analysis**: This involves examining external factors that can impact an organization, such as economic, political, social, and technological trends. It is not specifically focused on environmental concerns or the procurement of goods and services.\n    \n\nIn summary, **green procurement** is the most precise term for the initiative where a company chooses products and services aimed at addressing environmental concerns."
   }
 ]
