@@ -838,5 +838,65 @@
     ],
     "correctAnswer": 0,
     "solution": "## **Explanation:**\n\nSystem audits related to IT focus on evaluating the effectiveness and efficiency of controls over IT systems and processes. This includes ensuring that data is accurately inputted, processed, and updated in databases, as well as verifying the integrity and security of that data.\n\nIn this case, the methods used by the sales department to ensure accuracy in database input and updates are critical for:\n\n- **Data Integrity**: Ensuring that the data entered into the system is correct and reliable.\n- **Process Control**: Verifying that there are adequate controls and procedures in place to prevent errors during data entry and updates.\n- **Compliance**: Making sure that the processes adhere to organizational policies and regulatory requirements.\n\n### Overview of Other Options\n\n- **b)** The process for the creation of a mid-term business plan by the business planning department: This activity is more focused on strategic planning and is less directly related to IT controls.\n    \n- **c)** The results of the employee personnel evaluations by the personnel department: While this may involve IT systems, the evaluations themselves are not primarily focused on internal controls related to IT.\n    \n- **d)** The status of the production equipment review conducted by the manufacturing department for the purpose of reducing defects: This pertains to operational controls in manufacturing rather than IT-related internal controls.\n    \nIn summary, option **a** is the correct choice because it specifically addresses the internal controls related to IT processes, particularly regarding data accuracy in database management, which is a key focus area for system audits."
+  },
+  {
+    "id": "2019S_FE_AM_61",
+    "question": "Which of the following is a case that enables the customer support operations at a call center to improve the quality by applying a pattern recognition function or machine learning function to the accumulated data?",
+    "options": [
+      "Deriving the most appropriate response in real time from the related materials and all the previous support history according to the content of the inquiry made by a customer",
+      "Displaying the digital content of a response manual or basic customer information on a pop-up window of a screen for responding to the requests from the operators",
+      "Repeatedly providing a roll play training to new operators from an experienced operator who serves as a lecturer by using the response manual as the teaching material",
+      "Transferring a phone call or the relevant support screen to an experienced operator or a dedicated staff when the operator who is responding to a customer over the phone is unable to provide an answer"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nThis option illustrates how a pattern recognition or machine learning function can analyze accumulated data to provide real-time, context-sensitive responses. By leveraging historical support data and the specifics of the current inquiry, the system can suggest the best possible responses to customer inquiries. This enhances the quality of customer support by ensuring operators have immediate access to relevant information, which can lead to quicker and more accurate resolutions.\n\n### Overview of Other Options\n\n- **b)** Displaying the digital content of a response manual or basic customer information on a pop-up window of a screen for responding to the requests from the operators: While this option supports operators by providing access to information, it does not involve pattern recognition or machine learning. It is more about presenting static information rather than analyzing data to derive responses.\n    \n- **c)** Repeatedly providing a role-play training to new operators from an experienced operator who serves as a lecturer by using the response manual as the teaching material: This option focuses on training rather than leveraging accumulated data for improved customer support quality. While valuable, it does not utilize machine learning or pattern recognition techniques.\n    \n- **d)** Transferring a phone call or the relevant support screen to an experienced operator or a dedicated staff when the operator who is responding to a customer over the phone is unable to provide an answer: This is a traditional escalation process that ensures customers receive help but does not improve the quality of support through data analysis or machine learning.\n    \n\nIn summary, option **a** is the most aligned with using machine learning and pattern recognition to enhance customer support quality by providing real-time, tailored responses based on historical data."
+  },
+  {
+    "id": "2019S_FE_AM_62",
+    "question": "When an UML is used for business modeling, which of the following is the diagram that can represent a workflow such as the execution sequence of the business processes and branching based on conditions?",
+    "options": [
+      "Activity diagram",
+      "Class diagram",
+      "Component diagram",
+      "Object diagram"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\nIn UML, an activity diagram **provides a view of the behavior of a system by describing the sequence of actions in a process**. It visualizes the flow of activities and decisions in a process, showcasing how different tasks are carried out, including branching based on conditions (e.g., decision points).\n\n### Overview of Other Options\n\n- **b) Class Diagram**: This diagram is used to model the static structure of a system by showing classes, their attributes, operations, and the relationships among objects. It does not represent workflows or the sequence of processes.\n    \n- **c) Component Diagram**: This type of diagram focuses on the physical components of a system, such as software modules, and how they interact. While it can show relationships, it is not used for detailing workflows or process sequences.\n    \n- **d) Object Diagram**: This diagram provides a snapshot of the instances of classes at a particular moment in time. It illustrates the relationships between objects but does not depict the flow of processes or workflows.\n    \n\nIn summary, the **activity diagram** is the most appropriate UML diagram for modeling workflows, execution sequences, and branching in business processes."
+  },
+  {
+    "id": "2019S_FE_AM_63",
+    "question": "Which of the following is a description of the SOA?",
+    "options": [
+      "A concept of constructing a system by considering the software functions as components called services and combining them",
+      "A concept of improving the sales efficiency and quality by using IT for the sales activities to increase the sales and profits as well as to improve customer satisfaction",
+      "A concept of re-designing the business processes to innovatively improve the cost, quality, service, and speed",
+      "Outsourcing the in-house operations other than those of the core businesses to concentrate the management resources on the core businesses"
+    ],
+    "correctAnswer": 0,
+    "solution": "## **Explanation:**\n\n**Service-Oriented Architecture (SOA)** is a design paradigm that focuses on organizing and utilizing software functions as distinct, interoperable services. In SOA, these services can communicate with each other over a network, enabling systems to be constructed by combining existing services. This approach promotes reusability, scalability, and flexibility in software development, as services can be developed independently and integrated into various applications.\n\n### Overview of Other Options\n\n- **b)** A concept of improving the sales efficiency and quality by using IT for the sales activities to increase the sales and profits as well as to improve customer satisfaction: This description aligns more closely with concepts like **Sales Force Automation (SFA)** or Customer Relationship Management (CRM) systems rather than SOA.\n    \n- **c)** A concept of re-designing the business processes to innovatively improve the cost, quality, service, and speed: This option describes **Business Process Reengineering (BPR)**, which focuses on improving organizational processes rather than the architectural framework of software systems.\n    \n- **d)** Outsourcing the in-house operations other than those of the core businesses to concentrate the management resources on the core businesses: This describes **outsourcing** rather than SOA. While outsourcing involves delegating non-core functions to third parties, it is not related to the architectural principles of software design.\n    \n\nIn summary, option **a** accurately defines SOA as a framework for building systems based on services, emphasizing the modular and combinatory nature of software components."
+  },
+  {
+    "id": "2019S_FE_AM_64",
+    "question": "Which of the following is a scheme where the user establishes a connection to the system of a service provider via the Internet and makes online use of only the necessary functions of the applications provided by the service provider at the necessary time?",
+    "options": [
+      "ERP",
+      "SaaS",
+      "SCM",
+      "XBRL"
+    ],
+    "correctAnswer": 1,
+    "solution": "## **Explanation:**\n\n**SaaS (Software as a Service)** is a cloud computing model where users connect to applications hosted by a service provider over the Internet. In this model, users can access and utilize only the necessary functions of the applications on a pay-per-use or subscription basis. SaaS eliminates the need for local installation and maintenance of software, allowing for flexibility and scalability in accessing software applications as needed.\n\n### Overview of Other Options\n\n- **a) ERP (Enterprise Resource Planning)**: This is a type of software used to manage and integrate the essential parts of a business. While ERP systems can be delivered as SaaS, ERP itself is not a service model but rather a type of application.\n    \n- **c) SCM (Supply Chain Management)**: SCM refers to the management of the flow of goods and services and includes all processes that transform raw materials into final products. Like ERP, SCM can be implemented as a SaaS solution but is not a scheme itself.\n    \n- **d) XBRL (eXtensible Business Reporting Language)**: This is a language for the electronic communication of business and financial data. It is primarily used for reporting purposes and does not pertain to a service delivery model like SaaS.\n    \n\nIn summary, **SaaS** is the most accurate option that describes a scheme where users connect to a service provider's system over the Internet to access only the necessary functions of applications as needed."
+  },
+  {
+    "id": "2019S_FE_AM_65",
+    "question": "A company chooses products and services that are acknowledged as actively addressing environmental concerns. What is this initiative called?",
+    "options": [
+      "CSR",
+      "Environmental assessment",
+      "Green procurement",
+      "Macro environment analysis"
+    ],
+    "correctAnswer": 2,
+    "solution": "## **Explanation:**\n\n**Green Procurement** refers to the process of selecting products and services that have a reduced environmental impact throughout their life cycle. This initiative involves sourcing environmentally friendly products and services that minimize waste, conserve resources, and contribute to sustainable practices. Companies that engage in green procurement actively consider environmental criteria in their purchasing decisions, aiming to support sustainability and reduce their ecological footprint.\n\n### Overview of Other Options\n\n- **a) CSR (Corporate Social Responsibility)**: This is a broader concept that encompasses a company's initiatives to operate ethically and contribute positively to society, including environmental, social, and economic responsibilities. While green procurement can be a part of a company's CSR strategy, CSR itself is not limited to environmentally focused initiatives.\n    \n- **b) Environmental Assessment**: This is a process used to evaluate the potential environmental impacts of a proposed project or action. While it involves considering environmental factors, it does not specifically refer to the selection of products and services.\n    \n- **d) Macro Environment Analysis**: This involves examining external factors that can impact an organization, such as economic, political, social, and technological trends. It is not specifically focused on environmental concerns or the procurement of goods and services.\n    \n\nIn summary, **green procurement** is the most precise term for the initiative where a company chooses products and services aimed at addressing environmental concerns."
   }
 ]
