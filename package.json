@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start -p 42561",
+    "start": "next start -p 42650",
     "lint": "next lint",
     "deploy": "npx pm2 start npm --name 'philnits' -- start",
     "status": "npx pm2 status",
