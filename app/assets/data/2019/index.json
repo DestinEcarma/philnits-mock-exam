@@ -421,7 +421,7 @@
   },
   {
     "id": "2019S_FE_AM_26",
-    "question": "An employee works for a department, which can be located in multiple regions. Three tables EMP, DEPT, and DEPT_LOCS are created as shown below for recording the employee, department, and department location data, respectively.\n\n![Image](Files/Pasted%20image%2020241020151447.png)\n\n![Image](Files/Pasted%20image%2020241020151505.png)\n\n![Image](Files/Pasted%20image%2020241020151634.png)",
+    "question": "An employee works for a department, which can be located in multiple regions. Three tables EMP, DEPT, and DEPT_LOCS are created as shown below for recording the employee, department, and department location data, respectively.\n\n![Image](Files/Pasted%20image%2020241020151447.png)\n\n![Image](Files/Pasted%20image%2020241020151505.png)",
     "options": [
       "A",
       "B",
