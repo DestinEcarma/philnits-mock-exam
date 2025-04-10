@@ -473,7 +473,7 @@
             "C",
             "D"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "solution": "Encryption is used to obscure data so that only authorized parties can access it. In this case, encrypting the communication between the database connection programs ensures that sensitive information is protected during transmission."
     },
     {
