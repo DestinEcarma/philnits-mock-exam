@@ -545,7 +545,7 @@
         "The processes and data are combined into a single object.",
         "The same message can be interpreted differently by different classes of objects"
         ],
-        "correctAnswer": 4,
+        "correctAnswer": 3,
         "solution": "### d) The same message can be interpreted differently by different classes of objects\n\n**Polymorphism** allows a parent class method to be overridden by child classes, so the same method can behave differently depending on the object type invoking it. This is fundamental in **Object-Oriented Programming (OOP)**.\n\nExample in Java:\n\n```Java\npublic static void main(String[] args) {\n  Employee joe = new Employee(\"Average Joe\");\n  Employee chad = new Manager(\"Chad\");\n\n  joe.introduce(); // Hello, I am Average Joe, an employee!\n  chad.introduce(); // Hello, I am Chad, and I manage a Local Branch.\n}\n\npublic static class Employee {\n  String name;\n  int id;\n  String department = \"General\";\n  Employee(String n) {\n    name = n;\n  }\n  void introduce() {\n    System.out.println(\"Hello, I am \" + name + \", an employee!\");\n  }\n}\n\npublic static class Manager extends Employee {\n  String department = \"Local Branch\";\n  Manager(String n) {\n    super(n);\n  }\n  @Override\n  void introduce() {\n    System.out.println(\"Hello, I am \" + name + \", and I manage a \" + department);\n  }\n}\n```"
     },
     {
@@ -581,17 +581,17 @@
         "Reverse engineering",
         "Social engineering"
         ],
-        "correctAnswer": 3,
+        "correctAnswer": 2,
         "solution": "### c) Reverse engineering\n\n**Reverse engineering** involves analyzing an existing system to uncover its design, source code, or architecture. It is used to extract information from a functioning system.\n\n### Other Terms\n\n- **Forward engineering**: Development from specifications to a system.\n- **Concurrent engineering**: Multiple development phases happen simultaneously.\n- **Social engineering**: Manipulation of individuals to divulge confidential information."
     },
     {
         "id": "2023A_FE_AM_51",
         "question": "![Image](Files/Pasted%20image%2020241019202636.png)",
         "options": [
-        "18",
-        "21",
-        "45",
-        "66"
+        "A",
+        "B",
+        "C",
+        "D"
         ],
         "correctAnswer": 1,
         "solution": "To solve this, we need to calculate the number of **one-on-one meetings** that occur when there are **10 members** and then compare that to the number of meetings when there are **12 members** (after adding two members).\n\n### Step 1: Calculate the number of meetings with 10 members\n\nThe number of **one-on-one meetings** between 10 members is a combination problem. The number of ways to choose 2 members from a group of 10 (which is the number of one-on-one meetings) is given by the combination formula:\n\n$\\binom{n}{2} = \\frac{n(n - 1)}{2}$\n\nWhere \\(n\\) is the number of members.\n\nFor 10 members, we can calculate the number of meetings as:\n\n$\\binom{10}{2} = \\frac{10 \\times (10 - 1)}{2} = \\frac{10 \\times 9}{2} = 45$\n\nSo, with 10 members, there are **45 one-on-one meetings**.\n\n### Step 2: Calculate the number of meetings with 12 members\n\nNow, if 2 more members are added, making it 12 members, we calculate the number of meetings again using the same combination formula:\n\n$\\binom{12}{2} = \\frac{12 \\times (12 - 1)}{2} = \\frac{12 \\times 11}{2} = 66$\n\nSo, with 12 members, there are **66 one-on-one meetings**.\n\n### Step 3: Calculate the additional meetings\n\nThe additional meetings are the difference between the number of meetings with 12 members and the number of meetings with 10 members:\n\n$\\text{Additional meetings} = 66 - 45 = 21$\n\n### Final Answer:\nThere will be **21 additional meetings** if two members are added to the team."
@@ -600,10 +600,10 @@
         "id": "2023A_FE_AM_52",
         "question": "![Image](Files/Pasted%20image%2020241019203204.png)",
         "options": [
-        "Rapid decrease in cumulative number of bugs",
-        "Continuous increase in cumulative number of bugs",
-        "Linear relationship between test items and cumulative bugs",
-        "Decrease in new bugs per test item"
+        "A",
+        "B",
+        "C",
+        "D"
         ],
         "correctAnswer": 3,
         "solution": "This indicates that fewer new bugs are being found per test item, suggesting a stabilizing quality condition.\n\n## What Constitutes Stable Quality?\n\n**A stable quality condition** means that the rate of new bugs being discovered is decreasing as more test items are completed.\n\n> [!tip] When a bug is discovered, making a test documents and stops it, but doesn't remove it from the cumulative calculation.\n > - cumulative means past number of bugs are still being included in the sum.\n > - `[1, 2, 0, 0]` the cumulative sum is still 3, not `0`, despite no more bugs being in the system.\n\n## Other Choices\n\n- **A)** shows a rapid decrease in the cumulative number of bugs, which is unrealistic as bugs are typically discovered throughout the testing process.\n- **B)** shows a continuous increase in the cumulative number of bugs at a relatively constant rate, indicating no improvement in quality.\n- **C)** shows a linear relationship between the number of completed test items and the cumulative number of bugs, suggesting a constant rate of bug discovery, which is not indicative of a stable quality condition."
