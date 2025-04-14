@@ -10,6 +10,26 @@ jobs:
     name: Deploy PhilNITS
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Upload file to SSH
+        uses: appleboy/scp-action@v1.2.0
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.SSH_USERNAME}}
+          password: ${{secrets.SSH_PASSWORD}}
+          port: ${{secrets.SSH_PORT}}
+          source: ".next/*, package.json, public/*, next.config.ts"
+          target: "~/philnits.dcism.org/"
+          overwrite: true
+
       - name: Build
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -18,9 +38,6 @@ jobs:
           password: ${{secrets.SSH_PASSWORD}}
           port: ${{secrets.SSH_PORT}}
           script: |
-            cd ~/philnits.dcism.org/philnits-mock-exam
-            git fetch --all
-            git reset --hard origin/main
-            npm install
-            npm run build
+            cd ~/philnits.dcism.org
+            npm install --production
             npx pm2 restart philnits || npx pm2 start npm --name 'philnits' -- start 
