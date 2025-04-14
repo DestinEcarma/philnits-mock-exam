@@ -20,7 +20,7 @@ jobs:
         run: npm run build
 
       - name: Upload file to SSH
-        uses: appleboy/scp-action@v1.2.0
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{secrets.SSH_HOST}}
           username: ${{secrets.SSH_USERNAME}}
