@@ -39,5 +39,5 @@ jobs:
           port: ${{secrets.SSH_PORT}}
           script: |
             cd ~/philnits.dcism.org
-            npm install
+            npm install --legacy-peer-deps
             npx pm2 restart philnits || npx pm2 start npm --name 'philnits' -- start 
