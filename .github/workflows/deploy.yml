@@ -36,4 +36,5 @@ jobs:
             cd ~/philnits.dcism.org
             npm install
             npm run build
-            npx pm2 restart philnits || npx pm2 start npm --name 'philnits' -- start 
+            npx pm2 delete philnits || true
+            npx pm2 start npm --name 'philnits' -- start 
