@@ -569,7 +569,7 @@
         "The code that passed the tests is not refactored until the next iteration.",
         "The customer is responsible for the specification of unit tests."
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "solution": "### b) Integration of the code and testing are continuously repeated.\n\n**Extreme Programming (XP)** is an agile methodology where **continuous integration and testing** are key practices. Code is integrated and tested frequently to catch issues early.\n\n### Why the Other Choices are Incorrect:\n\n- **a) After the code is created, and it is confirmed that it can be integrated, test cases are created**: In XP, tests are written **before** code (Test-Driven Development).\n- **c) The code that passed the tests is not refactored until the next iteration**: Refactoring is done continuously.\n- **d) The customer is responsible for the specification of unit tests**: The customer provides **user stories** but **developers** write unit tests in XP."
     },
     {
