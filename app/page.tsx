@@ -8,16 +8,14 @@ import Timer from "@/components/Timer"
 import LandingPage from "@/components/LandingPage"
 import { quizData, type QuizQuestion } from "@/assets/data" 
 
-const QUIZ_TIME = 90 * 60 * 1000 // 1 hour 30 minutes in milliseconds
-const QUESTIONS_COUNT = 60
-
 export default function Quiz() {
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [userAnswers, setUserAnswers] = useState<number[]>([])
   const [quizStarted, setQuizStarted] = useState(false)
   const [quizCompleted, setQuizCompleted] = useState(false)
-  const [timeRemaining, setTimeRemaining] = useState(QUIZ_TIME)
+  const [totalTime, setTotalTime] = useState(0)
+  const [timeRemaining, setTimeRemaining] = useState(0)
 
   const shuffle = (array: QuizQuestion[]) => { 
     for (let i = array.length - 1; i > 0; i--) { 
@@ -27,9 +25,9 @@ export default function Quiz() {
     return array; 
   };
 
-  const startQuiz = useCallback(() => {
+  const startQuiz = useCallback((numQuestions: number) => {
     const shuffled = shuffle(quizData)
-    setQuestions(shuffled.slice(0, QUESTIONS_COUNT))
+    setQuestions(shuffled.slice(0, numQuestions))
     // // FOR DEBUGGING
     // const debugIndex = 55
     // setQuestions(quizData.slice(debugIndex, debugIndex + 10))
@@ -37,7 +35,11 @@ export default function Quiz() {
     // setQuestions(quizData)
     
     setQuizStarted(true)
-    setTimeRemaining(QUIZ_TIME)
+
+    const totalTime = numQuestions * 90 * 1000
+
+    setTotalTime(totalTime)
+    setTimeRemaining(totalTime)
   }, [])
 
   const endQuiz = useCallback(() => {
@@ -87,11 +89,16 @@ export default function Quiz() {
   }
 
   const restartQuiz = () => {
-    setCurrentQuestion(0)
+    setUserAnswers([])
+    setQuizStarted(true)
+    setQuizCompleted(false)
+    setTimeRemaining(totalTime)
+  }
+
+  const newQuiz = () => {
     setUserAnswers([])
     setQuizStarted(false)
     setQuizCompleted(false)
-    setTimeRemaining(QUIZ_TIME)
   }
 
   return (
@@ -123,8 +130,9 @@ export default function Quiz() {
                 quizData={questions}
                 userAnswers={userAnswers}
                 onRestart={restartQuiz}
+                onNewQuiz={newQuiz}
                 timeRemaining={timeRemaining}
-                timeTaken={QUIZ_TIME - timeRemaining}
+                timeTaken={totalTime - timeRemaining}
               />
             )}
           </CardContent>
