@@ -10,9 +10,13 @@ interface LandingPageProps {
 }
 
 export default function LandingPage({ onStartQuiz }: LandingPageProps) {
-	const [numQuestions, setNumQuestions] = useState(() => {
-    const stored = parseInt(localStorage.getItem("numQuestions") || "60", 10)
-    return (isNaN(stored) || stored < 1 ? 60 : Math.min(stored, quizData.length)).toString()
+  const [numQuestions, setNumQuestions] = useState(() => {
+    if (typeof window !== "undefined") {
+      const stored = parseInt(localStorage.getItem("numQuestions") || "60", 10)
+      return (isNaN(stored) || stored < 1 ? 60 : Math.min(stored, quizData.length)).toString()
+    }
+
+    return "60"
   })
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +26,10 @@ export default function LandingPage({ onStartQuiz }: LandingPageProps) {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    localStorage.setItem("numQuestions", numQuestions)
+    if (typeof window !== "undefined") {
+      localStorage.setItem("numQuestions", numQuestions)
+    }
+
     onStartQuiz(parseInt(numQuestions, 10))
   }
 
