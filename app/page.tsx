@@ -93,12 +93,15 @@ export default function Quiz() {
     setQuizStarted(true)
     setQuizCompleted(false)
     setTimeRemaining(totalTime)
+    setCurrentQuestion(0)
   }
 
   const newQuiz = () => {
     setUserAnswers([])
     setQuizStarted(false)
     setQuizCompleted(false)
+    setTimeRemaining(totalTime)
+    setCurrentQuestion(0)
   }
 
   return (

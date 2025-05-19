@@ -41,7 +41,7 @@ export default function LandingPage({ onStartQuiz }: LandingPageProps) {
       </CardHeader>
       <CardContent className="space-y-4">
 
-        <p>This quiz contains randomly selected questions from a range of topics covered in previous years' exams. A total of {quizData.length} questions are available.</p>
+        <p>This quiz contains randomly selected questions from a range of topics covered in previous years&apos; exams. A total of {quizData.length} questions are available.</p>
         <ul className="list-disc list-inside space-y-2">
           <li>You are given a 1:30 minutes per questions</li>
           <li>Some questions may include images</li>
