@@ -10,11 +10,12 @@ interface ResultsProps {
   quizData: QuizQuestion[]
   userAnswers: number[]
   onRestart: () => void
+  onNewQuiz: () => void
   timeRemaining: number
   timeTaken: number
 }
 
-export default function Results({ quizData, userAnswers, onRestart, timeRemaining, timeTaken }: ResultsProps) {
+export default function Results({ quizData, userAnswers, onRestart, onNewQuiz, timeRemaining, timeTaken }: ResultsProps) {
   const score = userAnswers.reduce((acc, answer, index) => {
     return answer === quizData[index].correctAnswer ? acc + 1 : acc
   }, 0)
@@ -46,7 +47,7 @@ export default function Results({ quizData, userAnswers, onRestart, timeRemainin
         <Button onClick={onRestart} className="flex-1">
           Retake Quiz
         </Button>
-        <Button onClick={() => window.location.reload()} className="flex-1">
+        <Button onClick={onNewQuiz} className="flex-1">
           New Quiz
         </Button>
       </div>
